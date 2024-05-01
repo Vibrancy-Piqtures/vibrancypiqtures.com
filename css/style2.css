@@ -1,0 +1,172 @@
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content-container {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0f5751;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Filters */
+.horizontal-list-container{
+    display: flex;
+    justify-content: center;
+    border: 5px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.filter-button {
+    margin: 0 4px;
+    padding: 8px 13px;
+    background-color: #236e6b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-button.active,
+.filter-button:hover {
+    background-color: transparent;
+}
+
+
+/* Gallery styles */
+.portraits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.portraits img {
+    margin: 5px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.weddings img {
+    margin: 5px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.weddings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+.thumbnails img {
+    max-width: 100%;
+    max-height: 250px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 200px;
+    height: auto;
+    margin: 5px;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .thumbnails img {
+        max-height: 100%;
+    }
+
+    .lightbox-content {
+        max-width: 85%;
+        max-height: 80%;
+    }
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.copyrighter {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+}

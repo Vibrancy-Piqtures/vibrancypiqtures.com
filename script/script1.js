@@ -461,35 +461,3 @@ overlay.addEventListener("click", function () {
   overlay.style.display = "none";
 });
 
-// Text for animation
-var textArray = [
-  "Are you a model!? ",
-  "We`re in for a collabo Shoot",
-  "Let's talk... ",
-  "📩Inbox"
-];
-var index = 0;
-var charIndex = 0;
-var typingSpeed = 180; 
-var textElement = document.getElementById("textAnimation");
-
-// Function for typewriter effect
-function typeWriter() {
-  var currentText = textArray[index];
-
-  if (charIndex < currentText.length) {
-    // Add next character
-    textElement.innerHTML += currentText.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeWriter, typingSpeed);
-  } else {
-    // Move to next text
-    index = (index + 1) % textArray.length;
-    charIndex = 0; // Reset character index for the next text
-    textElement.innerHTML = ""; // Clear the text before typing the next one
-    setTimeout(typeWriter, typingSpeed);
-  }
-}
-
-// Start animation
-typeWriter();

@@ -1,3 +1,4 @@
+
 body,
 h1,
 h2,
@@ -703,12 +704,12 @@ input:focus {
   top: 5px;
   right: 10px;
   font-size: 24px;
-  color: #7e7e7e;
+  color: #5c5c5c;
   cursor: pointer;
 }
 
 .closeButton:hover {
-  color: #000000;
+  color: #0f0f0f;
 }
 
 /*loader*/
@@ -984,90 +985,6 @@ input:focus {
   transform: scaleX(1.4) scaleY(1.5);
   opacity: 0;
 }
-
-/* Special offer*/
-.special-heading {
-  font-size: 36px;
-  color: #ff6f61;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.info-graphics {
-  display: fixed;
-  background-color: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.info-graphics {
-  font-family: "Arial", sans-serif;
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.graphics {
-  height: 400px;
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Animation */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: auto;
-  }
-}
-
-.text-animation {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.text-animation span {
-  display: inline-block;
-  animation: typing 5s steps(40, end);
-}
-
-.rating-h {
-  position: relative;
-}
-
-.rating {
-  display: inline-block;
-}
-
-.rating input {
-  display: none;
-}
-
-.rating label {
-  float: right;
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.3s;
-}
-
-.rating label:before {
-  content: "\2605";
-  font-size: 30px;
-}
-
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
-  color: #ffc400;
-  transition: color 0.3s;
-}
-
 
 /*Go to Gallery button*/
 .animated-button {

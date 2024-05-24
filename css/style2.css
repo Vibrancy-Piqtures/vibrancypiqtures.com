@@ -12,14 +12,7 @@ ol {
     margin: 0;
     padding: 0;
     text-align: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.content-container {
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -70,6 +63,13 @@ header {
 
 
 /* Gallery styles */
+.gallery-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
 .portraits {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +102,7 @@ header {
     transition: transform 0.2s;
     width: 200px;
     height: auto;
-    margin: 5px;
+    margin: 8px;
 }
 
 .thumbnails img:hover {
@@ -149,6 +149,10 @@ header {
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
+    .thumbnails img {
+        width: 95vw;
+    }
+
     .thumbnails img {
         max-height: 100%;
     }

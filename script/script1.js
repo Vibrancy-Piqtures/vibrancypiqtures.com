@@ -419,45 +419,13 @@ document.addEventListener("click", function (event) {
 });
 
 //Packages Poster Slide show functions
-document.addEventListener("DOMContentLoaded", function () {
-  const btn = document.querySelector(".btn");
-  const overlay = document.querySelector(".overlay");
-  const slideshowContainer = document.querySelector(".slideshow-container");
-  const slides = document.querySelectorAll(".slide");
-
-  btn.addEventListener("click", function () {
-    overlay.classList.toggle("show");
-    slideshowContainer.classList.toggle("show");
-
-    // Animate slides in one by one
-    slides.forEach((slide, index) => {
-      setTimeout(() => {
-        slide.style.opacity = "1";
-        slide.style.transform = "scale(1)";
-      }, index * 300);
-    });
-  });
-
-  slides.forEach((slide) => {
-    slide.addEventListener("click", function () {
-      slides.forEach((s) => s.classList.remove("active"));
-      slide.classList.add("active");
-    });
-  });
-
-  // Initially set the middle image as active
-  slides[1].classList.add("active");
-});
-
-// Get the overlay element
-var overlay = document.querySelector(".overlay");
-
-// Get the slideshow container
-var slideshowContainer = document.querySelector(".slideshow-container");
-
-// Add click event listener to the overlay
-overlay.addEventListener("click", function () {
-  slideshowContainer.style.display = "none";
-  overlay.style.display = "none";
-});
+// Function to toggle Slider visibility
+function toggleSlider() {
+  var form = document.getElementById("posterSlider");
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+}
 

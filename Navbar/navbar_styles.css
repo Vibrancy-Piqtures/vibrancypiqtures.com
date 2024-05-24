@@ -10,16 +10,18 @@
 .navbar a:hover {
     opacity: 0.5; 
 }
+
+/* Styles for menu toggle */
 .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: block;
     height: 24px;
+    color: #ffffff; 
+    background-color: #12726a; 
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    border-radius: 65%; 
+    padding: 10px; 
+    margin-bottom: 5px;
     cursor: pointer;
-    border-radius: 4px; 
-    padding: 4px; 
-    background-color: #fff; 
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); 
 }
 
 .bar {
@@ -28,17 +30,6 @@
     background-color: #333;
     transition: all 0.3s ease-in-out;
     border-radius: 2px; 
-}
-
-/* Styles for menu toggle */
-.menu-toggle {
-    display: block;
-    color: #ffffff; 
-    background-color: #12726a; 
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
-    border-radius: 65%; 
-    padding: 10px; 
-    margin-bottom: 5px;
 }
 
 #mainNavbar.rounded {
@@ -82,6 +73,7 @@
 }
 
 .menu li {
+    text-align: center;
     margin-left: 20px;
 }
 

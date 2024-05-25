@@ -41,6 +41,16 @@ header {
     padding: 25px;
 }
 
+.whatsapp-logo {
+    display: block;
+    position: fixed;
+    width: 40px;
+    height: auto;
+    bottom: 5rem;
+    right: 10px;
+    z-index: 2;
+  }
+
 .horizontal-list-container {
     position: absolute;
     bottom: 0;

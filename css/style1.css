@@ -686,7 +686,7 @@ input:focus {
 
 @media (max-width: 768px) {
   .plan {
-    width: 350px;
+    width: 320px;
     max-width: 450px;
   }
 }

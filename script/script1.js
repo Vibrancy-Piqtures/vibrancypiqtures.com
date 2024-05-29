@@ -419,13 +419,26 @@ document.addEventListener("click", function (event) {
 });
 
 //Packages Poster Slide show functions
-// Function to toggle Slider visibility
-function toggleSlider() {
-  var form = document.getElementById("posterSlider");
-  if (form.style.display === "none") {
-    form.style.display = "block";
-  } else {
-    form.style.display = "none";
-  }
-}
 
+window.addEventListener('scroll', function() {
+  var button = document.getElementById('myButton');
+  var offsetFromBottom = 112; // Distance from the bottom of the page where it should become sticky
+  var showButtonOffset = 150; // Distance from the top of the page when the button should appear
+
+  var scrollHeight = document.documentElement.scrollHeight;
+  var scrollPosition = window.innerHeight + window.scrollY;
+
+  // Show button after scrolling past a certain point
+  if (window.scrollY >= showButtonOffset) {
+    button.classList.add('show-button');
+  } else {
+    button.classList.remove('show-button');
+  }
+
+  // Make button sticky near the bottom of the page
+  if (scrollHeight - scrollPosition <= offsetFromBottom) {
+    button.classList.add('sticky');
+  } else {
+    button.classList.remove('sticky');
+  }
+});

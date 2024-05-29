@@ -21,7 +21,6 @@ ol {
 
 .slogan {
   color: #ffffff;
-  font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -692,13 +691,6 @@ input:focus {
   }
 }
 
-@media (max-width: 1298px) {
-  .plan {
-    width: 45rem;
-    max-width: 250px;
-  }
-}
-
 .closeButton {
   position: absolute;
   top: 5px;
@@ -816,9 +808,6 @@ input:focus {
   }
 }
 
-/* Packages Posters */
-
-
 .btn {
   text-transform: uppercase;
   text-decoration: none;
@@ -887,6 +876,26 @@ input:focus {
   z-index: 999;
 }
 
+@media (max-width: 768px) {
+.animated-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.5s, position 0.3s;
+}
+
+.show-button {
+  opacity: 1;
+}
+
+.sticky {
+  position: absolute;
+  bottom: 150px; 
+  right: 20px;
+}
+}
+
 .animated-button svg {
   position: absolute;
   width: 20px; 
@@ -908,8 +917,8 @@ input:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 16px; 
-  height: 16px; 
+  width: 12px; 
+  height: 12px; 
   background-color: teal;
   border-radius: 50%;
   opacity: 0;

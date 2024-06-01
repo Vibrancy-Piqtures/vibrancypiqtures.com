@@ -14,10 +14,10 @@ ol {
 }
 
 body {
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f8f7;
-    color: #333;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f8f7;
+  color: #333;
 }
 
 header {
@@ -31,40 +31,47 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .contact-form-container h2 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 20px;
-  padding: 20px;
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Space between form elements */
 }
 
 .contact-inputs {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 50px;
   border: none;
   outline: none;
-  padding-left: 25px;
+  padding: 0 25px;
   font-weight: 500;
   color: #666;
   border-radius: 25px;
 }
 
 .contactForm textarea {
+  width: 100%;
+  max-width: 400px;
   height: 150px;
-  padding-top: 15px;
+  padding: 15px;
   border-radius: 20px;
 }
-.contact-inputs:focus {
-  border: 2px solid;
-  color: #0b8070;
-}
 
-@media (max-width="768px") {
-  .contact-inputs {
-    width: 75vw;
-  }
+.contact-inputs:focus {
+  border: 2px solid #0b8070;
+  color: #0b8070;
 }
 
 .submitForm {
@@ -76,7 +83,9 @@ header {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
 }
+
 .submitForm:hover {
   background-color: #0b8070;
 }
@@ -88,4 +97,11 @@ header {
 .whatsapp-logo {
   width: 40px;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .contact-inputs,
+  .contactForm textarea {
+    width: 90%;
+  }
 }

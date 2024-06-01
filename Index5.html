@@ -21,19 +21,20 @@
       <section>
         <div class="contact-form-container">
           <h2>
-            Contact Us
+            Get In Touch
           </h2>
-          <form id="contactForm">
-            <label for="name">Name:</label><input type="text" id="name" name="name" required><br>
+          <form action="https://api.web3forms.com/submit" method="POST" class="contactForm">
+            
+            <input type="hidden" name="access_key" value="db93213a-e41a-4187-bea9-a2fa95546a46">
+
+            <input type="text" placeholder="Your Name" id="name" name="name" class="contact-inputs" required ><br>
             <br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" placeholder="Your Email" id="email" name="email" class="contact-inputs" required ><br>
             <br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="8" required></textarea>
+            <textarea placeholder="Your Message" id="message" name="message" class="contact-inputs" required ></textarea>
             <br>
             <br>
-            <button class="green-button" onclick="submitForm()">Submit to Our Email</button><br>
+            <button class="submitForm" onclick="submitForm()">Submit Message to Our Email</button><br><br><br>
             <h3>
               Message us directly
             </h3>

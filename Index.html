@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vibrancy Piqtures</title>
-  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="Navbar/navbar_styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
@@ -13,7 +13,7 @@
 <body>
   <header class="Header">
     <div class="logo">
-      <img src="Images/Vibrancy.png" alt="Vibrancy Piqtures Logo" width="200px">
+      <img src="Images/Vibrancy.png" alt="Vibrancy Piqtures Logo">
     </div>
     <div class="slogan">
       <h4>
@@ -27,7 +27,7 @@
       <div class="text-content">
         <h2>
           Welcome to Vibrancy Piqtures
-        </h2>
+        </h2><br><br>
         <p>
           Your one-stop destination for Professional Photography and videography services. We specialize in capturing beauty in its glamour.
         </p>
@@ -116,10 +116,11 @@
           <div class="image-container loading">
             <img src="Page1/Images/Sharua.jpg" alt="Featured Image" loading="lazy" onload="this.parentNode.classList.add('loaded')">
           </div>
-          <div>
+
+            
             <!-- Our Packages -->
-            <section>
-              <div>
+            <div>
+              <div class="right-content">
                 <div class="packages-system-container">
                   <button class="packages-system" onclick="toggleForm()">Our Packages</button><br>
                   <form class="Form-container" id="planContent" style="display: none;">
@@ -206,12 +207,10 @@
                 Checking...
               </div><br><br>
 
-          <!-- Our Package posters -->
-          <div class="packagePosters">
-            <button class="btn">Deals</button>
-          </div>
-          
-            </section>
+          <!-- Questionnaire Modal -->
+        <div class="modalpopup">
+            <button class="btn" onclick="openModal()">DEALS</button>
+        </div>
             <div class="contact-form-container">
               <form id="contactForm">
                 <h3>
@@ -225,7 +224,19 @@
                 <a class="whatsapp-button" href="https://wa.me/+256743964609" target="_blank"><img class="whatsapp-logo" src="Images/whatsapp_logo.png" alt="WhatsApp Logo"></a>
               </form>
             </div>
-          </div>
+           <br><br><br><br> 
+          <div class="slider-container">
+            <div class="slider">
+                <div class="slides"> 
+                    <img src="Page2/Images/a (10).jpg" class="slide" alt="Image 1">
+                </div>
+                <div class="navigation">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+                <div class="dots"></div>
+            </div>
+    </section>
   </main>
   
   <a href="Index2.html" style="text-decoration: none; color: inherit;">

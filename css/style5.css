@@ -27,6 +27,10 @@ header {
   padding: 15px;
 }
 
+.logo img{
+  width: 200px;
+}
+
 .contact-form-container {
   display: flex;
   flex-direction: column;
@@ -46,7 +50,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px; /* Space between form elements */
+  gap: 45px; /* Space between form elements */
 }
 
 .contact-inputs {
@@ -103,5 +107,11 @@ header {
   .contact-inputs,
   .contactForm textarea {
     width: 90%;
+  }
+}
+
+@media (max-width: 235px) {
+  .logo img{
+    width: 50px;
   }
 }

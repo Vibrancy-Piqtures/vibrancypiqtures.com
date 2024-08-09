@@ -41,6 +41,10 @@ header {
     padding: 25px;
 }
 
+.logo img{
+    width: 200px;
+  }
+
 .whatsapp-logo {
     display: block;
     position: fixed;
@@ -195,6 +199,12 @@ img {
         order: -1;
     }
 }
+
+@media (max-width: 235px) {
+    .logo img{
+      width: 50px;
+    }
+  }
 
 
 .copyrighter{

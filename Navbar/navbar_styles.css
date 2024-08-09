@@ -37,7 +37,6 @@
     transition: border-radius 0.3s ease-in-out;
 }
 
-
 /* The Navbar */
 .navbar {
     display: flex;
@@ -45,6 +44,7 @@
     justify-content: space-between;
     padding: 10px;
     border-radius: 5px;
+    margin: 2rem  0 2rem 0;
 }
 
 .navbar a {
@@ -93,6 +93,7 @@
     .menu-toggle {
         display: block;
         margin-right: 15px;
+        margin-bottom: 10px;
     }
 
     .menu {
@@ -132,7 +133,12 @@
         display: block;
         border-radius: 5px;
         padding: 10px;
-    }}
+    }
+
+    .navbar {
+        margin: 1rem  0 1rem 0;
+    }
+}
 
 /* Initially hide the menu */
 .menu {
@@ -141,7 +147,7 @@
 }
 
 
-/* Search */
+/* Search Textarea*/
 .search-container input[type="text"] {
     padding: 8px;
     width: 125px;
@@ -172,13 +178,13 @@
     cursor: pointer;
     outline: none;
     border: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 
 .search-container button[type="submit"] img {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
 }
 
 .search-container button[type="submit"]:hover img {

@@ -1,3 +1,4 @@
+
 // Function to load the navbar
 document.addEventListener("DOMContentLoaded", function () {
   $("#navbar-placeholder").load("Navbar/navbar.html");
@@ -84,82 +85,6 @@ function recommendPlan(event) {
 
   // Display additional details
   additionalDetailsElement.innerHTML = `<h3>Comes with:</h3><p>${additionalDetails}</p>`;
-}
-
-// Function to get package details based on event type and package type
-function getPackageDetails(eventType, packageType) {
-  // Package details based on event type and package type
-  const details = {
-    Wedding: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kwanjura: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kuhinjira: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Anniversary: {
-      platinum:
-        "160 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kukyala: {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    "Baby Shower": {
-      platinum:
-        "50 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "75 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Birthday Party": {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    Proposal: {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Private Photography Session": {
-      platinum:
-        "150 Image Detailed Photobook,All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Portrait reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Private Video Session": {
-      platinum: "10-15 mins of HD (High Definition) Edited footage",
-      gold: "15-30 mins of HD (High Definition) Edited footage"
-    },
-    "Corporate Gathering/Meeting": {
-      platinum:
-        "Details depend on the client`s needs, disscussable with our personnel.",
-      gold:
-        "Details depend on the client`s needs, disscussable with our personnel."
-    }
-  };
-
-  return (
-    details[eventType][packageType] ||
-    "The service details entirely depend on the client`s needs, all the prices are not fixed or final, Please contact for more information."
-  );
 }
 
 // Function to format currency with commas
@@ -314,6 +239,82 @@ function recommendPlan(event) {
       additionalDetails = getPackageDetails(eventType, "gold");
     }
 
+    // Function to get package details based on event type and package type
+function getPackageDetails(eventType, packageType) {
+  // Package details based on event type and package type
+  const details = {
+    Wedding: {
+      platinum:
+        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+      gold:
+        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+    },
+    Kwanjura: {
+      platinum:
+        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+      gold:
+        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+    },
+    Kuhinjira: {
+      platinum:
+        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+      gold:
+        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+    },
+    Anniversary: {
+      platinum:
+        "160 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+      gold:
+        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+    },
+    Kukyala: {
+      platinum:
+        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+      gold:
+        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+    },
+    "Baby Shower": {
+      platinum:
+        "50 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+      gold:
+        "75 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+    },
+    "Birthday Party": {
+      platinum:
+        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+      gold:
+        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+    },
+    Proposal: {
+      platinum:
+        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+      gold:
+        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+    },
+    "Private Photography Session": {
+      platinum:
+        "150 Image Detailed Photobook,All your softcopy images on our Online Gallery.",
+      gold:
+        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Portrait reel, All your softcopy images avail on our Online Gallery."
+    },
+    "Private Video Session": {
+      platinum: "10-15 mins of HD (High Definition) Edited footage",
+      gold: "15-30 mins of HD (High Definition) Edited footage"
+    },
+    "Corporate Gathering/Meeting": {
+      platinum:
+        "Details depend on the client`s needs, disscussable with our personnel.",
+      gold:
+        "Details depend on the client`s needs, disscussable with our personnel."
+    }
+  };
+
+  return (
+    details[eventType][packageType] ||
+    "The service details entirely depend on the client`s needs, all the prices are not fixed or final, Please contact for more information."
+  );
+}
+
     // Hide loading animation
     hideLoading();
 
@@ -353,6 +354,68 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Slider
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slide');
+  const dotsContainer = document.querySelector('.dots');
+  let currentIndex = 0;
+  let interval;
+
+  slides.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => showSlide(index));
+      dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+      slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          dots[i].classList.remove('active');
+          if (i === index) {
+              slide.classList.add('active');
+              dots[i].classList.add('active');
+          }
+      });
+
+      const offset = -index * 100;
+      document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+      currentIndex = index;
+      resetInterval();
+  }
+
+  function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+  }
+
+  function previousSlide() {
+      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+  }
+
+  function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextSlide, 7000);
+  }
+
+  document.querySelector('.prev').addEventListener('click', previousSlide);
+  document.querySelector('.next').addEventListener('click', nextSlide);
+  document.querySelector('.slider').addEventListener('wheel', (event) => {
+      if (event.deltaY > 0) {
+          nextSlide();
+      } else {
+          previousSlide();
+      }
+  });
+
+  showSlide(currentIndex);
+  interval = setInterval(nextSlide, 10000);
+});
+
 
 // Function to close plan recommendation section
 function closePlanResult() {
@@ -442,3 +505,6 @@ window.addEventListener('scroll', function() {
     button.classList.remove('sticky');
   }
 });
+
+
+

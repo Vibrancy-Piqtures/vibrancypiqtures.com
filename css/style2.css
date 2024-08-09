@@ -33,6 +33,10 @@ header {
     padding: 15px;
 }
 
+.logo img{
+    width: 200px;
+  }
+
 /* Filters */
 .horizontal-list-container{
     display: flex;
@@ -171,6 +175,12 @@ header {
         max-height: 80%;
     }
 }
+
+@media (max-width: 235px) {
+    .logo img{
+      width: 50px;
+    }
+  }
 
 .thumbnails {
     display: flex;

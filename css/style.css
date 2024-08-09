@@ -24,6 +24,11 @@ ol {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+.text-content{
+  padding: 10px;
+  line-height: 25px;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

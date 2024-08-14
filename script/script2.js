@@ -47,3 +47,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const images = document.querySelectorAll('img');
+
+  images.forEach(img => {
+    // Ensure the image has loaded
+    if (img.complete) {
+      img.classList.add('loaded');
+    } else {
+      img.onload = () => {
+        img.classList.add('loaded');
+      };
+    }
+  });
+});
+
+window.addEventListener("scroll", function() {
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (window.scrollY > window.innerHeight) {  // Adjusted to 1x the viewport height
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+

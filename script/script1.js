@@ -552,6 +552,12 @@ function initializeSwiper() {
             releaseOnEdges: true,
         },
     });
+
+    document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+          swiper.slideTo(index, 600);  
+      });
+  });
 }
 
 function openModal() {

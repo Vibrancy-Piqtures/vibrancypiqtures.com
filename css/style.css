@@ -59,15 +59,20 @@ ol {
 }
 
 .show-less {
+  display: none;
   color: #0f5751;
   cursor: pointer;
   text-decoration: underline;
   font-size: 0.85em; 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .text-container {
     font-size: 15px;
+  }
+
+  .show-less {
+    display: block;
   }
 }
 

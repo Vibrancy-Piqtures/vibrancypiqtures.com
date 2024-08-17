@@ -34,8 +34,6 @@ function unhoverMenu(element) {
     element.style.color = '#000'; 
 }
 
-document.addEventListener('DOMContentLoaded', closeMenu);
-
 // Function to toggle menu visibility
 $('.menu-toggle').on('click', function() {
     $(this).toggleClass('open');

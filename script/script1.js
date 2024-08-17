@@ -519,4 +519,58 @@ document.getElementById("scrollToTopBtn").addEventListener("click", function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// Swiper for offers and campaigns
+var swiper; 
+
+function initializeSwiper() {
+    swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 2,
+        speed: 600,
+        preventClicks: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            stretch: 50,
+            depth: 250,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            draggable: true,
+            hide: false,
+        },
+        mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+        },
+    });
+}
+
+function openModal() {
+    const modal = document.getElementById('sliderModal');
+    modal.classList.add('show');
+    modal.classList.remove('closing');
+
+    if (!swiper) {
+        initializeSwiper(); 
+    } else {
+        swiper.update(); 
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('sliderModal');
+    modal.classList.add('closing');
+    setTimeout(() => {
+        modal.classList.remove('show');
+    }, 400); 
+}
 

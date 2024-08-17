@@ -527,8 +527,20 @@ main {
   margin: 10px;
 
 }
+
+label{
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #a8edf707;
+  color: #08413a;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0;
+}
+
 .packages-system {
-  background-color: #0b9265;
+  background-color: #1f796e;
   color: #fff;
   padding: 10px;
   margin-bottom: 25px;

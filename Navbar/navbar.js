@@ -34,6 +34,7 @@ function unhoverMenu(element) {
     element.style.color = '#000'; 
 }
 
+document.addEventListener('DOMContentLoaded', closeMenu);
 
 // Function to toggle menu visibility
 $('.menu-toggle').on('click', function() {
@@ -89,21 +90,3 @@ function includeNavbar() {
 
 window.addEventListener('DOMContentLoaded', includeNavbar);
 
-// Function to close the menu
-function closeMenu() {
-    const menu = document.querySelector('.menu'); // Adjust this selector to match your menu
-    const hamburger = document.querySelector('.hamburger'); // Adjust this selector to match your hamburger icon
-
-    if (menu.classList.contains('open')) {
-        menu.classList.remove('open');
-        hamburger.classList.remove('is-active'); // Adjust this to match your active state
-    }
-}
-
-// Event listener for page navigation
-window.addEventListener('popstate', closeMenu);
-
-// Optional: Close the menu when a link is clicked
-document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-});

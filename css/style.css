@@ -25,6 +25,7 @@ ol {
 }
 
 .text-content{
+  font-size: 16px;
   padding: 10px;
   line-height: 25px;
 }
@@ -47,6 +48,7 @@ ol {
 }
 
 .hidden-content.show {
+  font-size: 16px;
   max-height: 500px; 
   opacity: 1;
 }
@@ -65,7 +67,7 @@ ol {
 
 @media (max-width: 600px) {
   .text-container {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 

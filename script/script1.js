@@ -547,6 +547,7 @@ function initializeSwiper() {
         speed: 600,
         preventClicks: true,
         slidesPerView: "auto",
+        loop: true,
         coverflowEffect: {
             stretch: 50,
             depth: 250,

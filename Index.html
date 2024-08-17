@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
   <header class="Header">
@@ -217,12 +218,36 @@
                 Checking...
               </div><br><br>
 
-          <!-- Questionnaire Modal -->
-        <div class="modalpopup">
-            <button class="btn" onclick="openModal()">DEALS</button>
-        </div>
+<!-- Deals (Posters of our ongoing campaigns and offers) -->
+<div class="modalpopup">
+  <button class="btn" onclick="openModal()">DEALS</button>
+</div>
 
-        
+            <!-- Modal with Slider -->
+            <div id="sliderModal" class="slider-overlay" onclick="closeModal()">
+              <div class="slider-content" onclick="event.stopPropagation()">
+                  <div class="swiper">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <img src="Page1/Slider/images/image (1).jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                              <img src="Page1/Slider/images/image (2).jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                              <img src="Page1/Slider/images/image (3).jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                              <img src="Page1/Slider/images/image (4).jpg" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                              <img src="Page1/Slider/images/image (5).jpg" alt="">
+                          </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                  </div>
+              </div>
+            </div>
 
             <div class="contact-form-container">
               <form id="contactForm">
@@ -300,9 +325,10 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="Navbar/navbar.js"></script>
-  <script src="script/script1.js"></script>
+  <script src="script/script1.js" defer></script>
 </body>
 
 </html>

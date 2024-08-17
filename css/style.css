@@ -29,6 +29,47 @@ ol {
   line-height: 25px;
 }
 
+.text-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.more-text {
+  color: darkteal;
+  cursor: pointer;
+}
+
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.hidden-content.show {
+  max-height: 500px; 
+  opacity: 1;
+}
+
+.location-contact {
+  font-family: 'Merriweather', serif; 
+  color: #333;
+}
+
+.show-less {
+  color: #0f5751;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.85em; 
+}
+
+@media (max-width: 600px) {
+  .text-container {
+    font-size: 14px;
+  }
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;

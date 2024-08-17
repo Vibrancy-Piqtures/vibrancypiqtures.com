@@ -4,6 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#navbar-placeholder").load("Navbar/navbar.html");
 });
 
+//More text...
+document.querySelector('.more-text').addEventListener('click', function(e) {
+  e.preventDefault();
+  var hiddenContent = document.querySelector('.hidden-content');
+  hiddenContent.classList.add('show'); // Add "show" class to reveal content smoothly
+  this.style.display = 'none'; // Hide the "..." after clicking
+});
+
+document.querySelector('.show-less').addEventListener('click', function(e) {
+  e.preventDefault();
+  var hiddenContent = document.querySelector('.hidden-content');
+  hiddenContent.classList.remove('show'); // Remove "show" class to hide content smoothly
+  document.querySelector('.more-text').style.display = 'inline'; // Show the "..." again
+});
+
+
 // Function to recommend plan based on budget and event type
 function recommendPlan(event) {
   // Retrieve necessary elements

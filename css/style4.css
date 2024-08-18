@@ -293,18 +293,6 @@ main {
     background-color: darkcyan;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .company-overview {
-        flex-direction: column;
-    }
-
-    .team-card {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
-}
-
 .animated-button {
     position: relative;
     left: 18em;
@@ -455,6 +443,21 @@ main {
     background-color: #006666; 
   }
   
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .company-overview {
+        flex-direction: column;
+    }
+
+    .team-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .animated-button {
+        left: 0;
+    }
+}
+
 .copyrighter{
     text-align: center; 
     background-color: #fff;  

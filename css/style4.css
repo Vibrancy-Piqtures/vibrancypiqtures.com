@@ -66,6 +66,15 @@ main {
     }
 }
 
+.whatsapp-logo {
+    display: block;
+    position: fixed;
+    width: 60px;
+    height: auto;
+    bottom: 5rem;
+    right: 10px;
+    z-index: 2;
+  }
 
 /* About Us Section */
 .hero h1 {

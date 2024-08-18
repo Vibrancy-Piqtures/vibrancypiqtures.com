@@ -25,7 +25,6 @@ ol {
 }
 
 .text-content{
-  font-size: 16px;
   padding: 10px;
   line-height: 25px;
 }
@@ -75,6 +74,21 @@ ol {
     display: block;
   }
 }
+
+.more-link {
+  color: #105a5f;
+  text-decoration: none;
+  font-size: 14px; 
+  font-weight: 600; 
+  margin-left: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.more-link:hover {
+  color: #0a5e64; 
+}
+
 
 body {
   font-family: Arial, sans-serif;
@@ -756,7 +770,7 @@ input:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
+  background-color: #105a5f;
   border-radius: 5px;
   text-align: center;
 }
@@ -765,7 +779,6 @@ input:focus {
   .plan {
     width: 320px;
     max-width: 350px;
-    height: auto;
   }
 }
 
@@ -980,6 +993,17 @@ input:focus {
       width: 75%; 
       max-width: 320px; 
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: white; 
+  opacity: 0.6; 
+  transition: background-color 0.3s ease, opacity 0.3s ease; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: teal; 
+  opacity: 1; 
 }
 
 .slider-overlay.show {

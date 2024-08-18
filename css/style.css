@@ -770,7 +770,7 @@ input:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #105a5f;
+  background-color: #ffffff;
   border-radius: 5px;
   text-align: center;
 }

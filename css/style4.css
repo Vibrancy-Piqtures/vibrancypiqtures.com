@@ -71,7 +71,7 @@ main {
     position: fixed;
     width: 60px;
     height: auto;
-    bottom: 5rem;
+    bottom: 10rem;
     right: 10px;
     z-index: 2;
   }

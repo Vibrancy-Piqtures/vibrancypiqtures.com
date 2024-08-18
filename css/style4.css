@@ -307,6 +307,7 @@ main {
 
 .animated-button {
     position: relative;
+    left: 18em;
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -459,3 +460,6 @@ main {
     background-color: #fff;  
     padding: 20px; 
     }
+
+
+    

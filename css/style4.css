@@ -52,6 +52,7 @@ main {
     font-size: 3rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     animation: fadeInScale 2s ease-out;
+    padding: 2rem;
 }
 
 @keyframes fadeInScale {
@@ -143,6 +144,11 @@ main {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .hero h1 {
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    animation: fadeInScale 2s ease-out;
+}
     .company-overview h2 {
         font-size: 2rem;
     }

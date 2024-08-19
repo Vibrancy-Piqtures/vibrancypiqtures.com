@@ -76,6 +76,8 @@ ol {
 }
 
 .more-link {
+  position: absolute;
+  right: 620px;
   color: #105a5f;
   text-decoration: none;
   font-size: 14px; 
@@ -87,6 +89,12 @@ ol {
 
 .more-link:hover {
   color: #0a5e64; 
+}
+
+@media (max-width: 768px) {
+  .more-link {
+    right: 0;
+  }
 }
 
 
@@ -1275,6 +1283,7 @@ input:focus {
 #scrollToTopBtn:hover {
   background-color: #006666; 
 }
+
 
 
 /*Socials toolkit*/

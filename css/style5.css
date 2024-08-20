@@ -27,6 +27,10 @@ header {
   padding: 15px;
 }
 
+.Info{
+  padding: 25px;
+}
+
 .logo img{
   width: 200px;
 }

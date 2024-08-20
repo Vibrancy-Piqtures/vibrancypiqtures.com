@@ -236,6 +236,7 @@ main {
   position: absolute;
   top: 3rem;
   right: 12rem;
+  height: auto;
 }
 
 /* Close button */

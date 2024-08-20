@@ -13,7 +13,6 @@ $(document).ready(function () {
         "slideShow",
         "fullScreen",
         "download",
-        "thumbs",
         "close",
       ],
     });

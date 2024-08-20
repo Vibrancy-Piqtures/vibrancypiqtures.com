@@ -501,8 +501,8 @@ document.addEventListener("click", function (event) {
 
 window.addEventListener('scroll', function() {
   var button = document.getElementById('myButton');
-  var offsetFromBottom = 112; // Distance from the bottom of the page where it should become sticky
-  var showButtonOffset = 150; // Distance from the top of the page when the button should appear
+  var offsetFromBottom = 112; 
+  var showButtonOffset = 150; 
 
   var scrollHeight = document.documentElement.scrollHeight;
   var scrollPosition = window.innerHeight + window.scrollY;

@@ -97,6 +97,11 @@ ol {
   }
 }
 
+@media (min-width: 768px) {
+  .more-link {
+    right: 180px;
+  }
+}
 
 body {
   font-family: Arial, sans-serif;

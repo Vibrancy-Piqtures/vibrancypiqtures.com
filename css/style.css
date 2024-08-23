@@ -1173,10 +1173,10 @@ input:focus {
   display: inline-block;
   width: 85%;
   max-width: 450px;
-  background-color: transparent;
+  background-color: #ffff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .slider {

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Contract</title>
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<style type="text/css" id="form-designer-style">
+  /*  1 - FONT FAMILY */
+  .form-all {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* 2 - FORM WIDTH */
+  .form-all {
+    max-width: 758px;
+  }
+
+  /* 5 - FONT SIZE */
+  .form-all {
+    font-size: 16px;
+  }
+
+  /* 5 - input bg color */
+  .form-textbox,
+  .form-textarea,
+  .form-radio-other-input,
+  .form-checkbox-other-input,
+  .form-captcha input,
+  .form-spinner input {
+    background-color: #ffffff;
+  }
+
+  /* 10 - LINE SPACING */
+  .form-line {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .supernova .form-all,
+  .form-all {
+    background-color: #f7f1ee;
+  }
+
+  .supernova {
+    background-color: #527f6b;
+  }
+
+  .supernova body {
+    background-color: transparent;
+  }
+
+  .form-all,
+  .form-label-top,
+  .form-label-left,
+  .form-label-right,
+  .form-html,
+  .form-checkbox-item label,
+  .form-radio-item label,
+  span.FITB .qb-checkbox-label,
+  span.FITB .qb-radiobox-label,
+  span.FITB .form-radio label,
+  span.FITB .form-checkbox label,
+  [data-blotid][data-type=checkbox] [data-labelid],
+  [data-blotid][data-type=radiobox] [data-labelid],
+  span.FITB-inptCont[data-type=checkbox] label,
+  span.FITB-inptCont[data-type=radiobox] label,
+  .form-sub-label {
+    color: #2c3345;
+  }
+
+  /*PREFERENCES STYLE*/
+  /* 17 - INPUT WIDTHS */
+  /*  20 - FORM PADDING */
+  ul.form-section {
+    padding: 0px 38px;
+  }
+
+  .form-textbox:not(#productSearch-input),
+  .form-textarea,
+  li[data-type=control_fileupload] .qq-upload-button,
+  .signature-wrapper {
+    border-color: #ffffff;
+  }
+
+  .form-textarea:hover,
+  .form-textbox:hover,
+  li[data-type=control_fileupload] .qq-upload-button:hover,
+  .signature-wrapper:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+  }
+
+  .form-textarea:focus,
+  .form-textbox:focus,
+  li[data-type=control_fileupload] .qq-upload-button:focus,
+  .signature-wrapper:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+  }
+
+  /* Heights */
+  /* 11 - LINE PADDING */
+  /* LABEL STYLE */
+  /* 12 - ROUNDED INPUTS */
+  .supernova .form-all,
+  .form-all {
+    border-radius: 20px;
+  }
+
+  .form-section:first-child {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .form-section:last-child {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .form-radio-item,
+  .form-checkbox-item {
+    padding-bottom: 0px;
+  }
+
+  .form-radio-item:last-child,
+  .form-checkbox-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .form-single-column .form-checkbox-item,
+  .form-single-column .form-radio-item {
+    width: 100%;
+  }
+
+  .form-checkbox-item .editor-container div,
+  .form-radio-item .editor-container div {
+    position: relative;
+  }
+
+  .form-checkbox-item .editor-container div:before,
+  .form-radio-item .editor-container div:before {
+    display: inline-block;
+    vertical-align: middle;
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: inherit;
+  }
+
+  .submit-button {
+    min-width: 180px;
+  }
+
+  .form-all .form-pagebreak-back,
+  .form-all .form-pagebreak-next {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .form-all .form-pagebreak-back,
+  .form-all .form-pagebreak-next {
+    min-width: 128px;
+  }
+
+  li[data-type="control_image"] div {
+    text-align: left;
+  }
+
+  li[data-type="control_image"] img {
+    border: none;
+    border-width: 0px !important;
+    border-style: solid !important;
+    border-color: false !important;
+  }
+
+  .supernova {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .supernova {
+    background-image: none;
+  }
+
+  #stage {
+    background-image: none;
+  }
+
+  /* | */
+  .form-all {
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .form-header-group {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center top;
+  }
+
+  .header-large h1.form-header {
+    font-size: 2em;
+  }
+
+  .header-large h2.form-header {
+    font-size: 1.5em;
+  }
+
+  .header-large h3.form-header {
+    font-size: 1.17em;
+  }
+
+  .header-large h1+.form-subHeader {
+    font-size: 1em;
+  }
+
+  .header-large h2+.form-subHeader {
+    font-size: .875em;
+  }
+
+  .header-large h3+.form-subHeader {
+    font-size: .75em;
+  }
+
+  .header-default h1.form-header {
+    font-size: 2em;
+  }
+
+  .header-default h2.form-header {
+    font-size: 1.5em;
+  }
+
+  .header-default h3.form-header {
+    font-size: 1.17em;
+  }
+
+  .header-default h1+.form-subHeader {
+    font-size: 1em;
+  }
+
+  .header-default h2+.form-subHeader {
+    font-size: .875em;
+  }
+
+  .header-default h3+.form-subHeader {
+    font-size: .75em;
+  }
+
+  .header-small h1.form-header {
+    font-size: 2em;
+  }
+
+  .header-small h2.form-header {
+    font-size: 1.5em;
+  }
+
+  .header-small h3.form-header {
+    font-size: 1.17em;
+  }
+
+  .header-small h1+.form-subHeader {
+    font-size: 1em;
+  }
+
+  .header-small h2+.form-subHeader {
+    font-size: .875em;
+  }
+
+  .header-small h3+.form-subHeader {
+    font-size: .75em;
+  }
+
+  .form-header-group {
+    text-align: left;
+  }
+
+  div.form-header-group.header-large,
+  div.form-header-group.hasImage {
+    margin: 0px -38px;
+  }
+
+  div.form-header-group.header-large,
+  div.form-header-group.hasImage {
+    padding: 40px 52px;
+  }
+
+  .form-header-group .form-header,
+  .form-header-group .form-subHeader {
+    color: -1;
+  }
+
+  .form-header-group {
+    border-bottom: none;
+  }
+
+  .form-line-error {
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -ms-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    background-color: #fff4f4;
+  }
+
+  .form-line-error .form-error-message {
+    background-color: #f23a3c;
+    clear: both;
+    float: none;
+  }
+
+  .form-line-error .form-error-message .form-error-arrow {
+    border-bottom-color: #f23a3c;
+  }
+
+  .form-line-error input:not(#coupon-input),
+  .form-line-error textarea,
+  .form-line-error .form-validation-error {
+    border: 1px solid #f23a3c;
+    box-shadow: 0 0 3px #f23a3c;
+  }
+
+  .form-line-error {
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -ms-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -ms-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    background-color: #fff4f4;
+  }
+
+  .form-line-active {
+    background-color: #f1f5ff;
+  }
+
+  /*__INSPECT_SEPERATOR__*/
+  .form-all {
+    background-size: 60%;
+    background-position: top right;
+  }
+</style>
+
+<body>
+  <form class="event-contract-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" method="post">
+    <div role="main" class="form-all">
+      <ul class="form-section page-section">
+        <li id="cid_45" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-large">
+            <div class="header-text httac htvam">
+              <h1 id="header_45" class="form-header" data-component="header">Event Photography Contract</h1>
+              <div class="logo">
+                <img src="./Logo black-01.png" alt="Vibrancy Piqtures Logo" width="250px">
+              </div>
+              <div id="subHeader_45" class="form-subHeader">Immortalizing Your Precious Moments</div>
+            </div>
+          </div>
+        </li>
+        <li id="cid_36" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_36" class="form-header" data-component="header">Event Representative</h2>
+              <div id="subHeader_36" class="form-subHeader">hereafter referred to as the &quot;Client&quot;</div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_fullname" id="id_2"><label class="form-label form-label-top form-label-auto" id="label_2" for="first_2" aria-hidden="false"> Full Name<span class="form-required">*</span> </label>
+          <div id="cid_2" class="form-input-wide jf-required" data-layout="full">
+            <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_2" name="q2_fullName2[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 given-name" size="10" data-component="first" aria-labelledby="label_2 sublabel_2_first" required="" value="" /><label class="form-sub-label" for="first_2" id="sublabel_2_first" style="min-height:13px">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_2" name="q2_fullName2[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_2 family-name" size="15" data-component="last" aria-labelledby="label_2 sublabel_2_last" required="" value="" /><label class="form-sub-label" for="last_2" id="sublabel_2_last" style="min-height:13px">Last Name</label></span></div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_email" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4" aria-hidden="false"> E-mail<span class="form-required">*</span> </label>
+          <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_4" name="q4_email4" class="form-textbox validate[required, Email]" data-defaultvalue="" autoComplete="section-input_4 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_4 sublabel_input_4" required="" value="" /><label class="form-sub-label" for="input_4" id="sublabel_input_4" style="min-height:13px"></label></span> </div>
+        </li>
+        <li class="form-line form-line-column form-col-2 jf-required" data-type="control_phone" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5_full"> Phone Number<span class="form-required">*</span> </label>
+          <div id="cid_5" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_5_full" name="q5_phoneNumber5[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_5 tel-national" style="width:310px" data-masked="true" data-component="phone" aria-labelledby="label_5" required="" value="" /></span> </div>
+        </li>
+        <li id="cid_39" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_39" class="form-header" data-component="header">Photographer’s details</h2>
+              <div id="subHeader_39" class="form-subHeader">hereafter referred to as the &quot;Photographer&quot;</div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line" data-type="control_text" id="id_7">
+          <div id="cid_7" class="form-input-wide" data-layout="full">
+            <div id="text_7" class="form-html" data-component="text" tabindex="0">
+              <div style="padding: 12px 20px; background-color: #fff;">
+                <p style="text-align: left;"> <strong>Name: Mark Paul Mugerwa</strong></p>
+                <p style="text-align: left;"><strong>Company:</strong> Vibrancy Piqtures</p>
+                <p style="text-align: left;"><strong>Mobile:</strong> 0764352188</p>
+                <p style="text-align: left;"><strong>Email:</strong> vibrancypiqtures@gmail.com</p>
+                <p style="text-align: left;"><strong>Address:</strong> Kyanja, Kampala Uganda</p>
+              </div>
+              <div id="gtx-trans"> </div>
+            </div>
+          </div>
+        </li>
+        <li id="cid_37" class="form-input-wide" data-type="control_head">
+          <div class="form-header-group  header-default">
+            <div class="header-text httal htvam">
+              <h2 id="header_37" class="form-header" data-component="header">Event details</h2>
+              <div id="subHeader_37" class="form-subHeader">hereafter referred to as the &quot;Event&quot;</div>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1 jf-required" data-type="control_textbox" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="input_9" aria-hidden="false"> Event Name<span class="form-required">*</span> </label>
+          <div id="cid_9" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_9" name="q9_eventName" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" placeholder=" " data-component="textbox" aria-labelledby="label_9" required="" value="" /> </div>
+        </li>
+        <li class="form-line form-line-column form-col-2 jf-required" data-type="control_datetime" id="id_10"><label class="form-label form-label-top form-label-auto" id="label_10" for="lite_mode_10" aria-hidden="false"> Event Date<span class="form-required">*</span> </label>
+          <div id="cid_10" class="form-input-wide jf-required" data-layout="half">
+            <div data-wrapper-react="true">
+              <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="month_10" name="q10_eventDate[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="05" required="" autoComplete="off" aria-labelledby="label_10 sublabel_10_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_10" id="sublabel_10_month" style="min-height:13px">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="currentDate form-textbox validate[required, limitDate]" id="day_10" name="q10_eventDate[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="30" required="" autoComplete="off" aria-labelledby="label_10 sublabel_10_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_10" id="sublabel_10_day" style="min-height:13px">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[required, limitDate]" id="year_10" name="q10_eventDate[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2024" required="" autoComplete="off" aria-labelledby="label_10 sublabel_10_year" /><label class="form-sub-label" for="year_10" id="sublabel_10_year" style="min-height:13px">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[required, limitDate, validateLiteDate]" id="lite_mode_10" size="12" data-maxlength="12" maxLength="12" data-age="" value="" required="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_10 sublabel_10_litemode" /><img class="showAutoCalendar newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_10_pick" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_10" id="sublabel_10_litemode" style="min-height:13px">Date</label></span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_textbox" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" for="input_12" aria-hidden="false"> Location name<span class="form-required">*</span> </label>
+          <div id="cid_12" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_12" name="q12_locationName" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" placeholder=" " data-component="textbox" aria-labelledby="label_12" required="" value="" /> </div>
+        </li>
+        <li class="form-line" data-type="control_text" id="id_14">
+          <div id="cid_14" class="form-input-wide" data-layout="full">
+            <div id="text_14" class="form-html" data-component="text" tabindex="0">
+              <p>This agreement contains the entire understanding between the Photographer and the Client. It supersedes all prior and simultaneous agreements between the parties. The only way to add or change this agreement is to do so in writing, please put a check mark by each term:</p>
+            </div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="input_15_0" aria-hidden="false"> Purpose<span class="form-required">*</span> </label>
+          <div id="cid_15" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_15" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_15" class="form-checkbox validate[required]" id="input_15_0" name="q15_purpose[]" value="This agreement contains the entire understanding between the Photographer and the Client. It supersedes all prior and simultaneous agreements between the parties. The only way to add or change this agreement is to do so in writing, signed by both parties" required="" /><label id="label_input_15_0" for="input_15_0">This agreement contains the entire understanding between the Photographer and the Client. It supersedes all prior and simultaneous agreements between the parties. The only way to add or change this agreement is to do so in writing, signed by both parties</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_16"><label class="form-label form-label-top form-label-auto" id="label_16" for="input_16_0" aria-hidden="false"> Reservations<span class="form-required">*</span> </label>
+          <div id="cid_16" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_16" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_16" class="form-checkbox validate[required]" id="input_16_0" name="q16_reservations[]" value="Upon your signature, the Photographer will reserve the time and date agreed upon, and will not make other reservations for that time and date. For this reason, the Reservation Deposit is non-refundable, even if the date is changed or event cancelled for any reason, including acts of God, fire, strike, and extreme weather. The Reservation Deposit is to be paid at time of signing the contract. The Reservation Deposit is applied towards the contracted Event Package. Client understands and agrees that the entire amount owed for the Event Package described in the contract is due on the day of the Event, or, on the Outstanding Balance Due date (if specified). Client agrees if the balance is not paid by this time, the Photographer will not photograph the Event, with a loss of Reservation Deposit by Client and no liability to the Photographer." required="" /><label id="label_input_16_0" for="input_16_0">Upon your signature, the Photographer will reserve the time and date agreed upon, and will not make other reservations for that time and date. For this reason, the Reservation Deposit is non-refundable, even if the date is changed or event cancelled for any reason, including acts of God, fire, strike, and extreme weather. The Reservation Deposit is to be paid at time of signing the contract. The Reservation Deposit is applied towards the contracted Event Package. Client understands and agrees that the entire amount owed for the Event Package described in the contract is due on the day of the Event, or, on the Outstanding Balance Due date (if specified). Client agrees if the balance is not paid by this time, the Photographer will not photograph the Event, with a loss of Reservation Deposit by Client and no liability to the Photographer.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17_0" aria-hidden="false"> Pre-Event Consultation<span class="form-required">*</span> </label>
+          <div id="cid_17" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_17" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_17" class="form-checkbox validate[required]" id="input_17_0" name="q17_preeventConsultation[]" value="The parties agree to a pre-event consultation before the Event in order to finalize the actual shooting times, locations, and Client’s request list (in writing) for specific photographs. The Client will be responsible for, or have someone designated, to identify people of whom specific photographs are desired. The Photographer will not be held accountable for not photographing desired people if there is no one to assist in identifying people or gathering people for group photographs." required="" /><label id="label_input_17_0" for="input_17_0">The parties agree to a pre-event consultation before the Event in order to finalize the actual shooting times, locations, and Client’s request list (in writing) for specific photographs. The Client will be responsible for, or have someone designated, to identify people of whom specific photographs are desired. The Photographer will not be held accountable for not photographing desired people if there is no one to assist in identifying people or gathering people for group photographs.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18_0" aria-hidden="false"> Shooting Time/Addition<span class="form-required">*</span> </label>
+          <div id="cid_18" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_18" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_18" class="form-checkbox validate[required]" id="input_18_0" name="q18_shootingTimeaddition[]" value="The photography schedule and selected methodology are designed to accomplish the goals and wishes of the Client in a manner enjoyed by all parties. The Client and the Photographer agree that cheerful co-operation and punctuality by all members of the Event staff are therefore essential to that purpose. Shooting commences at the scheduled start time agreed by both parties. Should additional photography and/or travel time, that is not included in the agreed package, be requested by the Client, it will be charged out at the rates specified in the Assignment Package, rounded to the nearest half hour." required="" /><label id="label_input_18_0" for="input_18_0">The photography schedule and selected methodology are designed to accomplish the goals and wishes of the Client in a manner enjoyed by all parties. The Client and the Photographer agree that cheerful co-operation and punctuality by all members of the Event staff are therefore essential to that purpose. Shooting commences at the scheduled start time agreed by both parties. Should additional photography and/or travel time, that is not included in the agreed package, be requested by the Client, it will be charged out at the rates specified in the Assignment Package, rounded to the nearest half hour.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_19"><label class="form-label form-label-top form-label-auto" id="label_19" for="input_19_0" aria-hidden="false"> House Rules<span class="form-required">*</span> </label>
+          <div id="cid_19" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_19" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_19" class="form-checkbox validate[required]" id="input_19_0" name="q19_houseRules[]" value="The Photographer is limited by the guidelines of event officials and/or event location site management. The Client agrees to accept the technical results of their imposition on the Photographer. Negotiation with the officials for moderation of guidelines is the Client’s responsibility; the Photographer will offer technical recommendations only." required="" /><label id="label_input_19_0" for="input_19_0">The Photographer is limited by the guidelines of event officials and/or event location site management. The Client agrees to accept the technical results of their imposition on the Photographer. Negotiation with the officials for moderation of guidelines is the Client’s responsibility; the Photographer will offer technical recommendations only.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_20"><label class="form-label form-label-top form-label-auto" id="label_20" for="input_20_0" aria-hidden="false"> Digital Negatives, Prints and Copyrights<span class="form-required">*</span> </label>
+          <div id="cid_20" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_20" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_20" class="form-checkbox validate[required]" id="input_20_0" name="q20_digitalNegatives[]" value="The photographs, digital negatives or prints produced by the Photographer are protected by International Copyright Law (all rights reserved) and the Photographer retains the copyright to all photos and images produced. The Client may receive a copy of the hi-res digital photographs on disc if it has been agreed upon as part of the Event Package. If so, the Client may reproduce any photos in any manner they like for internal and external purposes. The Client agrees to obtain written permission from the Photographer prior to the Client (or its assigned agents) publishing or selling the photographs for profit." required="" /><label id="label_input_20_0" for="input_20_0">The photographs, digital negatives or prints produced by the Photographer are protected by International Copyright Law (all rights reserved) and the Photographer retains the copyright to all photos and images produced. The Client may receive a copy of the hi-res digital photographs on disc if it has been agreed upon as part of the Event Package. If so, the Client may reproduce any photos in any manner they like for internal and external purposes. The Client agrees to obtain written permission from the Photographer prior to the Client (or its assigned agents) publishing or selling the photographs for profit.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_21"><label class="form-label form-label-top form-label-auto" id="label_21" for="input_21_0" aria-hidden="false"> Model Release<span class="form-required">*</span> </label>
+          <div id="cid_21" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_21" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_21" class="form-checkbox validate[required]" id="input_21_0" name="q21_modelRelease[]" value="The Client hereby grants to the Photographer and its legal representatives and assigns, the irrevocable and unrestricted right to use and publish photographs of the Event, its guests, attendees, and officials for editorial, trade, advertising, stock, commercial and any other purpose and in any manner and medium; to alter the same without restriction; and to copyright the same. The Client hereby releases the Photographer and his legal representatives and assigns from all claims and liability relating to said photographs." required="" /><label id="label_input_21_0" for="input_21_0">The Client hereby grants to the Photographer and its legal representatives and assigns, the irrevocable and unrestricted right to use and publish photographs of the Event, its guests, attendees, and officials for editorial, trade, advertising, stock, commercial and any other purpose and in any manner and medium; to alter the same without restriction; and to copyright the same. The Client hereby releases the Photographer and his legal representatives and assigns from all claims and liability relating to said photographs.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_22"><label class="form-label form-label-top form-label-auto" id="label_22" for="input_22_0" aria-hidden="false"> Exclusivity / Guest Photography<span class="form-required">*</span> </label>
+          <div id="cid_22" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_22" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_22" class="form-checkbox validate[required]" id="input_22_0" name="q22_exclusivity[]" value="If the Photographer is the sole professional photographer at the event (as specified in the Event Details), it is understood that the Photographer will be the only one allowed to photograph the event. In which case, amateur photographers may take photos during the event if they do not interfere with the contracted Photographer and are not shooting the Photographer’s same posed shots. If a problem arises with any guest or attendee(s) the On-site Event Contact will be advised to handle the situation politely for the Photographer by enforcing the conditions of this agreement." required="" /><label id="label_input_22_0" for="input_22_0">If the Photographer is the sole professional photographer at the event (as specified in the Event Details), it is understood that the Photographer will be the only one allowed to photograph the event. In which case, amateur photographers may take photos during the event if they do not interfere with the contracted Photographer and are not shooting the Photographer’s same posed shots. If a problem arises with any guest or attendee(s) the On-site Event Contact will be advised to handle the situation politely for the Photographer by enforcing the conditions of this agreement.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_23"><label class="form-label form-label-top form-label-auto" id="label_23" for="input_23_0" aria-hidden="false"> Co-operation of Guests and Other Service Providers <span class="form-required">*</span> </label>
+          <div id="cid_23" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_23" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_23" class="form-checkbox validate[required]" id="input_23_0" name="q23_cooperationOf[]" value="The Client is responsible for the conduct of the guests. Co-ordination with other service providers may be necessary to complete all the photography as scheduled. The Client should share the photography schedule with other service providers to make sure that there are no conflicts with times. In addition, events during the Event should be planned to make the best use of time for all vendors. The Photographer will not tolerate verbally or physically abusive behavior, nor will the Photographer share its time or compete with guest photographers for the attention of the subjects. Unchecked guest conduct that interferes with photography will seriously affect the quality of the photographs taken and increase the number of photos that must be created. If the Client is unable to control the conduct of the guests or if the conduct of any of the Event guests damages any of the equipment of the Photographer, it will result in the early or immediate departure of the Photographer. The Client understands that in such an event, no refund will be given." required="" /><label id="label_input_23_0" for="input_23_0">The Client is responsible for the conduct of the guests. Co-ordination with other service providers may be necessary to complete all the photography as scheduled. The Client should share the photography schedule with other service providers to make sure that there are no conflicts with times. In addition, events during the Event should be planned to make the best use of time for all vendors. The Photographer will not tolerate verbally or physically abusive behavior, nor will the Photographer share its time or compete with guest photographers for the attention of the subjects. Unchecked guest conduct that interferes with photography will seriously affect the quality of the photographs taken and increase the number of photos that must be created. If the Client is unable to control the conduct of the guests or if the conduct of any of the Event guests damages any of the equipment of the Photographer, it will result in the early or immediate departure of the Photographer. The Client understands that in such an event, no refund will be given.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_24"><label class="form-label form-label-top form-label-auto" id="label_24" for="input_24_0" aria-hidden="false"> Desired scenes<span class="form-required">*</span> </label>
+          <div id="cid_24" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_24" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_24" class="form-checkbox validate[required]" id="input_24_0" name="q24_desiredScenes[]" value="The Client will provide The Photographers with a list of suggested photographs that they desire in advance. While every attempt is made to accommodate the Client’s desired list of photographs and create the best images possible, no particular image is guaranteed. The Photographer’s are equipped to handle most low-light situations. In situations where flash photography is prohibited or is deemed to be unsafe, the Client agrees to accept the Digital Images as-is, given the technical limitations of low-light photography." required="" /><label id="label_input_24_0" for="input_24_0">The Client will provide The Photographers with a list of suggested photographs that they desire in advance. While every attempt is made to accommodate the Client’s desired list of photographs and create the best images possible, no particular image is guaranteed. The Photographer’s are equipped to handle most low-light situations. In situations where flash photography is prohibited or is deemed to be unsafe, the Client agrees to accept the Digital Images as-is, given the technical limitations of low-light photography.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_25"><label class="form-label form-label-top form-label-auto" id="label_25" for="input_25_0" aria-hidden="false"> Completion Schedule <span class="form-required">*</span> </label>
+          <div id="cid_25" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_25" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_25" class="form-checkbox validate[required]" id="input_25_0" name="q25_completionSchedule[]" value="The Client agrees that no part of the Event Package, including previews (if any) will be delivered until the Outstanding Balance is paid in full. Digital copies will be given to the Client after the Event, in the form of an Online Photo Gallery, or other medium, assuming the Outstanding Balance has been paid" required="" /><label id="label_input_25_0" for="input_25_0">The Client agrees that no part of the Event Package, including previews (if any) will be delivered until the Outstanding Balance is paid in full. Digital copies will be given to the Client after the Event, in the form of an Online Photo Gallery, or other medium, assuming the Outstanding Balance has been paid</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_26"><label class="form-label form-label-top form-label-auto" id="label_26" for="input_26_0" aria-hidden="false"> Payment<span class="form-required">*</span> </label>
+          <div id="cid_26" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_26" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_26" class="form-checkbox validate[required]" id="input_26_0" name="q26_payment[]" value="The Client agrees that the Reservation Deposit is required at the time of signing the contract and the Outstanding Balance is due on the day of the Event, or on the Outstanding Balance Due date in the Event Package Summary, if specified." required="" /><label id="label_input_26_0" for="input_26_0">The Client agrees that the Reservation Deposit is required at the time of signing the contract and the Outstanding Balance is due on the day of the Event, or on the Outstanding Balance Due date in the Event Package Summary, if specified.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_27"><label class="form-label form-label-top form-label-auto" id="label_27" for="input_27_0" aria-hidden="false"> Penalty Fees and Charges<span class="form-required">*</span> </label>
+          <div id="cid_27" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_27" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_27" class="form-checkbox validate[required]" id="input_27_0" name="q27_penaltyFees[]" value="There is a $150 charge for payments returned by the bank for any reason. There will be a $50 late payment fee for any payments that are not postmarked or delivered to the Photographer by the required date." required="" /><label id="label_input_27_0" for="input_27_0">There is a $150 charge for payments returned by the bank for any reason. There will be a $50 late payment fee for any payments that are not postmarked or delivered to the Photographer by the required date.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_28"><label class="form-label form-label-top form-label-auto" id="label_28" for="input_28_0" aria-hidden="false"> Right of Withdrawl<span class="form-required">*</span> </label>
+          <div id="cid_28" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_28" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_28" class="form-checkbox validate[required]" id="input_28_0" name="q28_rightOf28[]" value="The Photographer’s discovery of new information, changes, or other factors tending to circumvent its policies could result in its withdrawal. Non co-operation; changes of locations, facilities or times available; missed appointments; bad or returned cheques, or late payments are examples of contributing factors. Should the Photographer initiate the withdrawal, all fees and deposits will be returned, excepting fair market value for all services/products already provided. In case of withdrawal, $150 an hour is billed for all photography services already provided, and $150 an hour is billed for all other services, consultations, and all travel time, rounded up to the nearest half-hour. If the Photographer withdraws -- the Client will not be billed for any services in excess of their deposits (except if deposit was in form of returned cheques)." required="" /><label id="label_input_28_0" for="input_28_0">The Photographer’s discovery of new information, changes, or other factors tending to circumvent its policies could result in its withdrawal. Non co-operation; changes of locations, facilities or times available; missed appointments; bad or returned cheques, or late payments are examples of contributing factors. Should the Photographer initiate the withdrawal, all fees and deposits will be returned, excepting fair market value for all services/products already provided. In case of withdrawal, $150 an hour is billed for all photography services already provided, and $150 an hour is billed for all other services, consultations, and all travel time, rounded up to the nearest half-hour. If the Photographer withdraws -- the Client will not be billed for any services in excess of their deposits (except if deposit was in form of returned cheques).</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_29"><label class="form-label form-label-top form-label-auto" id="label_29" for="input_29_0" aria-hidden="false"> Limit of Liabitlity<span class="form-required">*</span> </label>
+          <div id="cid_29" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_29" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_29" class="form-checkbox validate[required]" id="input_29_0" name="q29_limitOf[]" value="In the unlikely event of severe medical, natural, or other emergency it could be necessary to retain a different photographer. The Photographer will make every effort to secure a skilled replacement photographer. If the situation should occur and a suitable replacement is not found, responsibility and liability is limited to the return of all payments received for the Event Package. The Photographer takes the utmost care with respect to exposure, transportation, and processing the photographs including using professional grade equipment and professional grade backup equipment. However, in the unlikely event those photographs have been lost, stolen, or destroyed for reasons within or beyond the Photographer’s control, the Photographer’s liability is limited to the return of all payments received for the event package. The limit of liability for a partial loss of originals shall be a prorated amount of the exposures lost." required="" /><label id="label_input_29_0" for="input_29_0">In the unlikely event of severe medical, natural, or other emergency it could be necessary to retain a different photographer. The Photographer will make every effort to secure a skilled replacement photographer. If the situation should occur and a suitable replacement is not found, responsibility and liability is limited to the return of all payments received for the Event Package. The Photographer takes the utmost care with respect to exposure, transportation, and processing the photographs including using professional grade equipment and professional grade backup equipment. However, in the unlikely event those photographs have been lost, stolen, or destroyed for reasons within or beyond the Photographer’s control, the Photographer’s liability is limited to the return of all payments received for the event package. The limit of liability for a partial loss of originals shall be a prorated amount of the exposures lost.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_30"><label class="form-label form-label-top form-label-auto" id="label_30" for="input_30_0" aria-hidden="false"> Non-Guarantee <span class="form-required">*</span> </label>
+          <div id="cid_30" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_30" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_30" class="form-checkbox validate[required]" id="input_30_0" name="q30_nonguarantee[]" value="Although every possible care will be taken to produce photographs of all important and special moments during the Event, the Photographer cannot place an unconditional guarantee on the above. The Photographer will not be held responsible for any ruined photographs due to guests’ (or any other) flashes; or any other ruined photographs due to any other cause in or outside of the Photographer’s control." required="" /><label id="label_input_30_0" for="input_30_0">Although every possible care will be taken to produce photographs of all important and special moments during the Event, the Photographer cannot place an unconditional guarantee on the above. The Photographer will not be held responsible for any ruined photographs due to guests’ (or any other) flashes; or any other ruined photographs due to any other cause in or outside of the Photographer’s control.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_31"><label class="form-label form-label-top form-label-auto" id="label_31" for="input_31_0" aria-hidden="false"> Performance<span class="form-required">*</span> </label>
+          <div id="cid_31" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_31" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_31" class="form-checkbox validate[required]" id="input_31_0" name="q31_performance[]" value="The performance of this contract on behalf of the Photographer shall be contingent upon acts of God, flood, warfare, government laws or regulations, electrical failure, strikes by suppliers, and / or conditions beyond its control." required="" /><label id="label_input_31_0" for="input_31_0">The performance of this contract on behalf of the Photographer shall be contingent upon acts of God, flood, warfare, government laws or regulations, electrical failure, strikes by suppliers, and / or conditions beyond its control.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line jf-required" data-type="control_checkbox" id="id_32"><label class="form-label form-label-top form-label-auto" id="label_32" for="input_32_0" aria-hidden="false"> Severability <span class="form-required">*</span> </label>
+          <div id="cid_32" class="form-input-wide jf-required" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_32" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_32" class="form-checkbox validate[required]" id="input_32_0" name="q32_severability[]" value="If any provision of this agreement is held to be invalid or unenforceable under the law, the validity of this agreement as a whole shall not be affected, and the other provisions of the agreement shall remain in full force and effect." required="" /><label id="label_input_32_0" for="input_32_0">If any provision of this agreement is held to be invalid or unenforceable under the law, the validity of this agreement as a whole shall not be affected, and the other provisions of the agreement shall remain in full force and effect.</label></span></div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-1" data-type="control_datetime" id="id_38"><label class="form-label form-label-top form-label-auto" id="label_38" for="lite_mode_38" aria-hidden="false"> Date </label>
+          <div id="cid_38" class="form-input-wide" data-layout="half">
+            <div data-wrapper-react="true">
+              <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_38" name="q38_date[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="05" autoComplete="off" aria-labelledby="label_38 sublabel_38_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_38" id="sublabel_38_month" style="min-height:13px">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="currentDate form-textbox validate[limitDate]" id="day_38" name="q38_date[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="30" autoComplete="off" aria-labelledby="label_38 sublabel_38_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_38" id="sublabel_38_day" style="min-height:13px">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_38" name="q38_date[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="2024" autoComplete="off" aria-labelledby="label_38 sublabel_38_year" /><label class="form-sub-label" for="year_38" id="sublabel_38_year" style="min-height:13px">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_38" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_38 sublabel_38_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_38_pick" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /></span>
+            </div>
+          </div>
+        </li>
+        <li class="form-line form-line-column form-col-2" data-type="control_signature" id="id_34"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34" aria-hidden="false"> Signed by Client </label>
+          <div id="cid_34" class="form-input-wide" data-layout="half">
+            <div data-wrapper-react="true">
+              <div id="signature_pad_34" class="signature-pad-wrapper">
+                <div data-wrapper-react="true">
+                  <!--[if IE 7]><script type="text/javascript" src="/js/vendor/json2.js"></script><![endif]-->
+                  <div data-placeholder="signature" style="padding: 12px 20px; background-color: #fff; width: 300px; height: 100px; border-radius: 8px;">
+                    <p> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </li>
+        <li class="form-line" data-type="control_button" id="id_35">
+          <div id="cid_35" class="form-input-wide" data-layout="full">
+            <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button type="submit">I accept the terms of this agreement.</button></div>
+          </div>
+        </li>
+        <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+      </ul>
+    </div>
+  </form>
+
+</body>
+
+</html>

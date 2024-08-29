@@ -1393,6 +1393,26 @@ ul {
 .socials .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
 }
+/* Existing styles */
+.socials .icon-content a[data-social="tiktok"] .filled,
+.socials .icon-content a[data-social="tiktok"] ~ .tooltip {
+  background-color: #000; /* TikTok logo background color */
+}
+
+.socials .icon-content a[data-social="tiktok"] .filled {
+  background: linear-gradient(
+    45deg,
+    #000000, /* TikTok brand color */
+    #000000  /* TikTok brand color */
+  );
+}
+
+.socials .icon-content a[data-social="tiktok"] .tooltip {
+  background: #000; /* Tooltip background for TikTok */
+}
+
+/* You can add more specific styles for TikTok if needed */
+
 
 /* General Footer Styling */
 .footer-container {

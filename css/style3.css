@@ -233,11 +233,28 @@ img {
     }
   }
 
-/*Socials toolkit*/
-ul {
-    list-style: none;
+  
+  
+  /*Footer */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f8f8f8;
+    text-align: center;
   }
   
+  .footer-container > div {
+    margin: 15px 0;
+  }
+
+  /*Socials toolkit*/
+  ul {
+    list-style: none;
+  }
+
   .socials {
     display: flex;
     justify-content: center;
@@ -303,12 +320,12 @@ ul {
   .socials .icon-content a:hover .filled {
     height: 100%;
   }
-  
+
   .socialssocials .icon-content a[data-social="linkedin"] .filled,
   .socials .icon-content a[data-social="linkedin"] ~ .tooltip {
     background-color: #0274b3;
   }
-  
+
   .socials .icon-content a[data-social="github"] .filled,
   .socials .icon-content a[data-social="github"] ~ .tooltip {
     background-color: #24262a;
@@ -329,20 +346,22 @@ ul {
   .socials .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
   }
-  
-  /* General Footer Styling */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-color: #f8f8f8;
-    text-align: center;
+  /* Existing styles */
+  .socials .icon-content a[data-social="tiktok"] .filled,
+  .socials .icon-content a[data-social="tiktok"] ~ .tooltip {
+    background-color: #000; 
   }
-  
-  .footer-container > div {
-    margin: 15px 0;
+
+  .socials .icon-content a[data-social="tiktok"] .filled {
+    background: linear-gradient(
+      45deg,
+      #000000, 
+      #000000  
+    );
+  }
+
+  .socials .icon-content a[data-social="tiktok"] .tooltip {
+    background: #000; /* Tooltip background for TikTok */
   }
 
   /* Contact Information and Business Hours */

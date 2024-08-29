@@ -1409,23 +1409,9 @@ ul {
   margin: 15px 0;
 }
 
-/* Logo Video */
-.logo-video .footer-video {
-  width: 25rem; 
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Contact Information and Business Hours */
 .contact-info, .business-hours {
   max-width: 300px;
-}
-
-.footer-item logo-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contact-and-bhrs{

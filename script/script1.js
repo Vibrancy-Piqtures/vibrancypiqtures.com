@@ -1,5 +1,5 @@
 //Reload on connection
-window.addEventListener('online', function() {
+window.addEventListener("online", function () {
   location.reload();
 });
 
@@ -9,20 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //More text...
-document.querySelector('.more-text').addEventListener('click', function(e) {
+document.querySelector(".more-text").addEventListener("click", function (e) {
   e.preventDefault();
-  var hiddenContent = document.querySelector('.hidden-content');
-  hiddenContent.classList.add('show'); // Add "show" class to reveal content smoothly
-  this.style.display = 'none'; // Hide the "..." after clicking
+  var hiddenContent = document.querySelector(".hidden-content");
+  hiddenContent.classList.add("show"); 
+  this.style.display = "none"; 
 });
 
-document.querySelector('.show-less').addEventListener('click', function(e) {
+document.querySelector(".show-less").addEventListener("click", function (e) {
   e.preventDefault();
-  var hiddenContent = document.querySelector('.hidden-content');
-  hiddenContent.classList.remove('show'); // Remove "show" class to hide content smoothly
-  document.querySelector('.more-text').style.display = 'inline'; // Show the "..." again
+  var hiddenContent = document.querySelector(".hidden-content");
+  hiddenContent.classList.remove("show"); y
+  document.querySelector(".more-text").style.display = "inline"; 
 });
-
 
 // Function to recommend plan based on budget and event type
 function recommendPlan(event) {
@@ -260,80 +259,80 @@ function recommendPlan(event) {
     }
 
     // Function to get package details based on event type and package type
-function getPackageDetails(eventType, packageType) {
-  // Package details based on event type and package type
-  const details = {
-    Wedding: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kwanjura: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kuhinjira: {
-      platinum:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Anniversary: {
-      platinum:
-        "160 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    Kukyala: {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-    },
-    "Baby Shower": {
-      platinum:
-        "50 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "75 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Birthday Party": {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    Proposal: {
-      platinum:
-        "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Private Photography Session": {
-      platinum:
-        "150 Image Detailed Photobook,All your softcopy images on our Online Gallery.",
-      gold:
-        "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Portrait reel, All your softcopy images avail on our Online Gallery."
-    },
-    "Private Video Session": {
-      platinum: "10-15 mins of HD (High Definition) Edited footage",
-      gold: "15-30 mins of HD (High Definition) Edited footage"
-    },
-    "Corporate Gathering/Meeting": {
-      platinum:
-        "Details depend on the client`s needs, disscussable with our personnel.",
-      gold:
-        "Details depend on the client`s needs, disscussable with our personnel."
-    }
-  };
+    function getPackageDetails(eventType, packageType) {
+      // Package details based on event type and package type
+      const details = {
+        Wedding: {
+          platinum:
+            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+          gold:
+            "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+        },
+        Kwanjura: {
+          platinum:
+            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+          gold:
+            "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+        },
+        Kuhinjira: {
+          platinum:
+            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+          gold:
+            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+        },
+        Anniversary: {
+          platinum:
+            "160 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+          gold:
+            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+        },
+        Kukyala: {
+          platinum:
+            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
+          gold:
+            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
+        },
+        "Baby Shower": {
+          platinum:
+            "50 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+          gold:
+            "75 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+        },
+        "Birthday Party": {
+          platinum:
+            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+          gold:
+            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+        },
+        Proposal: {
+          platinum:
+            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
+          gold:
+            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
+        },
+        "Private Photography Session": {
+          platinum:
+            "150 Image Detailed Photobook,All your softcopy images on our Online Gallery.",
+          gold:
+            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Portrait reel, All your softcopy images avail on our Online Gallery."
+        },
+        "Private Video Session": {
+          platinum: "10-15 mins of HD (High Definition) Edited footage",
+          gold: "15-30 mins of HD (High Definition) Edited footage"
+        },
+        "Corporate Gathering/Meeting": {
+          platinum:
+            "Details depend on the client`s needs, disscussable with our personnel.",
+          gold:
+            "Details depend on the client`s needs, disscussable with our personnel."
+        }
+      };
 
-  return (
-    details[eventType][packageType] ||
-    "The service details entirely depend on the client`s needs, all the prices are not fixed or final, Please contact for more information."
-  );
-}
+      return (
+        details[eventType][packageType] ||
+        "The service details entirely depend on the client`s needs, all the prices are not fixed or final, Please contact for more information."
+      );
+    }
 
     // Hide loading animation
     hideLoading();
@@ -376,66 +375,67 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Slider
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slide');
-  const dotsContainer = document.querySelector('.dots');
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.querySelector(".dots");
   let currentIndex = 0;
   let interval;
 
   slides.forEach((_, index) => {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      dot.addEventListener('click', () => showSlide(index));
-      dotsContainer.appendChild(dot);
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dot.addEventListener("click", () => showSlide(index));
+    dotsContainer.appendChild(dot);
   });
 
-  const dots = document.querySelectorAll('.dot');
+  const dots = document.querySelectorAll(".dot");
 
   function showSlide(index) {
-      slides.forEach((slide, i) => {
-          slide.classList.remove('active');
-          dots[i].classList.remove('active');
-          if (i === index) {
-              slide.classList.add('active');
-              dots[i].classList.add('active');
-          }
-      });
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+      if (i === index) {
+        slide.classList.add("active");
+        dots[i].classList.add("active");
+      }
+    });
 
-      const offset = -index * 100;
-      document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-      currentIndex = index;
-      resetInterval();
+    const offset = -index * 100;
+    document.querySelector(
+      ".slides"
+    ).style.transform = `translateX(${offset}%)`;
+    currentIndex = index;
+    resetInterval();
   }
 
   function nextSlide() {
-      const nextIndex = (currentIndex + 1) % slides.length;
-      showSlide(nextIndex);
+    const nextIndex = (currentIndex + 1) % slides.length;
+    showSlide(nextIndex);
   }
 
   function previousSlide() {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(prevIndex);
+    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIndex);
   }
 
   function resetInterval() {
-      clearInterval(interval);
-      interval = setInterval(nextSlide, 7000);
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 7000);
   }
 
-  document.querySelector('.prev').addEventListener('click', previousSlide);
-  document.querySelector('.next').addEventListener('click', nextSlide);
-  document.querySelector('.slider').addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-          nextSlide();
-      } else {
-          previousSlide();
-      }
+  document.querySelector(".prev").addEventListener("click", previousSlide);
+  document.querySelector(".next").addEventListener("click", nextSlide);
+  document.querySelector(".slider").addEventListener("wheel", (event) => {
+    if (event.deltaY > 0) {
+      nextSlide();
+    } else {
+      previousSlide();
+    }
   });
 
   showSlide(currentIndex);
   interval = setInterval(nextSlide, 10000);
 });
-
 
 // Function to close plan recommendation section
 function closePlanResult() {
@@ -503,100 +503,102 @@ document.addEventListener("click", function (event) {
 
 //Packages Poster Slide show functions
 
-window.addEventListener('scroll', function() {
-  var button = document.getElementById('myButton');
-  var offsetFromBottom = 112; 
-  var showButtonOffset = 150; 
+window.addEventListener("scroll", function () {
+  var button = document.getElementById("myButton");
+  var offsetFromBottom = 112;
+  var showButtonOffset = 150;
 
   var scrollHeight = document.documentElement.scrollHeight;
   var scrollPosition = window.innerHeight + window.scrollY;
 
   // Show button after scrolling past a certain point
   if (window.scrollY >= showButtonOffset) {
-    button.classList.add('show-button');
+    button.classList.add("show-button");
   } else {
-    button.classList.remove('show-button');
+    button.classList.remove("show-button");
   }
 
   // Make button sticky near the bottom of the page
   if (scrollHeight - scrollPosition <= offsetFromBottom) {
-    button.classList.add('sticky');
+    button.classList.add("sticky");
   } else {
-    button.classList.remove('sticky');
+    button.classList.remove("sticky");
   }
 });
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-  if (window.scrollY > window.innerHeight) {  // Adjusted to 1x the viewport height
+  if (window.scrollY > window.innerHeight) {
+    // Adjusted to 1x the viewport height
     scrollToTopBtn.classList.add("show");
   } else {
     scrollToTopBtn.classList.remove("show");
   }
 });
 
-document.getElementById("scrollToTopBtn").addEventListener("click", function() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+document
+  .getElementById("scrollToTopBtn")
+  .addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
 // Swiper for offers and campaigns
-var swiper; 
+var swiper;
 
 function initializeSwiper() {
-    swiper = new Swiper(".swiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        initialSlide: 2,
-        speed: 600,
-        preventClicks: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            stretch: 50,
-            depth: 250,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        scrollbar: {
-            el: ".swiper-scrollbar",
-            draggable: true,
-            hide: false,
-        },
-        mousewheel: {
-            forceToAxis: true,
-            sensitivity: 1,
-            releaseOnEdges: true,
-        },
-    });
+  swiper = new Swiper(".swiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    initialSlide: 2,
+    speed: 600,
+    preventClicks: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      stretch: 50,
+      depth: 250,
+      modifier: 1,
+      slideShadows: true
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+      hide: false
+    },
+    mousewheel: {
+      forceToAxis: true,
+      sensitivity: 1,
+      releaseOnEdges: true
+    }
+  });
 
-    document.querySelectorAll('.swiper-slide').forEach((slide, index) => {
-      slide.addEventListener('click', () => {
-          swiper.slideTo(index, 600);  
-      });
+  document.querySelectorAll(".swiper-slide").forEach((slide, index) => {
+    slide.addEventListener("click", () => {
+      swiper.slideTo(index, 600);
+    });
   });
 }
 
 function openModal() {
-    const modal = document.getElementById('sliderModal');
-    modal.classList.add('show');
-    modal.classList.remove('closing');
+  const modal = document.getElementById("sliderModal");
+  modal.classList.add("show");
+  modal.classList.remove("closing");
 
-    if (!swiper) {
-        initializeSwiper(); 
-    } else {
-        swiper.update(); 
-    }
+  if (!swiper) {
+    initializeSwiper();
+  } else {
+    swiper.update();
+  }
 }
 
 function closeModal() {
-    const modal = document.getElementById('sliderModal');
-    modal.classList.add('closing');
-    setTimeout(() => {
-        modal.classList.remove('show');
-    }, 10); 
+  const modal = document.getElementById("sliderModal");
+  modal.classList.add("closing");
+  setTimeout(() => {
+    modal.classList.remove("show");
+  }, 10);
 }
-

@@ -1,4 +1,3 @@
-
 body,
 h1,
 h2,
@@ -28,11 +27,11 @@ header {
   padding: 15px;
 }
 
-.logo img{
+.logo img {
   width: 200px;
 }
 
-.Info{
+.Info {
   padding: 25px;
 }
 
@@ -55,7 +54,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 45px; 
+  gap: 45px;
 }
 
 .contact-inputs {
@@ -116,150 +115,147 @@ header {
 }
 
 @media (max-width: 235px) {
-  .logo img{
+  .logo img {
     width: 50px;
   }
 }
 
-  /* General Footer Styling */
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-color: #f8f8f8;
-    text-align: center;
-  }
+/* General Footer Styling */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
 
-  .footer-container > div {
-    margin: 15px 0;
-  }
+.footer-container > div {
+  margin: 15px 0;
+}
 
-  /*Socials toolkit*/
-  ul {
-    list-style: none;
-  }
+/*Socials toolkit*/
+ul {
+  list-style: none;
+}
 
-  .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .socials .icon-content {
-    margin: 0 10px;
-    position: relative;
-  }
-  .socials .icon-content .tooltip {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    padding: 6px 10px;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 14px;
-    transition: all 0.3s ease;
-  }
-  .socials .icon-content:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    top: -50px;
-  }
-  .socials .icon-content a {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    color: #4d4d4d;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-  }
-  .socials .icon-content a:hover {
-    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .socials .icon-content a svg {
-    position: relative;
-    z-index: 1;
-    width: 30px;
-    height: 30px;
-  }
-  .socials .icon-content a:hover {
-    color: white;
-  }
-  .socials .icon-content a .filled {
-    position: absolute;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000;
-    transition: all 0.3s ease-in-out;
-  }
-  .socials .icon-content a:hover .filled {
-    height: 100%;
-  }
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.socials .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.socials .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.socials .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.socials .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.socials .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.socials .icon-content a:hover {
+  color: white;
+}
+.socials .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.socials .icon-content a:hover .filled {
+  height: 100%;
+}
 
-  .socialssocials .icon-content a[data-social="linkedin"] .filled,
-  .socials .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
-  }
+.socialssocials .icon-content a[data-social="linkedin"] .filled,
+.socials .icon-content a[data-social="linkedin"] ~ .tooltip {
+  background-color: #0274b3;
+}
 
-  .socials .icon-content a[data-social="github"] .filled,
-  .socials .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
-  }
-  .socials .icon-content a[data-social="instagram"] .filled,
-  .socials .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
-    );
-  }
-  .socials .icon-content a[data-social="youtube"] .filled,
-  .socials .icon-content a[data-social="youtube"] ~ .tooltip {
-    background-color: #ff0000;
-  }
-  /* Existing styles */
-  .socials .icon-content a[data-social="tiktok"] .filled,
-  .socials .icon-content a[data-social="tiktok"] ~ .tooltip {
-    background-color: #000; 
-  }
+.socials .icon-content a[data-social="github"] .filled,
+.socials .icon-content a[data-social="github"] ~ .tooltip {
+  background-color: #24262a;
+}
+.socials .icon-content a[data-social="instagram"] .filled,
+.socials .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.socials .icon-content a[data-social="youtube"] .filled,
+.socials .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+/* Existing styles */
+.socials .icon-content a[data-social="tiktok"] .filled,
+.socials .icon-content a[data-social="tiktok"] ~ .tooltip {
+  background-color: #000;
+}
 
-  .socials .icon-content a[data-social="tiktok"] .filled {
-    background: linear-gradient(
-      45deg,
-      #000000, 
-      #000000  
-    );
-  }
+.socials .icon-content a[data-social="tiktok"] .filled {
+  background: linear-gradient(45deg, #000000, #000000);
+}
 
-  .socials .icon-content a[data-social="tiktok"] .tooltip {
-    background: #000; /* Tooltip background for TikTok */
-  }
+.socials .icon-content a[data-social="tiktok"] .tooltip {
+  background: #000; /* Tooltip background for TikTok */
+}
 
 /* Logo Video */
 .logo-video .footer-video {
-  width: 25rem; 
+  width: 25rem;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Information and Business Hours */
-.contact-info, .business-hours {
+.contact-info,
+.business-hours {
   max-width: 300px;
 }
 
@@ -269,7 +265,7 @@ header {
   justify-content: center;
 }
 
-.contact-and-bhrs{
+.contact-and-bhrs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,7 +274,7 @@ header {
 }
 
 @media (max-width: 768px) {
-  .contact-and-bhrs{
+  .contact-and-bhrs {
     flex-direction: column;
   }
 }
@@ -315,7 +311,6 @@ header {
   background-color: #0f5751;
 }
 
-
 .footer-bottom {
   text-align: center;
   padding-top: 10px;
@@ -323,4 +318,3 @@ header {
   font-size: 0.9rem;
   color: #000000;
 }
-

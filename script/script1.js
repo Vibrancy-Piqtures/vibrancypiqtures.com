@@ -374,67 +374,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Slider
 document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
-  const dotsContainer = document.querySelector(".dots");
-  let currentIndex = 0;
-  let interval;
+  const slidesContainer = document.querySelector(".slides");
+  let isPaused = false;
 
-  slides.forEach((_, index) => {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    dot.addEventListener("click", () => showSlide(index));
-    dotsContainer.appendChild(dot);
+  // Function to start or stop the animation
+  function toggleAnimation(state) {
+    slidesContainer.style.animationPlayState = state ? "paused" : "running";
+  }
+
+  // Event listeners to pause and resume on mouse events
+  slidesContainer.addEventListener("mouseenter", () => {
+    isPaused = true;
+    toggleAnimation(isPaused);
   });
 
-  const dots = document.querySelectorAll(".dot");
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      dots[i].classList.remove("active");
-      if (i === index) {
-        slide.classList.add("active");
-        dots[i].classList.add("active");
-      }
-    });
-
-    const offset = -index * 100;
-    document.querySelector(
-      ".slides"
-    ).style.transform = `translateX(${offset}%)`;
-    currentIndex = index;
-    resetInterval();
-  }
-
-  function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-
-  function previousSlide() {
-    const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(prevIndex);
-  }
-
-  function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(nextSlide, 7000);
-  }
-
-  document.querySelector(".prev").addEventListener("click", previousSlide);
-  document.querySelector(".next").addEventListener("click", nextSlide);
-  document.querySelector(".slider").addEventListener("wheel", (event) => {
-    if (event.deltaY > 0) {
-      nextSlide();
-    } else {
-      previousSlide();
-    }
+  slidesContainer.addEventListener("mouseleave", () => {
+    isPaused = false;
+    toggleAnimation(isPaused);
   });
-
-  showSlide(currentIndex);
-  interval = setInterval(nextSlide, 10000);
 });
 
 // Function to close plan recommendation section
@@ -500,8 +458,6 @@ document.addEventListener("click", function (event) {
     signUpForm.style.display = "none";
   }
 });
-
-//Packages Poster Slide show functions
 
 window.addEventListener("scroll", function () {
   var button = document.getElementById("myButton");

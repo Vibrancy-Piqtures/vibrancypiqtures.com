@@ -1201,7 +1201,7 @@ input:focus {
   width: 25%; 
 }
 
-
+/* Keyframes for sliding animation */
 @keyframes slideLeft {
   0% {
     transform: translateX(0);

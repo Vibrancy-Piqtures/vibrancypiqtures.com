@@ -1,6 +1,6 @@
 //Reload on connection
 window.addEventListener("online", function () {
-  location.reload();
+  location.load();
 });
 
 // Function to load the navbar

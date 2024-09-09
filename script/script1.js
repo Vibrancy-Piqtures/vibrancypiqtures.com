@@ -1,6 +1,6 @@
 //Reload on connection
 window.addEventListener("online", function () {
-  location.load();
+  location.reload();
 });
 
 // Function to load the navbar
@@ -19,7 +19,7 @@ document.querySelector(".more-text").addEventListener("click", function (e) {
 document.querySelector(".show-less").addEventListener("click", function (e) {
   e.preventDefault();
   var hiddenContent = document.querySelector(".hidden-content");
-  hiddenContent.classList.remove("show"); y
+  hiddenContent.classList.remove("show"); 
   document.querySelector(".more-text").style.display = "inline"; 
 });
 
@@ -364,37 +364,6 @@ function hideLoading() {
   loadingElement.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("planContent");
-  form.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      recommendPlan(event);
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const slidesContainer = document.querySelector(".slides");
-  let isPaused = false;
-
-  // Function to start or stop the animation
-  function toggleAnimation(state) {
-    slidesContainer.style.animationPlayState = state ? "paused" : "running";
-  }
-
-  // Event listeners to pause and resume on mouse events
-  slidesContainer.addEventListener("mouseenter", () => {
-    isPaused = true;
-    toggleAnimation(isPaused);
-  });
-
-  slidesContainer.addEventListener("mouseleave", () => {
-    isPaused = false;
-    toggleAnimation(isPaused);
-  });
-});
-
 // Function to close plan recommendation section
 function closePlanResult() {
   const planResult = document.getElementById("planResult");
@@ -459,13 +428,15 @@ document.addEventListener("click", function (event) {
   }
 });
 
-window.addEventListener("scroll", function () {
-  var button = document.getElementById("myButton");
-  var offsetFromBottom = 112;
-  var showButtonOffset = 150;
 
-  var scrollHeight = document.documentElement.scrollHeight;
-  var scrollPosition = window.innerHeight + window.scrollY;
+  // Scroll to top btn
+  window.addEventListener("scroll", function () {
+    var button = document.getElementById("myButton");
+    var offsetFromBottom = 112;
+    var showButtonOffset = 150;
+
+    var scrollHeight = document.documentElement.scrollHeight;
+    var scrollPosition = window.innerHeight + window.scrollY;
 
   // Show button after scrolling past a certain point
   if (window.scrollY >= showButtonOffset) {
@@ -498,7 +469,9 @@ document
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-// Swiper for offers and campaigns
+
+
+// Swiper for Niche Images
 var swiper;
 
 function initializeSwiper() {
@@ -557,4 +530,52 @@ function closeModal() {
   setTimeout(() => {
     modal.classList.remove("show");
   }, 10);
+}
+
+// Are you A Model
+document.getElementById('model-cta').addEventListener('click', function() {
+  openQuizModal();
+});
+
+function openQuizModal() {
+  document.getElementById('quiz-modal').classList.remove('hidden');
+  document.getElementById('quiz-overlay').classList.remove('hidden');
+}
+
+function closeQuizModal() {
+  document.getElementById('quiz-modal').classList.add('hidden');
+  document.getElementById('quiz-overlay').classList.add('hidden');
+}
+
+function navigateQuiz(direction) {
+  const questions = document.querySelectorAll('.quiz-question');
+  let currentStep = [...questions].findIndex(q => !q.classList.contains('hidden'));
+
+  // Save the name for the final message
+  if (currentStep === 0 && direction === 'next') {
+      const name = document.getElementById('name').value;
+      document.getElementById('user-name-display').textContent = name || '[Name/Alias]';
+  }
+
+  // Hide the current question
+  questions[currentStep].classList.add('hidden');
+
+  // Determine the next step
+  if (direction === 'next' && currentStep < questions.length - 1) {
+      currentStep++;
+  } else if (direction === 'prev' && currentStep > 0) {
+      currentStep--;
+  }
+
+  // Show the next question
+  questions[currentStep].classList.remove('hidden');
+
+  // Toggle visibility of navigation buttons
+  document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 0);
+  document.getElementById('next-btn').classList.toggle('hidden', currentStep === questions.length - 1);
+}
+
+function submitQuiz() {
+  alert('Form submitted successfully, Thank you.');
+  closeQuizModal();
 }

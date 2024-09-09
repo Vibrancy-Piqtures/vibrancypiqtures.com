@@ -477,6 +477,7 @@ var swiper;
 function initializeSwiper() {
   swiper = new Swiper(".swiper", {
     effect: "coverflow",
+    loop: true,
     grabCursor: true,
     centeredSlides: true,
     initialSlide: 2,

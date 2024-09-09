@@ -1499,9 +1499,9 @@ input[type="radio"]:checked + .radio-checkmark::after {
     display: flex;
     position: relative;
     align-items: center;
-    justify-content: center;
-    font-size: 0.9em;
-    padding: 0.8em 2em;
+    left: 8rem;
+    bottom: 2px;
+    transform: translate(-50%, -50%);
   }
 }
 

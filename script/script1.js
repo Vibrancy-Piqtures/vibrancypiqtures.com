@@ -1,8 +1,3 @@
-//Reload on connection
-window.addEventListener("online", function () {
-  location.reload();
-});
-
 // Function to load the navbar
 document.addEventListener("DOMContentLoaded", function () {
   $("#navbar-placeholder").load("Navbar/navbar.html");

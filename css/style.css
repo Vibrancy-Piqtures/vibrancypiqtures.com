@@ -746,7 +746,7 @@ input:focus {
 }
 
 .recommendPlanButton {
-  background-color: #0b9265;
+  background-color: #0a5746;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -757,7 +757,7 @@ input:focus {
 }
 
 .recommendPlanButton:hover {
-  background-color: #05724e;
+  background-color: #063630;
 }
 
 #planResult {
@@ -1674,3 +1674,4 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
+

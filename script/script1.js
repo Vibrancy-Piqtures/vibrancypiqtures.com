@@ -582,6 +582,6 @@ function navigateQuiz(direction) {
 
 // Submit the quiz
 function submitQuiz() {
-  alert("Form submitted successfully, Thank you.");
+  alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }

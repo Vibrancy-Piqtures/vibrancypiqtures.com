@@ -34,7 +34,7 @@
 
         <div class="text-container">
           <h2>Welcome to Vibrancy Piqtures</h2><br>
-          <p>A Professional Photography and Videography Services Company.</p>
+          <p>Professional Photography and Videography Services Company.</p>
           <p>As our slogan is, we "Immortalize your precious moments by making them art."</p>
           <p>We are a team of talented, passion driven, young creatives that have devoted our time to master the craft of documenting your precious moments seamlessly, <span class="more-text"> ...</span></p>
 
@@ -290,7 +290,7 @@
                   <img src="Page1/Slider/images/image (5).jpg" class="slide" alt="Image 5">
                 </div>
               </div>
-            </div>            
+            </div>
         </section>
   </main>
 
@@ -316,7 +316,9 @@
     <!-- Contact Information -->
     <div class="contact-and-bhrs">
       <div class="contact-info">
-        <a href="Index5.html"><h4>Contact Us</h4></a>
+        <a href="Index5.html">
+          <h4>Contact Us</h4>
+        </a>
         <p>Email: <a href="mailto:info@vibrancypiqtures.com">info@vibrancypiqtures.com</a></p>
         <p>Phone: <a href="tel:+256764352188">+256 764 352188 | +256 705 834067</a></p>
         <p>Location: Kyanja, Ring Road, Prince Mall - Shop No.c5</p>
@@ -365,45 +367,53 @@
       </ul>
     </div><br><br><br><br>
 
-
-<!-- Models` Tooltip -->
+    <!-- Models` Tooltip -->
     <div class="quiz-tooltip" id="model-cta">
       Are You a model !?
       <div class="tooltiptext">Hello!</div>
     </div>
-    
+
     <div id="quiz-overlay" class="quiz-overlay hidden" onclick="closeQuizModal()"></div>
     <div id="quiz-modal" class="quiz-modal hidden">
       <form id="quiz-form">
         <div class="quiz-content" id="quiz-content">
+        <!-- Progress Status -->
+        <div id="progress-status" class="quiz-status">
+          Qn. <span id="current-step">1</span>/<span id="total-steps">18</span>
+        </div><br><br><br>
+
           <!-- Questions -->
           <div class="quiz-question" data-step="1">
+            <p>
             <h4>Interested in featuring us on a Collabo Shoot!</h4>
+            </p>
             <h4>We`ll ask you a few questions to know a bit about your brand.</h4>
-            <label for="name"><h5>Name / Alias:</label>
-            <input type="text" id="name" name="name" placeholder="Please enter your name or Alias" required />
+            <label for="name">
+              <h5>Name / Alias:
+            </label>
+            <input type="text" id="name" name="name" placeholder="Please enter your Name or Alias" required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="2">
             <label for="location">Where are you currently based?</label>
             <input type="text" id="location" name="location" placeholder="Town, City, Country ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="3">
             <label>What type of modeling do you do?</label>
             <input type="text" name="type of model" placeholder="E.g., Fashion, Lifestyle..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="4">
             <label>How long have you been modeling?</label>
             <input type="text" name="modeling_duration" placeholder="E.g., 2 years, Just started" required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="5">
             <label>Have you previously worked with other photographers or businesses?</label>
             <input type="text" name="previous_work" placeholder="E.g., Yes, No" required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="6">
             <label>"Are you currently under any model management or agency? If yes please specify which."</label>
             <input type="text" name="shoot_duration" placeholder=" ..." required />
@@ -418,37 +428,37 @@
             <label>Are you willing to travel for shoots? If so, how far?</label>
             <input type="text" name="experience" placeholder="E.g. Around City, Across the country ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="9">
             <label>Do you have a unique or original idea you would wish we could work on? (Optional)</label>
             <input type="text" name="interests" placeholder="E.g.Give alittle insight on your vision ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="10">
             <label>What days and times are you generally available for shoots?</label>
             <input type="text" name="availability" placeholder="E.g., Weekends, Evenings" required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="11">
             <label>How many hours can you be on set for?</label>
             <input type="text" name="shoot_duration" placeholder=" E.g. 2 hrs, Half-day ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="12">
             <label>"Is there anything else you would like us to know about you or your expectations if we are to do a collaborative Project?"</label>
             <input type="text" name="shoot_duration" placeholder="How you expect the experience, limitations etc ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="13">
             <label>Do you have any specific expectations or requirements that could dictate collaboration with us?</label>
             <input type="text" name="expectations" placeholder="Literally anythig to ensure your comfort ... " required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="14">
             <label>"What do you hope to gain from this collaboration?"</label>
             <input type="text" name="expectations" placeholder="e.g., exposure, portfolio building, networking ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="15">
             <label>How did you hear about us?</label>
             <input type="text" name="referral_source" placeholder="E.g., Instagram, Friend, Website" required />
@@ -458,28 +468,28 @@
             <label>How ambitious are you about your modelling?</label>
             <input type="text" name="referral_source" placeholder="E.g., Just a hobby, Want to build a career ..." required />
           </div>
-    
+
           <div class="quiz-question hidden" data-step="17">
             <label>Would you rather shoot In or Outdoors!</label>
             <input type="text" name="referral_source" placeholder="Or Anywhere ..." required />
-            </div>
-        </div>              
-    
-          <!-- Final Message -->
-          <div class="quiz-question hidden" data-step="18">
-              <h2>Thank you, <span id="user-name-display">[Name/Alias]</span>!</h2><br>
-              <p>We are going to reach out to you as soon as possible.</p><br>
-              <p>Please click *submit to finish and send the questionnaire to our email.</p><br>
-              <button type="button" id="submit-btn" onclick="submitQuiz()">Submit</button>
-          </div>
-          
-          <!-- Navigation Arrows -->
-          <div class="quiz-navigation">
-            <button type="button" id="prev-btn" onclick="navigateQuiz('prev')" class="hidden">&#8592;</button>
-            <button type="button" id="next-btn" onclick="navigateQuiz('next')">&#8594;</button>
           </div>
         </div>
-      </form>
+
+        <!-- Final Message -->
+        <div class="quiz-question hidden" data-step="18">
+          <h2>Thank you, <span id="user-name-display">[Name/Alias]</span>!</h2><br>
+          <p>We are going to reach out to you as soon as possible.</p><br>
+          <p>Please click *submit to finish and send the questionnaire.</p><br>
+          <button type="button" id="submit-btn" onclick="submitQuiz()">Submit</button>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="quiz-navigation">
+          <button type="button" id="prev-btn" onclick="navigateQuiz('prev')" class="hidden">&#8592;</button>
+          <button type="button" id="next-btn" onclick="navigateQuiz('next')">&#8594;</button>
+        </div>
+    </div>
+    </form>
     </div>
 
     <!-- Copyright -->

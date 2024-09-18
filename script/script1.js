@@ -7,15 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector(".more-text").addEventListener("click", function (e) {
   e.preventDefault();
   var hiddenContent = document.querySelector(".hidden-content");
-  hiddenContent.classList.add("show"); 
-  this.style.display = "none"; 
+  hiddenContent.classList.add("show");
+  this.style.display = "none";
 });
 
 document.querySelector(".show-less").addEventListener("click", function (e) {
   e.preventDefault();
   var hiddenContent = document.querySelector(".hidden-content");
-  hiddenContent.classList.remove("show"); 
-  document.querySelector(".more-text").style.display = "inline"; 
+  hiddenContent.classList.remove("show");
+  document.querySelector(".more-text").style.display = "inline";
 });
 
 // Function to recommend plan based on budget and event type
@@ -423,15 +423,14 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// Scroll to top btn
+window.addEventListener("scroll", function () {
+  var button = document.getElementById("myButton");
+  var offsetFromBottom = 112;
+  var showButtonOffset = 150;
 
-  // Scroll to top btn
-  window.addEventListener("scroll", function () {
-    var button = document.getElementById("myButton");
-    var offsetFromBottom = 112;
-    var showButtonOffset = 150;
-
-    var scrollHeight = document.documentElement.scrollHeight;
-    var scrollPosition = window.innerHeight + window.scrollY;
+  var scrollHeight = document.documentElement.scrollHeight;
+  var scrollPosition = window.innerHeight + window.scrollY;
 
   // Show button after scrolling past a certain point
   if (window.scrollY >= showButtonOffset) {
@@ -463,8 +462,6 @@ document
   .addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-
-
 
 // Swiper for Niche Images
 var swiper;
@@ -528,50 +525,63 @@ function closeModal() {
   }, 10);
 }
 
-// Are you A Model
-document.getElementById('model-cta').addEventListener('click', function() {
+
+
+// Triggerring the modal when the user clicks the "Are you a Model" button
+document.getElementById("model-cta").addEventListener("click", function () {
   openQuizModal();
 });
 
+// Open the quiz modal
 function openQuizModal() {
-  document.getElementById('quiz-modal').classList.remove('hidden');
-  document.getElementById('quiz-overlay').classList.remove('hidden');
+  document.getElementById("quiz-modal").classList.remove("hidden");
+  document.getElementById("quiz-overlay").classList.remove("hidden");
+  document.getElementById("current-step").textContent = currentStep + 1; // Show step count
+  document.getElementById("total-steps").textContent = totalSteps;
 }
 
+// Close the quiz modal
 function closeQuizModal() {
-  document.getElementById('quiz-modal').classList.add('hidden');
-  document.getElementById('quiz-overlay').classList.add('hidden');
+  document.getElementById("quiz-modal").classList.add("hidden");
+  document.getElementById("quiz-overlay").classList.add("hidden");
 }
 
-function navigateQuiz(direction) {
-  const questions = document.querySelectorAll('.quiz-question');
-  let currentStep = [...questions].findIndex(q => !q.classList.contains('hidden'));
+// Initialization of variables for current step and total steps
+let currentStep = 0; 
+const totalSteps = 18;
 
+// Navigation logic for the quiz (combined function)
+function navigateQuiz(direction) {
+  const questions = document.querySelectorAll(".quiz-question");
+  
   // Save the name for the final message
-  if (currentStep === 0 && direction === 'next') {
-      const name = document.getElementById('name').value;
-      document.getElementById('user-name-display').textContent = name || '[Name/Alias]';
+  if (currentStep === 0 && direction === "next") {
+    const name = document.getElementById("name").value;
+    document.getElementById("user-name-display").textContent = name || "[Name/Alias]";
   }
 
   // Hide the current question
-  questions[currentStep].classList.add('hidden');
+  questions[currentStep].classList.add("hidden");
 
   // Determine the next step
-  if (direction === 'next' && currentStep < questions.length - 1) {
-      currentStep++;
-  } else if (direction === 'prev' && currentStep > 0) {
-      currentStep--;
+  if (direction === "next" && currentStep < totalSteps - 1) {
+    currentStep++;
+  } else if (direction === "prev" && currentStep > 0) {
+    currentStep--;
   }
 
-  // Show the next question
-  questions[currentStep].classList.remove('hidden');
+  // Show the next/previous question
+  questions[currentStep].classList.remove("hidden");
 
-  // Toggle visibility of navigation buttons
-  document.getElementById('prev-btn').classList.toggle('hidden', currentStep === 0);
-  document.getElementById('next-btn').classList.toggle('hidden', currentStep === questions.length - 1);
+  // Update the progress status
+  document.getElementById("current-step").textContent = currentStep + 1;
+
+  document.getElementById("prev-btn").classList.toggle("hidden", currentStep === 0);
+  document.getElementById("next-btn").classList.toggle("hidden", currentStep === questions.length - 1);
 }
 
+// Submit the quiz
 function submitQuiz() {
-  alert('Form submitted successfully, Thank you.');
+  alert("Form submitted successfully, Thank you.");
   closeQuizModal();
 }

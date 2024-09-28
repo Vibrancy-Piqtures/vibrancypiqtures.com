@@ -491,6 +491,7 @@ function initializeSwiper() {
       draggable: true,
       hide: false
     },
+    lazy: false,
     mousewheel: {
       forceToAxis: true,
       sensitivity: 1,

@@ -370,22 +370,24 @@ function toggleLoginForm() {
   var loginForm = document.getElementById("loginForm");
   var signUpForm = document.getElementById("signUpForm");
 
+  if (!loginForm) return; // Ensure loginForm exists
   if (loginForm.style.display === "none" || loginForm.style.display === "") {
     loginForm.style.display = "block";
-    signUpForm.style.display = "none";
+    if (signUpForm) signUpForm.style.display = "none"; // Ensure signUpForm exists before accessing
   } else {
     loginForm.style.display = "none";
   }
 }
 
 // Function to toggle sign-up form visibility
-document.querySelector(".sign-up-link").addEventListener("click", function () {
+document.querySelector(".sign-up-link")?.addEventListener("click", function () {
   var loginForm = document.getElementById("loginForm");
   var signUpForm = document.getElementById("signUpForm");
 
+  if (!signUpForm) return; // Ensure signUpForm exists
   if (signUpForm.style.display === "none" || signUpForm.style.display === "") {
     signUpForm.style.display = "block";
-    loginForm.style.display = "none";
+    if (loginForm) loginForm.style.display = "none"; // Ensure loginForm exists
   } else {
     signUpForm.style.display = "none";
   }
@@ -394,13 +396,13 @@ document.querySelector(".sign-up-link").addEventListener("click", function () {
 // Close login form
 function closeLoginForm() {
   var loginForm = document.getElementById("loginForm");
-  loginForm.style.display = "none";
+  if (loginForm) loginForm.style.display = "none";
 }
 
 // Close sign-up form
 function closeSignUpForm() {
   var signUpForm = document.getElementById("signUpForm");
-  signUpForm.style.display = "none";
+  if (signUpForm) signUpForm.style.display = "none";
 }
 
 // Close forms when clicking outside of them
@@ -409,15 +411,17 @@ document.addEventListener("click", function (event) {
   var signUpForm = document.getElementById("signUpForm");
 
   if (
+    loginForm &&
     !loginForm.contains(event.target) &&
-    !document.querySelector(".Log-in-form-container").contains(event.target)
+    !document.querySelector(".Log-in-form-container")?.contains(event.target)
   ) {
     loginForm.style.display = "none";
   }
 
   if (
+    signUpForm &&
     !signUpForm.contains(event.target) &&
-    !document.querySelector(".form-container").contains(event.target)
+    !document.querySelector(".form-container")?.contains(event.target)
   ) {
     signUpForm.style.display = "none";
   }
@@ -525,8 +529,7 @@ function closeModal() {
   }, 10);
 }
 
-
-
+// Models` Questionnaire
 // Triggerring the modal when the user clicks the "Are you a Model" button
 document.getElementById("model-cta").addEventListener("click", function () {
   openQuizModal();
@@ -547,17 +550,18 @@ function closeQuizModal() {
 }
 
 // Initialization of variables for current step and total steps
-let currentStep = 0; 
+let currentStep = 0;
 const totalSteps = 18;
 
 // Navigation logic for the quiz (combined function)
 function navigateQuiz(direction) {
   const questions = document.querySelectorAll(".quiz-question");
-  
+
   // Save the name for the final message
   if (currentStep === 0 && direction === "next") {
     const name = document.getElementById("name").value;
-    document.getElementById("user-name-display").textContent = name || "[Name/Alias]";
+    document.getElementById("user-name-display").textContent =
+      name || "[Name/Alias]";
   }
 
   // Hide the current question
@@ -576,9 +580,32 @@ function navigateQuiz(direction) {
   // Update the progress status
   document.getElementById("current-step").textContent = currentStep + 1;
 
-  document.getElementById("prev-btn").classList.toggle("hidden", currentStep === 0);
-  document.getElementById("next-btn").classList.toggle("hidden", currentStep === questions.length - 1);
+  document
+    .getElementById("prev-btn")
+    .classList.toggle("hidden", currentStep === 0);
+  document
+    .getElementById("next-btn")
+    .classList.toggle("hidden", currentStep === questions.length - 1);
 }
+
+// Keyboard event listeners
+document.addEventListener("keydown", function (e) {
+  // Right arrow key (Next)
+  if (e.key === "ArrowRight") {
+    navigateQuiz("next");
+  }
+  // Left arrow key (Previous)
+  if (e.key === "ArrowLeft") {
+    navigateQuiz("prev");
+  }
+  // Enter key (Next)
+  if (e.key === "Enter") {
+    const focusedElement = document.activeElement;
+    if (focusedElement && focusedElement.tagName === "INPUT") {
+      navigateQuiz("next");
+    }
+  }
+});
 
 // Submit the quiz
 function submitQuiz() {

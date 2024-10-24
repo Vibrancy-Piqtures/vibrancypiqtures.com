@@ -1401,8 +1401,7 @@ input:focus {
   border-color: #125544;
 }
 
-
-#clarification{
+#name{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border: 2px solid rgba(0, 58, 43, 0.342);
   outline: none;
@@ -1412,7 +1411,21 @@ input:focus {
   border-radius: 5px;
 }
 
-#clarification:focus {
+#name:focus {
+  border-color: #125544;
+}
+
+.clarification{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid rgba(0, 58, 43, 0.342);
+  outline: none;
+  padding: 15px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 5px;
+}
+
+.clarification:focus {
   border-color: #125544;
 }
 
@@ -1578,6 +1591,18 @@ input:focus {
     left: 8rem;
     bottom: 2px;
     transform: translate(-50%, -50%);
+  }
+
+  .clarification{
+    width: 240px;
+  }
+  
+  #portfolio-link{
+    width: 250px;
+  }
+
+  #name{
+    width: 250px;
   }
 }
 

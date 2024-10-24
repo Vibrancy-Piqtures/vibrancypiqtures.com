@@ -387,12 +387,12 @@
             <label for="name">
               <h5>Name / Alias:</h5>
             </label>
-            <input type="text" id="name" name="name" placeholder="Please enter your Name or Alias" required />
+            <textarea id="name" name="name" placeholder="Please enter your Name or Alias" required  rows="2" cols="20"></textarea>
           </div>
 
           <div class="quiz-question hidden" data-step="2">
             <label for="location">Where are you currently based?</label><br><br>
-            <input type="text" id="location" name="location" placeholder="Town, City, Country ..." required />
+            <textarea id="location" class="clarification" name="location" placeholder="Town, City, Country ..." required rows="2" cols="20"></textarea>
           </div>
 
           <div class="quiz-question hidden" data-step="3">
@@ -608,22 +608,22 @@
 
         <div class="quiz-question hidden" data-step="13">
           <label>Are there any styles or types of shoots you prefer to avoid?</label><br>
-          <textarea id="clarification" name="styles-to-avoid" placeholder="Anything you would be uncomfortable shooting..." rows="4" cols="50"></textarea>
+          <textarea id="styles-to-avoid" class="clarification" name="styles-to-avoid" placeholder="Anything you would be uncomfortable shooting..." rows="4" cols="50"></textarea>
         </div>
-
+  
         <div class="quiz-question hidden" data-step="14">
-          <label>Is there anything else you'd like us to know about your expectations on this collaborative project?</label>
-          <textarea id="clarification" name="expectations" placeholder="How you expect the experience, limitations, etc ..." rows="4" cols="50"></textarea>
+          <label>Is there anything else you'd like us to know about your expectations on this probable collaborative project?</label>
+          <textarea id="expectations" class="clarification" name="expectations" placeholder="How you expect the experience, limitations, etc ..." rows="4" cols="50"></textarea>
         </div>
-
+  
         <div class="quiz-question hidden" data-step="15">
           <label>Do you have any specific requirements that could affect collaboration with us? (Optional) </label>
-          <textarea id="clarification" name="requirements" placeholder="Let us know to ensure your comfort ..." rows="4" cols="50"></textarea>
+          <textarea id="requirements" class="clarification" name="requirements" placeholder="Let us know to ensure your comfort ..." rows="4" cols="50"></textarea>
         </div>
-
+  
         <div class="quiz-question hidden" data-step="16">
           <label>How do you hope to benefit from this collaboration? (Optional) </label>
-          <textarea id="clarification" name="benefit" placeholder="Describe your goals or hopes ..." rows="4" cols="50"></textarea>
+          <textarea id="benefit" class="clarification" name="benefit" placeholder="Describe your goals or hopes ..." rows="4" cols="50"></textarea>
         </div>
 
         <div class="quiz-question hidden" data-step="17">
@@ -662,4 +662,3 @@
 </body>
 
 </html>
-

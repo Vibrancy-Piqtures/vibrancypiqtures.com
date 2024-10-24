@@ -57,16 +57,21 @@ header {
   gap: 45px;
 }
 
+.WhatsApp-modal{
+  border: 2px solid rgba(1, 44, 33, 0.692);
+  padding: 55px;
+  border-radius: 5px;
+}
 .contact-inputs {
   width: 100%;
   max-width: 400px;
   height: 50px;
-  border: none;
+  border: 3px solid rgba(1, 44, 33, 0.692);
   outline: none;
-  padding: 0 25px;
+  padding: 15px;
   font-weight: 500;
   color: #666;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 
 .contactForm textarea {
@@ -74,7 +79,7 @@ header {
   max-width: 400px;
   height: 150px;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .contact-inputs:focus {
@@ -293,22 +298,6 @@ ul {
 
 .footer-container a:hover {
   color: #00796b;
-}
-
-/* Contract Button */
-.contract-button button {
-  padding: 10px 20px;
-  background-color: #19746c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 16px;
-}
-
-.contract-button button:hover {
-  background-color: #0f5751;
 }
 
 .footer-bottom {

@@ -372,7 +372,7 @@
 
     <div id="quiz-overlay" class="quiz-overlay hidden" onclick="closeQuizModal()"></div>
     <div id="quiz-modal" class="quiz-modal hidden">
-      <form id="quiz-form">
+      <form action="#" id="quiz-form">
         <div class="quiz-content" id="quiz-content">
 
           <!-- Progress Status -->
@@ -608,27 +608,27 @@
 
         <div class="quiz-question hidden" data-step="13">
           <label>Are there any styles or types of shoots you prefer to avoid?</label><br>
-          <input type="text" name="styles-to-avoid" placeholder="Anything you would be uncomfortable shooting..." />
+          <textarea id="clarification" name="styles-to-avoid" placeholder="Anything you would be uncomfortable shooting..." rows="4" cols="50"></textarea>
         </div>
 
         <div class="quiz-question hidden" data-step="14">
           <label>Is there anything else you'd like us to know about your expectations for a collaborative project?</label>
-          <input type="text" name="expectations" placeholder="How you expect the experience, limitations, etc ..." required />
+          <textarea id="clarification" name="expectations" placeholder="How you expect the experience, limitations, etc ..." rows="4" cols="50"></textarea>
         </div>
 
         <div class="quiz-question hidden" data-step="15">
-          <label>Do you have any specific requirements that could affect collaboration with us?</label>
-          <input type="text" name="requirements" placeholder="Let us know to ensure your comfort ..." required />
+          <label>Do you have any specific requirements that could affect collaboration with us? (Optional) </label>
+          <textarea id="clarification" name="requirements" placeholder="Let us know to ensure your comfort ..." rows="4" cols="50"></textarea>
         </div>
 
         <div class="quiz-question hidden" data-step="16">
-          <label>How do you hope to benefit from this collaboration?</label>
-          <input type="text" name="benefit" placeholder="Describe your goals or hopes ..." required />
+          <label>How do you hope to benefit from this collaboration? (Optional) </label>
+          <textarea id="clarification" name="benefit" placeholder="Describe your goals or hopes ..." rows="4" cols="50"></textarea>
         </div>
 
         <div class="quiz-question hidden" data-step="17">
           <label>Can you share a link to your portfolio or recent work?</label>
-          <input type="text" name="portfolio" placeholder="Please paste Instagram link ..." required />
+          <textarea id="portfolio-link" name="portfolio" placeholder="Please paste Instagram link ..." rows="2" cols="50" required ></textarea>
         </div>
 
         <!-- Final Message -->
@@ -658,7 +658,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="Navbar/navbar.js"></script>
-  <script src="scripts/script1.js" defer></script>
+  <script src="scripts/script.js" defer></script>
 </body>
 
 </html>

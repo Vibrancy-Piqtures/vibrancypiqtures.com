@@ -58,7 +58,7 @@ header {
 }
 
 .WhatsApp-modal{
-  border: 2px solid rgba(1, 44, 33, 0.692);
+  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
   padding: 55px;
   border-radius: 5px;
 }
@@ -66,7 +66,8 @@ header {
   width: 100%;
   max-width: 400px;
   height: 50px;
-  border: 3px solid rgba(1, 44, 33, 0.692);
+  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
+  border: none;
   outline: none;
   padding: 15px;
   font-weight: 500;
@@ -82,11 +83,6 @@ header {
   border-radius: 5px;
 }
 
-.contact-inputs:focus {
-  border: 2px solid #0b8070;
-  color: #0b8070;
-}
-
 .submitForm {
   padding: 10px 20px;
   background-color: #249070;
@@ -96,6 +92,7 @@ header {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
   margin-top: 10px;
 }
 
@@ -110,6 +107,7 @@ header {
 .whatsapp-logo {
   width: 40px;
   height: auto;
+  padding: 25px;
 }
 
 @media (max-width: 768px) {

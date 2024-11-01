@@ -35,6 +35,11 @@ header {
   padding: 25px;
 }
 
+.contacts a {
+  text-decoration: none;
+  color: #00393d;
+}
+
 .contact-form-container {
   display: flex;
   flex-direction: column;

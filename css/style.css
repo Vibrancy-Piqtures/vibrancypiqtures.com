@@ -58,6 +58,11 @@ ol {
   color: #333;
 }
 
+.contacts a {
+  text-decoration: none;
+  color: #00393d;
+}
+
 .show-less {
   display: none;
   color: #0f5751;

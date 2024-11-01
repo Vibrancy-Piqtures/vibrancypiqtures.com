@@ -159,11 +159,10 @@ img {
 #scrollToTopBtn {
   position: fixed;
   bottom: 25px;
-  right: 10px;
+  right: 12px;
   width: 40px;
   height: 40px;
-  background-color: teal;
-  color: white;
+  background-color: #ffffff;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -182,7 +181,7 @@ img {
 }
 
 #scrollToTopBtn:hover {
-  background-color: #006666;
+  background-color: #f5f5f5;
 }
 
 /* Media query for smaller screens */
@@ -394,22 +393,6 @@ ul {
   color: #00796b;
 }
 
-/* Contract Button */
-.contract-button button {
-  padding: 10px 20px;
-  background-color: #19746c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 16px;
-}
-
-.contract-button button:hover {
-  background-color: #0f5751;
-}
-
 .footer-bottom {
   text-align: center;
   padding-top: 10px;
@@ -417,3 +400,5 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
+
+

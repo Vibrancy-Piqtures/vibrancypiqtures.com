@@ -204,8 +204,7 @@ header {
   right: 20px;
   width: 40px;
   height: 40px;
-  background-color: teal;
-  color: white;
+  background-color: #ffffff;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -224,7 +223,7 @@ header {
 }
 
 #scrollToTopBtn:hover {
-  background-color: #006666;
+  background-color: #f5f5f5;
 }
 
 /*Footer*/
@@ -396,3 +395,5 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
+
+

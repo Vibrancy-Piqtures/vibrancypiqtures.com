@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#navbar-placeholder").load("Navbar/navbar.html");
 });
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/scripts/service-worker.js')
+    .then(function(registration) {
+      console.log('Service Worker registered with scope:', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('Service Worker registration failed:', error);
+    });
+}
+
 //More text...
 document.querySelector(".more-text").addEventListener("click", function (e) {
   e.preventDefault();
@@ -17,6 +27,7 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
   hiddenContent.classList.remove("show");
   document.querySelector(".more-text").style.display = "inline";
 });
+
 
 // Function to recommend plan based on budget and event type
 function recommendPlan(event) {
@@ -365,6 +376,9 @@ function closePlanResult() {
   planResult.style.display = "none";
 }
 
+
+
+
 // Function to toggle login form visibility
 function toggleLoginForm() {
   var loginForm = document.getElementById("loginForm");
@@ -410,24 +424,18 @@ document.addEventListener("click", function (event) {
   var loginForm = document.getElementById("loginForm");
   var signUpForm = document.getElementById("signUpForm");
 
-  if (
-    loginForm &&
-    !loginForm.contains(event.target) &&
-    !document.querySelector(".Log-in-form-container")?.contains(event.target)
-  ) {
+  if (loginForm && !loginForm.contains(event.target) && 
+      !document.querySelector(".Log-in-form-container")?.contains(event.target)) {
     loginForm.style.display = "none";
   }
 
-  if (
-    signUpForm &&
-    !signUpForm.contains(event.target) &&
-    !document.querySelector(".form-container")?.contains(event.target)
-  ) {
+  if (signUpForm && !signUpForm.contains(event.target) &&
+      !document.querySelector(".form-container")?.contains(event.target)) {
     signUpForm.style.display = "none";
   }
 });
 
-// Scroll to top btn
+// Go to Gallery Button
 window.addEventListener("scroll", function () {
   var button = document.getElementById("myButton");
   var offsetFromBottom = 112;
@@ -451,6 +459,8 @@ window.addEventListener("scroll", function () {
   }
 });
 
+
+  // Scroll to top button
 window.addEventListener("scroll", function () {
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
   if (window.scrollY > window.innerHeight) {
@@ -529,10 +539,22 @@ function closeModal() {
   }, 10);
 }
 
+
 // Models` Questionnaire
 // Triggerring the modal when the user clicks the "Are you a Model" button
 document.getElementById("model-cta").addEventListener("click", function () {
   openQuizModal();
+});
+
+window.addEventListener("scroll", function () {
+  var tooltip = document.getElementById("model-cta");
+
+  // Show tooltip after scrolling down a bit
+  if (window.scrollY >= 1000) {
+    tooltip.classList.add("show-tooltip");
+  } else {
+    tooltip.classList.remove("show-tooltip");
+  }
 });
 
 // Open the quiz modal
@@ -612,3 +634,4 @@ function submitQuiz() {
   alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }
+

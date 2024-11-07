@@ -19,7 +19,7 @@
 <body>
   <header class="Header">
     <div class="logo">
-      <a href="Index.html">
+      <a href="Index.html" >
         <img src="Images/Vibrancy.png" alt="Vibrancy Piqtures Logo">
       </a>
     </div>
@@ -43,7 +43,7 @@
           <div class="hidden-content">
             <p>For your Wedding, Kwanjura, Kukyala, Kuhingira, Annivasery, family photoshoot, name any event and we have you covered.</p>
             <p>Our packages are carefully tailored to fit your specific budget in order to ensure a smooth and proffessional operation and most importantly *the best results on delivery.</p>
-            <p>Feel free to navigate the site, check ot our work, packages, read through our services know about us and if you need any specific information, you can easily reach us via WhatsApp.<a href="#" class="show-less"> Show less</a></p>
+            <p>Feel free to navigate the site, check ot our work, packages, read through our services know about us and if you need any specific information, you can easily reach us via <a id="whatsapp-link1" href="https://wa.me/+256767810246">WhatsApp.</a><a href="#" class="show-less"> Show less</a></p>
           </div>
           <a href="Index4.html" class="more-link">More About Us</a>
           <br><br>
@@ -172,9 +172,7 @@
                             </option>
                           </select>
                           <div id="budgetInput">
-                            <label for="budget">ENTER YOUR BUDGET (UGX)</label>
-                            <input type="number" id="budget" placeholder="Enter budget in UGX">
-                            <label for="currencySwitch">YOU CAN SWITCH THE CURRENCY</label>
+                            <label for="currencySwitch">yOUR PREFERED CURRENCY</label>
                             <select id="currencySwitch" onchange="convertCurrency()">
                               <option value="UGX">
                                 UGX
@@ -183,6 +181,8 @@
                                 USD
                               </option>
                             </select>
+                            <label for="budget">ENTER YOUR BUDGET (UGX)</label>
+                            <input type="number" id="budget" placeholder="Enter budget in UGX">
                           </div>
                           <button class="recommendPlanButton" id="recommendPlanButton" type="button" onclick="recommendPlan(event)">GET RECOMMENDED PLAN</button>
                         </div>
@@ -303,6 +303,7 @@
     </button>
   </a>
 
+  <!-- Scroll To Top Btn -->
   <button id="scrollToTopBtn" title="Scroll to top">
     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 1706.66 1706.66">
       <path class="fil0" d="M209.55 1384.08c-5.12,0 -10.23,-1.96 -14.13,-5.86l-188.87 -188.87c-7.81,-7.8 -7.81,-20.45 0,-28.26l832.64 -832.64c7.81,-7.81 20.46,-7.81 28.26,0l832.66 832.64c7.8,7.82 7.81,20.46 0,28.28l-188.87 188.86c-7.81,7.81 -20.47,7.81 -28.27,0l-629.65 -629.65 -629.65 629.65c-3.9,3.9 -9.02,5.86 -14.13,5.86z"/>

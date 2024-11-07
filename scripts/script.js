@@ -94,7 +94,7 @@ function getPackageDetails(eventType, packageType) {
       gold: "Details depend on client's needs, discussable with personnel."
   }
 };
-  return details[eventType]?.[packageType] || "Details depend on client’s needs.Please contact us for more information.";
+  return details[eventType]?.[packageType] || "Details depend on client’s needs. Please contact us for more information.";
 }
 
 // Function to recommend plan based on budget and event type

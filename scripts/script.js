@@ -29,365 +29,167 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
 });
 
 
-// Function to recommend plan based on budget and event type
-function recommendPlan(event) {
-  // Retrieve necessary elements
-  const eventTypeSelect = document.getElementById("eventType");
-  const eventType = eventTypeSelect.value;
-  const minimumPrice = parseFloat(
-    eventTypeSelect.options[eventTypeSelect.selectedIndex].dataset.minimumPrice
-  );
-  const budgetInput = document.getElementById("budget");
-  const budget = parseFloat(budgetInput.value);
-
-  let recommendedPlan;
-  let additionalDetails;
-
-  if (budget < minimumPrice) {
-    recommendedPlan = `The starting package (Silver Package) for ${eventType}s is at least ${formatCurrency(
-      minimumPrice
-    )}`;
-
-    // Additional details for the Silver Package
-    if (eventType === "Wedding") {
-      additionalDetails =
-        "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Kwanjura") {
-      additionalDetails =
-        "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Kuhingira") {
-      additionalDetails =
-        "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Anniversary") {
-      additionalDetails =
-        "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Kukyala") {
-      additionalDetails =
-        "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Baby Shower") {
-      additionalDetails =
-        "45 prints-Stick-on Album, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Birthday Party") {
-      additionalDetails =
-        "50 prints-Stick-on Album, 3-5 mins Highlight reel, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Proposal") {
-      additionalDetails =
-        "50 prints-Stick-on Album, 3-5 mins Highlight reel, All the softcopy images are made available our Online Gallery.";
-    } else if (eventType === "Private Photography Session") {
-      additionalDetails =
-        "20 All the softcopy images are made available our Online Gallery, Prints are to be discussed.";
-    } else if (eventType === "Private Video Session") {
-      additionalDetails = "4-5 mins of HD (High Definition) Edited footage";
-    } else if (eventType === "Corporate Gathering/Meeting") {
-      additionalDetails =
-        "Details depend on the client`s needs, so disscussable with our personnel.";
-    } else {
-      additionalDetails =
-        "The details of price are not fixed and depend entirely on the client`s needs. Please Contact For More Information.";
-    }
-  } else if (budget < 2500000) {
-    recommendedPlan = "Silver Package";
-    // Additional details for the Platinum Package
-    additionalDetails = getPackageDetails(eventType, "silver");
-  } else if (budget < 4500000) {
-    recommendedPlan = "Platinum Package";
-    // Additional details for the Platinum Package
-    additionalDetails = getPackageDetails(eventType, "platinum");
-  } else {
-    recommendedPlan = "Gold Package";
-    // Additional details for the Gold Package
-    additionalDetails = getPackageDetails(eventType, "gold");
-  }
-
-  const planResult = document.getElementById("planResult");
-  const additionalDetailsElement = document.getElementById("additionalDetails");
-
-  // Show the plan result section
-  planResult.style.display = "block";
-
-  // Display recommended plan
-  document.getElementById("recommendedPlan").textContent = recommendedPlan;
-
-  // Display additional details
-  additionalDetailsElement.innerHTML = `<h3>Comes with:</h3><p>${additionalDetails}</p>`;
-}
-
 // Function to format currency with commas
 function formatCurrency(amount) {
   return "Shs. " + amount.toLocaleString("en-US");
 }
 
-// Function to convert currency
+// Function to get package details based on event type and package type
+function getPackageDetails(eventType, packageType) {
+  const details = {
+      Wedding: {
+          silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
+          gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      },
+      Kwanjura: {
+          silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
+          gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      },
+      Kuhingira: {
+          silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
+          gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      },
+      Anniversary: {
+          silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "160 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
+          gold: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      },
+      Kukyala: {
+          silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
+          gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      },
+      "Baby Shower": {
+          silver: "45 prints-Stick-on Album, 2 A3 boards, All softcopy images on our Online Gallery.",
+          platinum: "50 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
+          gold: "75 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      },
+      "Birthday Party": {
+          silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
+          platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
+          gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      },
+      Proposal: {
+          silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
+          platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
+          gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      },
+      "Private Photography Session": {
+          silver: "20 All softcopy images on our Online Gallery, Prints are to be discussed.",
+          platinum: "150 Image Detailed Photobook, Online Gallery.",
+          gold: "180 Image Detailed Photobook, 3-5 mins HD Portrait reel, Online Gallery."
+      },
+      "Private Video Session": {
+          silver: "4-5 mins of HD Edited footage",
+          platinum: "10-15 mins of HD Edited footage",
+          gold: "15-30 mins of HD Edited footage"
+      },
+      "Corporate Gathering/Meeting": {
+          silver: "Details depend on client's needs, discussable with personnel.",
+          platinum: "Details depend on client's needs, discussable with personnel.",
+          gold: "Details depend on client's needs, discussable with personnel."
+      }
+  };
+  return details[eventType]?.[packageType] || "Details depend on client’s needs, prices are not fixed. Contact for more information.";
+}
+
+// Function to recommend plan based on budget and event type
+function recommendPlan() {
+  showLoading();
+  setTimeout(() => {
+      const eventTypeSelect = document.getElementById("eventType");
+      const eventType = eventTypeSelect.value;
+      const minimumPrice = parseFloat(eventTypeSelect.options[eventTypeSelect.selectedIndex].dataset.minimumPrice);
+      const budget = parseFloat(document.getElementById("budget").value);
+
+      let recommendedPlan;
+      let additionalDetails;
+
+      if (budget < minimumPrice) {
+          recommendedPlan = `The starting package (Silver Package) for ${eventType}s is at least ${formatCurrency(minimumPrice)}`;
+          additionalDetails = getPackageDetails(eventType, "silver");
+      } else if (budget < 2500000) {
+          recommendedPlan = "Silver Package";
+          additionalDetails = getPackageDetails(eventType, "silver");
+      } else if (budget < 4500000) {
+          recommendedPlan = "Platinum Package";
+          additionalDetails = getPackageDetails(eventType, "platinum");
+      } else {
+          recommendedPlan = "Gold Package";
+          additionalDetails = getPackageDetails(eventType, "gold");
+      }
+
+      hideLoading();
+      displayRecommendation(recommendedPlan, additionalDetails);
+  }, 2000);
+}
+
+// Functions to show/hide loading animation and display recommendation
+function showLoading() {
+  document.getElementById("loading").style.display = "block";
+}
+function hideLoading() {
+  document.getElementById("loading").style.display = "none";
+}
+function displayRecommendation(plan, details) {
+  document.getElementById("planResult").style.display = "block";
+  document.getElementById("recommendedPlan").textContent = plan;
+  document.getElementById("additionalDetails").innerHTML = `<h3>Comes with:</h3><p>${details}</p>`;
+}
+
+// Currency conversion function
 function convertCurrency() {
   const budgetInput = document.getElementById("budget");
   const currencySwitch = document.getElementById("currencySwitch");
-
-  // Conversion rate (replace with actual rate)
   const exchangeRate = 0.00028;
-
   const currentBudget = parseFloat(budgetInput.value);
-
-  if (currencySwitch.value === "USD") {
-    const convertedBudget = (currentBudget * exchangeRate).toFixed(2);
-    budgetInput.value = convertedBudget;
-  } else {
-    const convertedBudget = (currentBudget / exchangeRate).toFixed(2);
-    budgetInput.value = convertedBudget;
-  }
+  budgetInput.value = currencySwitch.value === "USD"
+      ? (currentBudget * exchangeRate).toFixed(2)
+      : (currentBudget / exchangeRate).toFixed(2);
 }
 
-// Function to open event form
-function openEventForm() {
-  const eventForm = document.getElementById("eventForm");
-  const formContainer = document.getElementById("formContainer");
-}
-
-// JavaScript function to add a class when an option is hovered over
-document.addEventListener("DOMContentLoaded", function () {
-  var selectElement = document.getElementById("currencySwitch");
-  selectElement.addEventListener("mouseover", function () {
-    this.classList.add("hovered");
-  });
-  selectElement.addEventListener("mouseout", function () {
-    this.classList.remove("hovered");
-  });
+// Event listeners
+document.getElementById("eventForm").addEventListener("click", (event) => {
+  if (event.target.id === "eventForm") closeEventForm();
+});
+document.querySelector(".packages-system").addEventListener("click", openEventForm);
+document.getElementById("currencySwitch").addEventListener("mouseover", function () {
+  this.classList.add("hovered");
+});
+document.getElementById("currencySwitch").addEventListener("mouseout", function () {
+  this.classList.remove("hovered");
 });
 
-// Function to close event form
+// Functions to open/close forms and toggle visibility
+function openEventForm() {
+  document.getElementById("eventForm").style.top = "0";
+  document.getElementById("formOverlay").style.display = "block";
+}
 function closeEventForm() {
-  const eventForm = document.getElementById("eventForm");
-  const formOverlay = document.getElementById("formOverlay");
-
-  // Hide the form and overlay
-  eventForm.style.top = "-500px";
-  formOverlay.style.display = "none";
+  document.getElementById("eventForm").style.top = "-500px";
+  document.getElementById("formOverlay").style.display = "none";
 }
-
-// Attach the closeEventForm function to the button click event in the form
-document
-  .getElementById("eventForm")
-  .addEventListener("click", function (event) {
-    if (event.target.id === "eventForm") {
-      closeEventForm();
-    }
-  });
-
-// Attach the openEventForm function to the "Our Packages" button
-document
-  .querySelector(".packages-system")
-  .addEventListener("click", function () {
-    openEventForm();
-  });
-
-// Function to toggle form visibility
 function toggleForm() {
-  var form = document.getElementById("planContent");
-  if (form.style.display === "none") {
-    form.style.display = "block";
-  } else {
-    form.style.display = "none";
-  }
+  const form = document.getElementById("planContent");
+  form.style.display = form.style.display === "none" ? "block" : "none";
 }
-
-function recommendPlan(event) {
-  // Show loading animation
-  showLoading();
-
-  // Simulate delay with setTimeout
-  setTimeout(function () {
-    // Retrieve necessary elements
-    const eventTypeSelect = document.getElementById("eventType");
-    const eventType = eventTypeSelect.value;
-    const minimumPrice = parseFloat(
-      eventTypeSelect.options[eventTypeSelect.selectedIndex].dataset
-        .minimumPrice
-    );
-    const budgetInput = document.getElementById("budget");
-    const budget = parseFloat(budgetInput.value);
-
-    let recommendedPlan;
-    let additionalDetails;
-
-    if (budget < minimumPrice) {
-      recommendedPlan = `The starting package (Silver Package) for ${eventType}s is at least ${formatCurrency(
-        minimumPrice
-      )}`;
-
-      // Additional details for the Silver Package
-      if (eventType === "Wedding") {
-        additionalDetails =
-          "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Kwanjura") {
-        additionalDetails =
-          "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Kuhingira") {
-        additionalDetails =
-          "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Anniversary") {
-        additionalDetails =
-          "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Kukyala") {
-        additionalDetails =
-          "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Baby Shower") {
-        additionalDetails =
-          "45 prints-Stick-on Album, 2 A3 boards of your choice, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Birthday Party") {
-        additionalDetails =
-          "50 prints-Stick-on Album, 3-5 mins Highlight reel, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Proposal") {
-        additionalDetails =
-          "50 prints-Stick-on Album, 3-5 mins Highlight reel, All the softcopy images are made available our Online Gallery.";
-      } else if (eventType === "Private Photography Session") {
-        additionalDetails =
-          "20 All the softcopy images are made available our Online Gallery, Prints are to be discussed.";
-      } else if (eventType === "Private Video Session") {
-        additionalDetails = "4-5 mins of HD (High Definition) Edited footage";
-      } else if (eventType === "Corporate Gathering/Meeting") {
-        additionalDetails =
-          "Details depend on the client`s needs, so discussable with our personnel.";
-      } else {
-        additionalDetails =
-          "The details of price are not fixed and depend entirely on the client`s needs. Please Contact For More Info";
-      }
-    } else if (budget < 2500000) {
-      recommendedPlan = "Silver Package";
-      // Additional details for the Platinum Package
-      additionalDetails = getPackageDetails(eventType, "silver");
-    } else if (budget < 4500000) {
-      recommendedPlan = "Platinum Package";
-      // Additional details for the Platinum Package
-      additionalDetails = getPackageDetails(eventType, "platinum");
-    } else {
-      recommendedPlan = "Gold Package";
-      // Additional details for the Gold Package
-      additionalDetails = getPackageDetails(eventType, "gold");
-    }
-
-    // Function to get package details based on event type and package type
-    function getPackageDetails(eventType, packageType) {
-      // Package details based on event type and package type
-      const details = {
-        Wedding: {
-          platinum:
-            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-          gold:
-            "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-        },
-        Kwanjura: {
-          platinum:
-            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-          gold:
-            "250 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-        },
-        Kuhinjira: {
-          platinum:
-            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-          gold:
-            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-        },
-        Anniversary: {
-          platinum:
-            "160 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-          gold:
-            "200 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-        },
-        Kukyala: {
-          platinum:
-            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 3 A3 boards of your choice, All your softcopy images on our Online Gallery.",
-          gold:
-            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, HD (High Definition) Full Length video of the event, 5 A3 boards of your choice, All your softcopy images avail on our Online Gallery."
-        },
-        "Baby Shower": {
-          platinum:
-            "50 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-          gold:
-            "75 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-        },
-        "Birthday Party": {
-          platinum:
-            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-          gold:
-            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-        },
-        Proposal: {
-          platinum:
-            "150 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images on our Online Gallery.",
-          gold:
-            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Highlight reel, All your softcopy images avail on our Online Gallery."
-        },
-        "Private Photography Session": {
-          platinum:
-            "150 Image Detailed Photobook,All your softcopy images on our Online Gallery.",
-          gold:
-            "180 Image Detailed Photobook,  3-5 mins HD (High Definition) Portrait reel, All your softcopy images avail on our Online Gallery."
-        },
-        "Private Video Session": {
-          platinum: "10-15 mins of HD (High Definition) Edited footage",
-          gold: "15-30 mins of HD (High Definition) Edited footage"
-        },
-        "Corporate Gathering/Meeting": {
-          platinum:
-            "Details depend on the client`s needs, disscussable with our personnel.",
-          gold:
-            "Details depend on the client`s needs, disscussable with our personnel."
-        }
-      };
-
-      return (
-        details[eventType][packageType] ||
-        "The service details entirely depend on the client`s needs, all the prices are not fixed or final, Please contact for more information."
-      );
-    }
-
-    // Hide loading animation
-    hideLoading();
-
-    // Show the plan result section
-    const planResult = document.getElementById("planResult");
-    planResult.style.display = "block";
-
-    // Display recommended plan
-    document.getElementById("recommendedPlan").textContent = recommendedPlan;
-
-    // Display additional details
-    const additionalDetailsElement = document.getElementById(
-      "additionalDetails"
-    );
-    additionalDetailsElement.innerHTML = `<h3>Comes with:</h3><p>${additionalDetails}</p>`;
-  }, 2000); // Adjust the delay time (in milliseconds) as needed
-}
-
-function showLoading() {
-  // Show loading animation
-  const loadingElement = document.getElementById("loading");
-  loadingElement.style.display = "block";
-}
-
-function hideLoading() {
-  // Hide loading animation
-  const loadingElement = document.getElementById("loading");
-  loadingElement.style.display = "none";
-}
-
-// Function to close plan recommendation section
 function closePlanResult() {
-  const planResult = document.getElementById("planResult");
-  planResult.style.display = "none";
+  document.getElementById("planResult").style.display = "none";
 }
 
-
-
-
+//Log in And Sign up
 // Function to toggle login form visibility
 function toggleLoginForm() {
   var loginForm = document.getElementById("loginForm");
   var signUpForm = document.getElementById("signUpForm");
 
-  if (!loginForm) return; // Ensure loginForm exists
+  if (!loginForm) return; 
   if (loginForm.style.display === "none" || loginForm.style.display === "") {
     loginForm.style.display = "block";
-    if (signUpForm) signUpForm.style.display = "none"; // Ensure signUpForm exists before accessing
+    if (signUpForm) signUpForm.style.display = "none"; 
   } else {
     loginForm.style.display = "none";
   }
@@ -401,7 +203,7 @@ document.querySelector(".sign-up-link")?.addEventListener("click", function () {
   if (!signUpForm) return; // Ensure signUpForm exists
   if (signUpForm.style.display === "none" || signUpForm.style.display === "") {
     signUpForm.style.display = "block";
-    if (loginForm) loginForm.style.display = "none"; // Ensure loginForm exists
+    if (loginForm) loginForm.style.display = "none"; 
   } else {
     signUpForm.style.display = "none";
   }

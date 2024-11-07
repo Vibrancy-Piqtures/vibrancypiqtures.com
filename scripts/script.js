@@ -29,7 +29,25 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
 });
 
 
-// Function to format currency with commas
+// Define minimum prices and thresholds for event packages in UGX and their equivalent in USD
+const packageThresholds = {
+  Wedding: { silver: 1500000, platinum: 2500000, gold: 4500000 },
+  Kwanjura: { silver: 1200000, platinum: 2500000, gold: 4500000 },
+  Kuhingira: { silver: 1800000, platinum: 2500000, gold: 4500000 },
+  Anniversary: { silver: 1500000, platinum: 2500000, gold: 4500000 },
+  Kukyala: { silver: 850000, platinum: 1500000, gold: 2500000 },
+  "Baby Shower": { silver: 350000, platinum: 500000, gold: 1000000 },
+  "Birthday Party": { silver: 350000, platinum: 500000, gold: 1000000 },
+  Proposal: { silver: 350000, platinum: 500000, gold: 1000000 },
+  "Private Photography Session": { silver: 250000, platinum: 450000, gold: 750000 },
+  "Private Video Session": { silver: 450000, platinum: 750000, gold: 1500000 },
+  "Corporate Gathering/Meeting": { silver: 500000, platinum: 750000, gold: 1000000 }
+};
+
+// Conversion rate for UGX to USD
+const exchangeRate = 0.00028;
+
+// Function to format currency with commas and symbol based on currency type
 function formatCurrency(amount, currency = "UGX") {
   const symbol = currency === "USD" ? "$" : "Shs.";
   return symbol + amount.toLocaleString("en-US");
@@ -42,58 +60,58 @@ function getPackageDetails(eventType, packageType) {
       silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
       gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
-  },
-  Kwanjura: {
+    },
+    Kwanjura: {
       silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
       gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
-  },
-  Kuhingira: {
+    },
+    Kuhingira: {
       silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
       gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
-  },
-  Anniversary: {
+    },
+    Anniversary: {
       silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "160 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
       gold: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
-  },
-  Kukyala: {
+    },
+    Kukyala: {
       silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
       gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
-  },
-  "Baby Shower": {
+    },
+    "Baby Shower": {
       silver: "45 prints-Stick-on Album, 2 A3 boards, All softcopy images on our Online Gallery.",
       platinum: "50 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
       gold: "75 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
-  },
-  "Birthday Party": {
+    },
+    "Birthday Party": {
       silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
       platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
       gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
-  },
-  Proposal: {
+    },
+    Proposal: {
       silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
       platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
       gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
-  },
-  "Private Photography Session": {
+    },
+    "Private Photography Session": {
       silver: "20 All softcopy images on our Online Gallery, Prints are to be discussed.",
       platinum: "150 Image Detailed Photobook, Online Gallery.",
       gold: "180 Image Detailed Photobook, 3-5 mins HD Portrait reel, Online Gallery."
-  },
-  "Private Video Session": {
+    },
+    "Private Video Session": {
       silver: "4-5 mins of HD Edited footage",
       platinum: "10-15 mins of HD Edited footage",
       gold: "15-30 mins of HD Edited footage"
-  },
-  "Corporate Gathering/Meeting": {
+    },
+    "Corporate Gathering/Meeting": {
       silver: "Details depend on client's needs, discussable with personnel.",
       platinum: "Details depend on client's needs, discussable with personnel.",
       gold: "Details depend on client's needs, discussable with personnel."
-  }
-};
+    }
+  };
   return details[eventType]?.[packageType] || "Details depend on client’s needs. Please contact us for more information.";
 }
 
@@ -103,21 +121,27 @@ function recommendPlan() {
   setTimeout(() => {
     const eventTypeSelect = document.getElementById("eventType");
     const eventType = eventTypeSelect.value;
-    const minimumPrice = parseFloat(eventTypeSelect.options[eventTypeSelect.selectedIndex].dataset.minimumPrice);
     const budget = parseFloat(document.getElementById("budget").value);
     const currency = document.getElementById("currencySwitch").value;
-    const thresholdUSD = minimumPrice * 0.00028; // Conversion rate if using USD
+
+    // Get package thresholds for the selected event type
+    const eventThresholds = packageThresholds[eventType];
+    const silverThresholdUSD = eventThresholds.silver * exchangeRate;
+    const platinumThresholdUSD = eventThresholds.platinum * exchangeRate;
+    const goldThresholdUSD = eventThresholds.gold * exchangeRate;
 
     let recommendedPlan;
     let additionalDetails;
 
-    if (currency === "USD" && budget < thresholdUSD || currency === "UGX" && budget < minimumPrice) {
-      recommendedPlan = `The starting package (Silver Package) for ${eventType}s is at least ${formatCurrency(minimumPrice, currency)}`;
+    // Determine the recommended plan based on budget
+    if ((currency === "USD" && budget < silverThresholdUSD) || (currency === "UGX" && budget < eventThresholds.silver)) {
+      const minPriceInCurrency = currency === "USD" ? silverThresholdUSD : eventThresholds.silver;
+      recommendedPlan = `The starting package (Silver Package) for ${eventType}s is at least ${formatCurrency(minPriceInCurrency, currency)}`;
       additionalDetails = getPackageDetails(eventType, "silver");
-    } else if (budget < (currency === "USD" ? 700 : 2500000)) {
+    } else if ((currency === "USD" && budget < platinumThresholdUSD) || (currency === "UGX" && budget < eventThresholds.platinum)) {
       recommendedPlan = "Silver Package";
       additionalDetails = getPackageDetails(eventType, "silver");
-    } else if (budget < (currency === "USD" ? 1250 : 4500000)) {
+    } else if ((currency === "USD" && budget < goldThresholdUSD) || (currency === "UGX" && budget < eventThresholds.gold)) {
       recommendedPlan = "Platinum Package";
       additionalDetails = getPackageDetails(eventType, "platinum");
     } else {
@@ -134,7 +158,6 @@ function recommendPlan() {
 function convertCurrency() {
   const budgetInput = document.getElementById("budget");
   const currencySwitch = document.getElementById("currencySwitch");
-  const exchangeRate = 0.00028;
   const currentBudget = parseFloat(budgetInput.value);
   budgetInput.value = currencySwitch.value === "USD"
     ? (currentBudget * exchangeRate).toFixed(2)
@@ -145,9 +168,11 @@ function convertCurrency() {
 function showLoading() {
   document.getElementById("loading").style.display = "block";
 }
+
 function hideLoading() {
   document.getElementById("loading").style.display = "none";
 }
+
 function displayRecommendation(plan, details) {
   document.getElementById("planResult").style.display = "block";
   document.getElementById("recommendedPlan").textContent = plan;
@@ -172,7 +197,7 @@ function openEventForm() {
   document.getElementById("formOverlay").style.display = "block";
 }
 function closeEventForm() {
-  document.getElementById("eventForm").style.top = "-500px";
+  document.getElementById("eventForm").style.top = "-250px";
   document.getElementById("formOverlay").style.display = "none";
 }
 function toggleForm() {
@@ -182,7 +207,6 @@ function toggleForm() {
 function closePlanResult() {
   document.getElementById("planResult").style.display = "none";
 }
-
 
 
 //Log in And Sign up
@@ -441,4 +465,5 @@ function submitQuiz() {
   alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }
+
 

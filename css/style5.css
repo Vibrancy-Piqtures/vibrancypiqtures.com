@@ -66,7 +66,9 @@ header {
 .WhatsApp-modal{
   box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
   padding: 55px;
-  border-radius: 5px;
+  width: 250px;
+  height: 200px;
+  border-radius: 15px;
   background-color: #fff;
 }
 .contact-inputs {
@@ -79,7 +81,7 @@ header {
   padding: 15px;
   font-weight: 500;
   color: #666;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 
 .contactForm textarea {
@@ -92,7 +94,7 @@ header {
 
 .submitForm {
   padding: 10px 20px;
-  background-color: #249070;
+  background-color: #0f7557;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -112,9 +114,10 @@ header {
 }
 
 .whatsapp-logo {
-  width: 40px;
+  width: 55px;
   height: auto;
-  padding: 25px;
+  padding: 25px 0;
+  margin: 35px 0;
 }
 
 @media (max-width: 768px) {
@@ -312,4 +315,3 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
-

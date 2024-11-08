@@ -28,8 +28,8 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
   document.querySelector(".more-text").style.display = "inline";
 });
 
-
-// Define minimum prices and thresholds for event packages in UGX and their equivalent in USD
+// Package recommendation System
+// Minimum prices/ Thresholds for event packages in UGX and their equivalent in USD
 const packageThresholds = {
   Wedding: { silver: 1500000, platinum: 2500000, gold: 4500000 },
   Kwanjura: { silver: 1200000, platinum: 2500000, gold: 4500000 },
@@ -191,7 +191,7 @@ document.getElementById("currencySwitch").addEventListener("mouseout", function 
   this.classList.remove("hovered");
 });
 
-// Functions to open/close forms and toggle visibility
+// Functions to open and close forms and toggle visibility
 function openEventForm() {
   document.getElementById("eventForm").style.top = "0";
   document.getElementById("formOverlay").style.display = "block";

@@ -67,6 +67,7 @@ header {
   box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
   padding: 55px;
   border-radius: 5px;
+  background-color: #fff;
 }
 .contact-inputs {
   width: 100%;

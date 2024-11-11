@@ -626,7 +626,7 @@ label {
 }
 
 .packages-system {
-  background-color: #1f796e;
+  background-color: #0b5248;
   color: #fff;
   padding: 10px;
   margin-bottom: 25px;
@@ -640,7 +640,7 @@ label {
 }
 
 .packages-system:hover {
-  background-color: #206860;
+  background-color: #033b34;
 }
 
 .input-container {

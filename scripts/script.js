@@ -3,16 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   $("#navbar-placeholder").load("Navbar/navbar.html");
 });
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/scripts/service-worker.js')
-    .then(function(registration) {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-    .catch(function(error) {
-      console.log('Service Worker registration failed:', error);
-    });
-}
-
 //More text...
 document.querySelector(".more-text").addEventListener("click", function (e) {
   e.preventDefault();

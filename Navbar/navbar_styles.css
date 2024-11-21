@@ -137,7 +137,7 @@
   
   .search-container input[type="text"]:focus,
   .search-container input[type="text"]:hover {
-    border-bottom-color: #146865;
+    border-bottom-color: #ffffff;
     width: 150px;
   }
   

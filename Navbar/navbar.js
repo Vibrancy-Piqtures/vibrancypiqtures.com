@@ -94,28 +94,8 @@ function includeNavbar() {
         </button>
       </div>
     `;
-
-    const menuToggle = navbarElement.querySelector(".menu-toggle");
-    const menu = navbarElement.querySelector(".menu");
-
-    // Add event listener to toggle the menu
-    menuToggle.addEventListener("click", function() {
-      menu.classList.toggle("show");  // Toggle the visibility of the menu
-      menuToggle.classList.toggle("open");  // Toggle the hamburger icon to "X" state
-    });
-
-    // Bind hover effects (Optional)
-    menuToggle.addEventListener("mouseover", function() { hoverMenu(menuToggle); });
-    menuToggle.addEventListener("mouseout", function() { unhoverMenu(menuToggle); });
-
-    const searchButton = navbarElement.querySelector("button[type='submit']");
-    searchButton.addEventListener("click", toggleSearch);
-    searchButton.addEventListener("mouseover", function() { hoverSearchIcon(searchButton); });
-    searchButton.addEventListener("mouseout", function() { unhoverSearchIcon(searchButton); });
   }
 }
 
 // Add the navbar after DOM content is loaded
 window.addEventListener("DOMContentLoaded", includeNavbar);
-
-

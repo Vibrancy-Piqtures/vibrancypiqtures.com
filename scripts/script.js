@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 //More text...
 document.querySelector(".more-text").addEventListener("click", function (e) {
   e.preventDefault();
-  var hiddenContent = document.querySelector(".hidden-content");
+  const hiddenContent = document.querySelector(".hidden-content");
   hiddenContent.classList.add("show");
   this.style.display = "none";
 });
 
 document.querySelector(".show-less").addEventListener("click", function (e) {
   e.preventDefault();
-  var hiddenContent = document.querySelector(".hidden-content");
+  const hiddenContent = document.querySelector(".hidden-content");
   hiddenContent.classList.remove("show");
   document.querySelector(".more-text").style.display = "inline";
 });
@@ -21,23 +21,24 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
 // Package recommendation System
 // Minimum prices/ Thresholds for event packages in UGX and their equivalent in USD
 const packageThresholds = {
-  Wedding: { silver: 1500000, platinum: 2500000, gold: 4500000 },
-  Kwanjura: { silver: 1200000, platinum: 2500000, gold: 4500000 },
-  Kuhingira: { silver: 1800000, platinum: 2500000, gold: 4500000 },
-  Anniversary: { silver: 1500000, platinum: 2500000, gold: 4500000 },
+  Wedding: { silver: 2500000, platinum: 3500000, gold: 5000000 },
+  Kwanjura: { silver: 2000000, platinum: 3500000, gold: 5000000 },
+  Kuhingira: { silver: 2000000, platinum: 3500000, gold: 5000000 },
+  Anniversary: { silver: 1800000, platinum: 2500000, gold: 4500000 },
   Kukyala: { silver: 850000, platinum: 1500000, gold: 2500000 },
-  "Baby Shower": { silver: 350000, platinum: 500000, gold: 1000000 },
-  "Birthday Party": { silver: 350000, platinum: 500000, gold: 1000000 },
-  Proposal: { silver: 350000, platinum: 500000, gold: 1000000 },
-  "Private Photography Session": { silver: 250000, platinum: 450000, gold: 750000 },
+  "Baby Shower": { silver: 450000, platinum: 750000, gold: 1000000 },
+  "Birthday Party": { silver: 350000, platinum: 450000, gold: 750000 },
+  Proposal: { silver: 250000, platinum: 350000, gold: 450000 },
+  "Private Photography Session": { silver: 250000, platinum: 350000, gold: 450000 },
   "Private Video Session": { silver: 450000, platinum: 750000, gold: 1500000 },
-  "Corporate Gathering/Meeting": { silver: 500000, platinum: 750000, gold: 1000000 }
+  "Corporate Gathering/Meeting": { silver: 500000, platinum: 750000, gold: 1000000 },
+  "Other": {}
 };
 
 // Conversion rate for UGX to USD
 const exchangeRate = 0.00028;
 
-// Function to format currency with commas and symbol based on currency type
+// Function to format currency
 function formatCurrency(amount, currency = "UGX") {
   const symbol = currency === "USD" ? "$" : "Shs.";
   return symbol + amount.toLocaleString("en-US");
@@ -47,49 +48,49 @@ function formatCurrency(amount, currency = "UGX") {
 function getPackageDetails(eventType, packageType) {
   const details = {
     Wedding: {
-      silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
-      gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
+      gold: "500 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 50 years."
     },
     Kwanjura: {
-      silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
-      gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Kuhingira: {
-      silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
-      gold: "250 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame, Secure Online Gallery images for upto 10 years.",
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Anniversary: {
-      silver: "150 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "160 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
-      gold: "200 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "250 image photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (2) A3 boards, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      gold: "350 image photobook, (5) 3-5 mins Highlight reels, 1 A3 board,  (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
     },
     Kukyala: {
-      silver: "120 prints-Stick-on Album, 3-5 mins Highlight reel, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 3 A3 boards, Online Gallery.",
-      gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, HD Full Length video, 5 A3 boards, Online Gallery."
+      silver: "120 prints-Stick-on Album, (1) 3-5 mins Highlight reel, 2 A3 boards, Secure online Galley accessible for atleast 5 years.",
+      platinum: "150 Image Detailed Photobook, (2) 3-5 mins HD Highlight reels, HD Full Length video, 3 A3 boards, Online Gallery.",
+      gold: "180 Image Detailed Photobook, (3) 3-5 mins HD Highlight reels, High Definition (HD) Full Length video, 5 A3 boards, Online Gallery."
     },
     "Baby Shower": {
-      silver: "45 prints-Stick-on Album, 2 A3 boards, All softcopy images on our Online Gallery.",
-      platinum: "50 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
-      gold: "75 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      silver: "75 prints-Stick-on Album, (1) 3-5 mins HD Highlight reel, Secure online Galley accessible for atleast 5 years.",
+      platinum: "120 Image Detailed Photobook, (1) 3-5 mins HD Highlight reel, Online Gallery.",
+      gold: "75 Image Detailed Photobook, (2) 3-5 mins HD Highlight reel, Online Gallery."
     },
     "Birthday Party": {
-      silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
-      platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
-      gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      silver: "50 prints-Stick-on Album, (1) 3-5 mins Highlight reel, Online Gallery.",
+      platinum: "150 Image Detailed Photobook, (2) 3-5 mins HD Highlight reel, Online Gallery.",
+      gold: "180 Image Detailed Photobook, (3) 3-5 mins HD Highlight reel, Online Gallery."
     },
     Proposal: {
-      silver: "50 prints-Stick-on Album, 3-5 mins Highlight reel, Online Gallery.",
-      platinum: "150 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery.",
-      gold: "180 Image Detailed Photobook, 3-5 mins HD Highlight reel, Online Gallery."
+      silver: "50 prints-Stick-on Album, (1) 3-5 mins Highlight reel, Online Gallery.",
+      platinum: "150 Image Detailed Photobook, (2) 3-5 mins HD Highlight reel, Online Gallery.",
+      gold: "180 Image Detailed Photobook, (3) 3-5 mins HD Highlight reel, Online Gallery."
     },
     "Private Photography Session": {
-      silver: "20 All softcopy images on our Online Gallery, Prints are to be discussed.",
-      platinum: "150 Image Detailed Photobook, Online Gallery.",
-      gold: "180 Image Detailed Photobook, 3-5 mins HD Portrait reel, Online Gallery."
+      silver: "15 softcopy High End Editted Images, Delivered via Whatsapp.",
+      platinum: "45 softcopy Images all accessible on our Collection where you can access your Gallery at your convinience.",
+      gold: "45 softcopy Images all accessible on our Collection where you can access your Gallery at your convinience."
     },
     "Private Video Session": {
       silver: "4-5 mins of HD Edited footage",
@@ -97,10 +98,11 @@ function getPackageDetails(eventType, packageType) {
       gold: "15-30 mins of HD Edited footage"
     },
     "Corporate Gathering/Meeting": {
-      silver: "Details depend on client's needs, discussable with personnel.",
-      platinum: "Details depend on client's needs, discussable with personnel.",
-      gold: "Details depend on client's needs, discussable with personnel."
-    }
+      silver: "Details depend on client's needs, discussable with our personnel, Please contact us for more information.",
+      platinum: "Details depend on client's needs, discussable with our personnel, Please contact us for more information.",
+      gold: "Details depend on client's needs, discussable with our personnel, Please contact us for more information."
+    },
+    "Other": {}
   };
   return details[eventType]?.[packageType] || "Details depend on client’s needs. Please contact us for more information.";
 }
@@ -202,8 +204,8 @@ function closePlanResult() {
 //Log in And Sign up
 // Function to toggle login form visibility
 function toggleLoginForm() {
-  var loginForm = document.getElementById("loginForm");
-  var signUpForm = document.getElementById("signUpForm");
+  const loginForm = document.getElementById("loginForm");
+  const signUpForm = document.getElementById("signUpForm");
 
   if (!loginForm) return; 
   if (loginForm.style.display === "none" || loginForm.style.display === "") {
@@ -216,8 +218,8 @@ function toggleLoginForm() {
 
 // Function to toggle sign-up form visibility
 document.querySelector(".sign-up-link")?.addEventListener("click", function () {
-  var loginForm = document.getElementById("loginForm");
-  var signUpForm = document.getElementById("signUpForm");
+  const loginForm = document.getElementById("loginForm");
+  const signUpForm = document.getElementById("signUpForm");
 
   if (!signUpForm) return; // Ensure signUpForm exists
   if (signUpForm.style.display === "none" || signUpForm.style.display === "") {
@@ -230,20 +232,20 @@ document.querySelector(".sign-up-link")?.addEventListener("click", function () {
 
 // Close login form
 function closeLoginForm() {
-  var loginForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("loginForm");
   if (loginForm) loginForm.style.display = "none";
 }
 
 // Close sign-up form
 function closeSignUpForm() {
-  var signUpForm = document.getElementById("signUpForm");
+  const signUpForm = document.getElementById("signUpForm");
   if (signUpForm) signUpForm.style.display = "none";
 }
 
 // Close forms when clicking outside of them
 document.addEventListener("click", function (event) {
-  var loginForm = document.getElementById("loginForm");
-  var signUpForm = document.getElementById("signUpForm");
+  const loginForm = document.getElementById("loginForm");
+  const signUpForm = document.getElementById("signUpForm");
 
   if (loginForm && !loginForm.contains(event.target) && 
       !document.querySelector(".Log-in-form-container")?.contains(event.target)) {
@@ -258,12 +260,12 @@ document.addEventListener("click", function (event) {
 
 // Go to Gallery Button
 window.addEventListener("scroll", function () {
-  var button = document.getElementById("myButton");
-  var offsetFromBottom = 112;
-  var showButtonOffset = 150;
+  const button = document.getElementById("myButton");
+  const offsetFromBottom = 112;
+  const showButtonOffset = 250;
 
-  var scrollHeight = document.documentElement.scrollHeight;
-  var scrollPosition = window.innerHeight + window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight;
+  const scrollPosition = window.innerHeight + window.scrollY;
 
   // Show button after scrolling past a certain point
   if (window.scrollY >= showButtonOffset) {
@@ -319,7 +321,7 @@ function initializeSwiper() {
     },
     pagination: {
       el: ".swiper-pagination",
-      clickable: true
+      clickable: true,
     },
     scrollbar: {
       el: ".swiper-scrollbar",
@@ -368,7 +370,7 @@ document.getElementById("model-cta").addEventListener("click", function () {
 });
 
 window.addEventListener("scroll", function () {
-  var tooltip = document.getElementById("model-cta");
+  const tooltip = document.getElementById("model-cta");
 
   // Show tooltip after scrolling down a bit
   if (window.scrollY >= 1000) {
@@ -392,7 +394,7 @@ function closeQuizModal() {
   document.getElementById("quiz-overlay").classList.add("hidden");
 }
 
-// Initialization of variables for current step and total steps
+// Initialization of constiables for current step and total steps
 let currentStep = 0;
 const totalSteps = 18;
 

@@ -610,7 +610,7 @@ main {
 .packages-system-container {
   display: inline-block;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 25px;
   margin: 10px;
 }
 
@@ -630,7 +630,7 @@ label {
   color: #fff;
   padding: 10px;
   margin-bottom: 25px;
-  margin-top: 75px;
+  margin-top: 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -651,7 +651,7 @@ label {
 
 .Form-container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 25px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -660,7 +660,7 @@ label {
 #eventSelection,
 #budgetInput,
 #planResult {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 label {
@@ -1035,12 +1035,13 @@ input:focus {
 
 .swiper-pagination-bullet {
   background-color: white;
+  color: #004d40;
   opacity: 0.6;
   transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: teal;
+  background: #004d40;
   opacity: 1;
 }
 

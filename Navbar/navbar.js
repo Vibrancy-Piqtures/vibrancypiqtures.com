@@ -1,90 +1,121 @@
-// Menu toggle function
-function toggleMenu() {
-    const menu = document.querySelector(".menu");
-    menu.classList.toggle("show-menu");
-    const menuToggle = document.querySelector(".menu-toggle");
-    menuToggle.classList.toggle("show-menu");
+// Toggle menu visibility
+function toggleMenu(event) {
+  event.stopPropagation(); 
+
+  const menuList = document.getElementById("menuList");
+  menuList.classList.toggle("show-menu"); 
+
+  if (menuList.classList.contains("show-menu")) {
+    document.addEventListener("click", closeMenuOnClickOutside); 
+  } else {
+    document.removeEventListener("click", closeMenuOnClickOutside);
   }
-  function toggleMenu(event) {
-    event.stopPropagation();
-    const menuList = document.getElementById("menuList");
-    menuList.classList.toggle("show-menu");
-  
-    if (menuList.classList.contains("show-menu")) {
-      document.addEventListener("click", closeMenuOnClickOutside);
-    } else {
-      document.removeEventListener("click", closeMenuOnClickOutside);
-    }
+}
+
+// Close menu when clicking outside
+function closeMenuOnClickOutside(event) {
+  const menuList = document.getElementById("menuList");
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  if (!menuList.contains(event.target) && event.target !== menuToggle) {
+    menuList.classList.remove("show-menu");
+    document.removeEventListener("click", closeMenuOnClickOutside);
   }
+}
+
+// Search toggle visibility
+function toggleSearch(event) {
+  event.preventDefault(); // Prevent the form from submitting
+  const searchContainer = document.querySelector(".search-container");
+  searchContainer.classList.toggle("active"); 
+  document.getElementById("searchInput").focus(); 
+}
+
+// Change search icon size on hover
+function hoverSearchIcon(element) {
+  element.querySelector("svg").style.transform = "scale(1.1)"; 
+}
+
+// Reset search icon size on mouseout
+function unhoverSearchIcon(element) {
+  element.querySelector("svg").style.transform = "scale(1)"; 
+}
+
+// Toggle menu visibility and animate hamburger icon
+function toggleMenu(event) {
+  event.stopPropagation(); 
+
+  const menuList = document.getElementById("menuList");
+  const menuToggle = document.querySelector(".menu-toggle");
   
-  function closeMenuOnClickOutside(event) {
-    const menuList = document.getElementById("menuList");
-    const menuToggle = document.querySelector(".menu-toggle");
-    if (!menuList.contains(event.target) && event.target !== menuToggle) {
-      menuList.classList.remove("show-menu");
-      document.removeEventListener("click", closeMenuOnClickOutside);
-    }
+  menuList.classList.toggle("show-menu"); // Toggle the menu visibility
+  menuToggle.classList.toggle("open"); // Trigger the hamburger to "X" animation
+
+  // Add event listener to close the menu if clicked outside
+  if (menuList.classList.contains("show-menu")) {
+    document.addEventListener("click", closeMenuOnClickOutside); 
+  } else {
+    document.removeEventListener("click", closeMenuOnClickOutside);
   }
-  
-  function hoverMenu(element) {
-    element.style.color = "#f8c18e";
+}
+
+
+// Initialize Navbar content dynamically
+function includeNavbar() {
+  const navbarElement = document.getElementById("mainNavbar");
+  if (navbarElement) {
+    navbarElement.innerHTML = `
+      <div class="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="30" height="30" fill="#FFFFFF">
+          <rect x="10" y="10" width="100" height="15" rx="7" ry="7"></rect>
+          <rect x="10" y="40" width="100" height="15" rx="7" ry="7"></rect>
+          <rect x="10" y="70" width="100" height="15" rx="7" ry="7"></rect>
+        </svg>
+      </div>
+
+      <ul class="menu" id="menuList">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Index2.html">Gallery</a></li>
+        <li><a href="Index3.html">Services</a></li>
+        <li><a href="Index5.html">Contact</a></li>
+      </ul>
+
+      <div class="search-container">
+        <input type="text" placeholder="Search..." id="searchInput">
+        <button type="submit">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 515.9 728.5" xml:space="preserve">
+            <path fill="#FFFFFF" d="M472.8,653.9c-34.2-35.4-69.1-70.4-103.6-105.8c-12.2-12.2-23-25.4-41.9-30c-16.7-4.3-19.5-19.7-10.8-34.7
+            c14.7-25,23.7-51.5,23.4-81.2c-0.7-9.7-0.3-19.3-2.4-28.2c-13.6-66.1-52.3-109.4-116.2-125.5c-64.2-16.4-124.5,8.6-162.9,64.4
+            c-40.8,59-33.5,144.8,16.4,197c51.3,53.3,138.5,62.9,196.4,20.4c10.5-7.9,15.3-5.7,24.1,2.9c11.2,11.1,8.7,27.5,19.9,38.6
+            c40.8,40,80.2,81.2,120.3,121.6c15.3,15.4,30.3,16.1,42.6,3.2C488.8,683.6,487.8,669.7,472.8,653.9z M184.3,523.4
+            c-67.3-0.4-121-55.1-121-123.3c0-68.6,55.1-124.1,123.1-123c66.3,0.7,121.4,57.6,120.7,124.4C306.4,469.1,251.3,523.8,184.3,523.4z"/>
+          </svg>
+        </button>
+      </div>
+    `;
+
+    const menuToggle = navbarElement.querySelector(".menu-toggle");
+    const menu = navbarElement.querySelector(".menu");
+
+    // Add event listener to toggle the menu
+    menuToggle.addEventListener("click", function() {
+      menu.classList.toggle("show");  // Toggle the visibility of the menu
+      menuToggle.classList.toggle("open");  // Toggle the hamburger icon to "X" state
+    });
+
+    // Bind hover effects (Optional)
+    menuToggle.addEventListener("mouseover", function() { hoverMenu(menuToggle); });
+    menuToggle.addEventListener("mouseout", function() { unhoverMenu(menuToggle); });
+
+    const searchButton = navbarElement.querySelector("button[type='submit']");
+    searchButton.addEventListener("click", toggleSearch);
+    searchButton.addEventListener("mouseover", function() { hoverSearchIcon(searchButton); });
+    searchButton.addEventListener("mouseout", function() { unhoverSearchIcon(searchButton); });
   }
-  
-  function unhoverMenu(element) {
-    element.style.color = "#000";
-  }
-  
-  // Function to toggle menu visibility
-  $(".menu-toggle").on("click", function () {
-    $(this).toggleClass("open");
-    $("#mainNavbar").toggleClass("rounded");
-  });
-  
-  // Function for search toggle
-  function toggleSearch(event) {
-    event.preventDefault(); // Prevent the form from submitting when the button is clicked
-    var searchContainer = document.querySelector(".search-container");
-    if (searchContainer.classList.contains("active")) {
-      // If the container is active, remove the active class to hide the input
-      searchContainer.classList.remove("active");
-    } else {
-      // If the container is not active, add the active class to show the input
-      searchContainer.classList.add("active");
-      // Focus the input after displaying it
-      document.getElementById("searchInput").focus();
-    }
-  }
-  
-  // Function to change the icon on hover
-  function hoverSearchIcon(element) {
-    element.getElementsByTagName("img")[0].style.transform = "scale(1.1)"; 
-  }
-  
-  // Function to change the icon on mouseout
-  function unhoverSearchIcon(element) {
-    element.getElementsByTagName("img")[0].style.transform = "scale(1)"; 
-  }
-  
-  function includeNavbar() {
-    const navbarElement = document.getElementById("mainNavbar");
-    if (navbarElement) {
-      navbarElement.innerHTML = `
-              <div class="menu-toggle" onclick="toggleMenu(event)" onmouseover="hoverMenu(this)" onmouseout="unhoverMenu(this)">☰</div>
-              <ul class="menu" id="menuList">
-                  <li><a href="./Index.html">Home</a></li>
-                  <li><a href="./Index2.html">Gallery</a></li>
-                  <li><a href="./Index3.html">Blog</a></li>
-                  <li><a href="./Index5.html">Contact</a></li>
-              </ul>
-              <div class="container">
-                  <div class="search-container">
-                      <input type="text" placeholder="Search...">
-                      <button type="submit">Search</button>
-                  </div>
-              </div>
-          `;
-    }
-  }
-  
-  window.addEventListener("DOMContentLoaded", includeNavbar);
-  
+}
+
+// Add the navbar after DOM content is loaded
+window.addEventListener("DOMContentLoaded", includeNavbar);
+
+

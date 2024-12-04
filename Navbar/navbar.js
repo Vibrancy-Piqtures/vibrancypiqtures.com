@@ -31,15 +31,6 @@ function toggleSearch(event) {
   document.getElementById("searchInput").focus(); 
 }
 
-// Change search icon size on hover
-function hoverSearchIcon(element) {
-  element.querySelector("svg").style.transform = "scale(1.1)"; 
-}
-
-// Reset search icon size on mouseout
-function unhoverSearchIcon(element) {
-  element.querySelector("svg").style.transform = "scale(1)"; 
-}
 
 // Toggle menu visibility and animate hamburger icon
 function toggleMenu(event) {
@@ -99,3 +90,5 @@ function includeNavbar() {
 
 // Add the navbar after DOM content is loaded
 window.addEventListener("DOMContentLoaded", includeNavbar);
+
+

@@ -40,7 +40,6 @@ function toggleMenu(event) {
   const menuToggle = document.querySelector(".menu-toggle");
   
   menuList.classList.toggle("show-menu"); // Toggle the menu visibility
-  menuToggle.classList.toggle("open"); // Trigger the hamburger to "X" animation
 
   // Add event listener to close the menu if clicked outside
   if (menuList.classList.contains("show-menu")) {
@@ -88,7 +87,7 @@ function includeNavbar() {
   }
 }
 
-// Add the navbar after DOM content is loaded
+// To add the navbar after DOM content is loaded
 window.addEventListener("DOMContentLoaded", includeNavbar);
 
 

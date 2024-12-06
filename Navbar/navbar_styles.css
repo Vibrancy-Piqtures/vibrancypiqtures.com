@@ -28,7 +28,7 @@
   display: none;
   width: 20px;
   height: 24px;
-  background-color: #12726a;
+  background-color: #0f5751;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 15%;
   padding: 5px;
@@ -74,7 +74,7 @@
     position: absolute;
     top: 60px;
     left: -160px;
-    background-color: #0d524c;
+    background-color: #0f5751;
     width: 160px;
     padding-top: 15px;
     transition: left 0.3s ease-in-out;

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
   // Initialize Fancybox
   $("[data-fancybox]").fancybox({
-    buttons: ["zoom", "slideShow", "fullScreen", "download", "close"]
+    buttons: ["zoom", "slideShow", "fullScreen", "close"]
   });
 });
 document.addEventListener("DOMContentLoaded", function () {

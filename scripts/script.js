@@ -1,4 +1,3 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
 
 // Function to load the navbar
 document.addEventListener("DOMContentLoaded", function () {
@@ -459,5 +458,7 @@ function submitQuiz() {
   alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }
+
+
 
 

@@ -1,3 +1,4 @@
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 // Function to load the navbar
 document.addEventListener("DOMContentLoaded", function () {

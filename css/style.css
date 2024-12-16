@@ -801,7 +801,7 @@ input:focus {
 .plan {
   display: block;
   width: 35rem;
-  height: 10rem;
+  height: 12rem;
   max-width: 75rem;
   position: absolute;
   padding: 25px;

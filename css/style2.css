@@ -95,17 +95,45 @@ header {
   object-fit: cover;
 }
 
-.weddings img {
-  margin: 5px;
-  border-radius: 5px;
-  object-fit: cover;
-}
 .weddings {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 20px;
 }
+
+.weddings img {
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.boudoir {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.boudoir img {
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.lifestyle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.lifestyle img {
+  margin: 5px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
 .thumbnails img {
   max-width: 100%;
   max-height: 250px;

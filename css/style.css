@@ -261,6 +261,21 @@ main {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .Log-in-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Log-In-system {
+    background-color: #ff7b00cc;
+    margin: 0;
+    height: 40px;
+    width: 75px;
+  }
+}
+
 /* Close button */
 .closeBtn {
   position: absolute;

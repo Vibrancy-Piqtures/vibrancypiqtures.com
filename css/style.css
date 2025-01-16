@@ -270,11 +270,11 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px;
   }
 
   .Log-In-system {
     background-color: #ff7b00cc;
+    margin-right: 25px;
     height: 40px;
     width: 75px;
   }

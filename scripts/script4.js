@@ -2,8 +2,19 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 // Function to load the navbar
 document.addEventListener("DOMContentLoaded", function () {
-  $("#navbar-placeholder").load("Navbar/navbar.html");
+  fetch("Navbar/navbar.html")
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.querySelector("#navbar-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error loading navbar:", error));
 });
+
 
 document.querySelectorAll(".accordion-button").forEach((button) => {
   button.addEventListener("click", () => {

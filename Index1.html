@@ -425,10 +425,11 @@
                 Boudoir
               </label>
               <label class="radio-container">
-                <input type="radio" name="model_type" value="Specify" />
+                <input type="radio" name="model_type" value="Specify" id="other-option" />
                 <span class="radio-checkmark"></span>
                 Other
               </label>
+              <input type="text" id="other-input" class="hidden" placeholder="Please specify" />              
             </div>
           </div>
 
@@ -613,30 +614,52 @@
         </div>
 
         <div class="quiz-question hidden" data-step="13">
-          <label>Are there any styles or types of shoots you prefer to avoid?</label><br>
+          <label>How do you hope to benefit from this collaboration? </label>
+          <div class="radio-group">
+            <label class="radio-container">
+              <input type="radio" name="benefit" value="Portfolio" />
+              <span class="radio-checkmark"></span>
+              Building my Portfolio
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="benefit" value="Skill Development" />
+              <span class="radio-checkmark"></span>
+              Skill Development
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="benefit" value="Personal Collection" />
+              <span class="radio-checkmark"></span>
+              Personal Collection
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="benefit" value="Other" id="custom-answer-option" />
+              <span class="radio-checkmark"></span>
+              Other
+            </label>
+            <input type="text" id="custom-answer-input" name="benefit_other" placeholder="Please specify..." class="hidden" />
+          </div>
+        </div>
+        
+        <div class="quiz-question hidden" data-step="14">
+          <label>Can you share a link to your portfolio or recent work?</label>
+          <textarea id="portfolio-link" name="portfolio" placeholder="Please paste social media i.e. Instagram link ..." rows="2" cols="50" required ></textarea>
+        </div>
+
+        <div class="quiz-question hidden" data-step="15">
+          <label>Are there any styles or types of shoots you prefer to avoid? (Optional)</label><br>
           <textarea id="styles-to-avoid" class="clarification" name="styles-to-avoid" placeholder="Anything you would be uncomfortable shooting..." rows="4" cols="50"></textarea>
         </div>
   
-        <div class="quiz-question hidden" data-step="14">
-          <label>Is there anything else you'd like us to know about your expectations on this probable collaborative project?</label>
+        <div class="quiz-question hidden" data-step="16">
+          <label>Is there anything else you'd like us to know about your expectations on this probable collaborative project? (Optional)</label>
           <textarea id="expectations" class="clarification" name="expectations" placeholder="How you expect the experience, limitations, etc ..." rows="4" cols="50"></textarea>
         </div>
   
-        <div class="quiz-question hidden" data-step="15">
+        <div class="quiz-question hidden" data-step="17">
           <label>Do you have any specific requirements that could affect collaboration with us? (Optional) </label>
           <textarea id="requirements" class="clarification" name="requirements" placeholder="Let us know to ensure your comfort ..." rows="4" cols="50"></textarea>
         </div>
   
-        <div class="quiz-question hidden" data-step="16">
-          <label>How do you hope to benefit from this collaboration? (Optional) </label>
-          <textarea id="benefit" class="clarification" name="benefit" placeholder="Describe your goals or hopes ..." rows="4" cols="50"></textarea>
-        </div>
-
-        <div class="quiz-question hidden" data-step="17">
-          <label>Can you share a link to your portfolio or recent work?</label>
-          <textarea id="portfolio-link" name="portfolio" placeholder="Please paste Instagram link ..." rows="2" cols="50" required ></textarea>
-        </div>
-
         <!-- Final Message -->
         <div class="quiz-question hidden" data-step="18">
           <h2>Thank you, <span id="user-name-display">[Name/Alias]</span>!</h2><br>
@@ -666,8 +689,6 @@
 </body>
 
 </html>
-
-
 
 
 

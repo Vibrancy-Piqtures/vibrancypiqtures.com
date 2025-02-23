@@ -465,10 +465,45 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const otherOption = document.getElementById('other-option');
+  const otherInput = document.getElementById('other-input');
+
+  // Initially hide the input
+  otherInput.classList.add('hidden');
+
+  // Listen for changes to the radio buttons
+  document.querySelectorAll('input[name="model_type"]').forEach((radio) => {
+    radio.addEventListener('change', function () {
+      if (otherOption.checked) {
+        otherInput.classList.remove('hidden');
+      } else {
+        otherInput.classList.add('hidden');
+        otherInput.value = ''; // Clear the input when hidden
+      }
+    });
+  });
+});
+
+
+  const otherOption = document.getElementById('custom-answer-option');
+  const otherInput = document.getElementById('custom-answer-input');
+  const radioButtons = document.querySelectorAll('input[name="benefit"]');
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener('change', () => {
+      if (otherOption.checked) {
+        otherInput.classList.remove('hidden');
+      } else {
+        otherInput.classList.add('hidden');
+        otherInput.value = '';
+      }
+    });
+  });
+
 // Submit the quiz
 function submitQuiz() {
   alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }
-
 

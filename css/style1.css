@@ -1498,6 +1498,14 @@ input:focus {
   padding: 20px;
   max-height: 90vh;
   overflow-y: auto;
+  flex-wrap: nowrap;
+}
+
+/* Radio buttons */
+.radio-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .radio-group {
@@ -1513,6 +1521,8 @@ input:focus {
 
 .radio-container {
   position: relative;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   padding: 12px 20px;
   border-radius: 8px;
@@ -1530,7 +1540,6 @@ input:focus {
 .radio-container input[type="radio"] {
   opacity: 0;
   position: absolute;
-  flex-wrap: nowrap;
 }
 
 .radio-checkmark {
@@ -1544,7 +1553,6 @@ input:focus {
   margin-right: 12px;
   display: inline-block;
   vertical-align: middle;
-  flex-shrink: 0;
 }
 
 .radio-container input[type="radio"]:checked + .radio-checkmark {
@@ -1583,13 +1591,11 @@ input:focus {
   }
 }
 
-/* Align Text to Left */
 .radio-container {
   justify-content: flex-start;
   text-align: left;
 }
 
-/* Adjusted Input Field */
 #other-input {
   margin-top: 10px;
   padding: 5px;
@@ -1630,7 +1636,6 @@ input:focus {
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect */
 #submit-btn:hover {
   background-color: #06302a;
 }

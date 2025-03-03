@@ -57,6 +57,17 @@ function formatCurrency(amount, currency = "UGX") {
   return symbol + amount.toLocaleString("en-US");
 }
 
+document.getElementById("eventType").addEventListener("change", function () {
+  let customInput = document.getElementById("customEvent");
+  if (this.value === "Other") {
+    customInput.style.display = "block";
+    customInput.focus();
+  } else {
+    customInput.style.display = "none";
+    customInput.value = ""; 
+  }
+});
+
 // Function to get package details based on event type and package type
 function getPackageDetails(eventType, packageType) {
   const details = {
@@ -119,6 +130,7 @@ function getPackageDetails(eventType, packageType) {
   };
   return details[eventType]?.[packageType] || "Details depend on client’s needs. Please contact us for more information.";
 }
+
 
 // Function to recommend plan based on budget and event type
 function recommendPlan() {

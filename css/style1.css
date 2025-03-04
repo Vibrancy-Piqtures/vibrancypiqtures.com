@@ -1401,10 +1401,10 @@ input:focus {
   border-radius: 12px;
   z-index: 10005;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 75%;
+  width: 85vw;
   max-width: 450px;
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 85vh;
 }
 
 .hidden {
@@ -1599,7 +1599,13 @@ input:focus {
 #other-input {
   margin-top: 10px;
   padding: 5px;
-  width: calc(100% - 10px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#custom-answer-input {
+  margin-top: 10px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -1642,8 +1648,9 @@ input:focus {
 
 @media screen and (max-width: 768px) {
   .quiz-modal {
-    width: 75%;
-    max-width: 90%;
+    width: 85vw;
+    max-width: 95%;
+    max-height: 95vh;
     padding: 1em;
   }
 

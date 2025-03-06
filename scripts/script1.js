@@ -529,4 +529,3 @@ function submitQuiz() {
   alert("Submitted successfully, Thank you.");
   closeQuizModal();
 }
-

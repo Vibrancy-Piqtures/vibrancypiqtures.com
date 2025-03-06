@@ -255,6 +255,17 @@ document.querySelector(".sign-up-link")?.addEventListener("click", function () {
   }
 });
 
+document.querySelector(".log-in-link")?.addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent default link behavior
+  e.stopPropagation(); // Stop event propagation
+  
+  const loginForm = document.getElementById("loginForm");
+  const signUpForm = document.getElementById("signUpForm");
+
+  loginForm.style.display = "block";
+  signUpForm.style.display = "none";
+});
+
 // Close login form
 function closeLoginForm() {
   const loginForm = document.getElementById("loginForm");

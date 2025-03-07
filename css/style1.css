@@ -1049,18 +1049,6 @@ input:focus {
   }
 }
 
-.swiper-pagination-bullet {
-  background-color: white;
-  color: #004d40;
-  opacity: 0.6;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  background: #004d40;
-  opacity: 1;
-}
-
 .slider-overlay.show {
   display: flex;
 }

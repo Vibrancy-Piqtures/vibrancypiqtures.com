@@ -355,10 +355,6 @@ function initializeSwiper() {
       modifier: 1,
       slideShadows: true
     },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
     scrollbar: {
       el: ".swiper-scrollbar",
       draggable: true,

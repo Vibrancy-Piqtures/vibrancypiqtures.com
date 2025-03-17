@@ -78,7 +78,6 @@ window.addEventListener("DOMContentLoaded", function () {
       searchInput.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
           event.preventDefault();
-          console.log("Hit");
           const searchQuery = searchInput.value.trim();
           if (searchQuery) {
             window.location.href = `Gallery.html?search=${encodeURIComponent(searchQuery)}`;

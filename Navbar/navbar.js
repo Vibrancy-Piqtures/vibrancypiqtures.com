@@ -1,12 +1,12 @@
 // Toggle menu visibility
 function toggleMenu(event) {
-  event.stopPropagation(); 
+  event.stopPropagation();
 
   const menuList = document.getElementById("menuList");
-  menuList.classList.toggle("show-menu"); 
+  menuList.classList.toggle("show-menu");
 
   if (menuList.classList.contains("show-menu")) {
-    document.addEventListener("click", closeMenuOnClickOutside); 
+    document.addEventListener("click", closeMenuOnClickOutside);
   } else {
     document.removeEventListener("click", closeMenuOnClickOutside);
   }
@@ -25,32 +25,13 @@ function closeMenuOnClickOutside(event) {
 
 // Search toggle visibility
 function toggleSearch(event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
   const searchContainer = document.querySelector(".search-container");
-  searchContainer.classList.toggle("active"); 
-  document.getElementById("searchInput").focus(); 
+  searchContainer.classList.toggle("active");
+  document.getElementById("search-input").focus();
 }
 
-
-// Toggle menu visibility and animate hamburger icon
-function toggleMenu(event) {
-  event.stopPropagation(); 
-
-  const menuList = document.getElementById("menuList");
-  const menuToggle = document.querySelector(".menu-toggle");
-  
-  menuList.classList.toggle("show-menu"); // Toggle the menu visibility
-
-  // Add event listener to close the menu if clicked outside
-  if (menuList.classList.contains("show-menu")) {
-    document.addEventListener("click", closeMenuOnClickOutside); 
-  } else {
-    document.removeEventListener("click", closeMenuOnClickOutside);
-  }
-}
-
-
-// Initialize Navbar content dynamically
+// Initializing Navbar content
 function includeNavbar() {
   const navbarElement = document.getElementById("mainNavbar");
   if (navbarElement) {
@@ -71,8 +52,8 @@ function includeNavbar() {
       </ul>
 
       <div class="search-container">
-        <input type="text" placeholder="Search..." id="searchInput">
-        <button type="submit">
+        <input type="text" placeholder="Search..." id="search-input">
+        <button type="submit" id="search-button" onclick="toggleSearch(event)">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 515.9 728.5" xml:space="preserve">
             <path fill="#FFFFFF" d="M472.8,653.9c-34.2-35.4-69.1-70.4-103.6-105.8c-12.2-12.2-23-25.4-41.9-30c-16.7-4.3-19.5-19.7-10.8-34.7
@@ -87,7 +68,34 @@ function includeNavbar() {
   }
 }
 
-// To add the navbar after DOM content is loaded
-window.addEventListener("DOMContentLoaded", includeNavbar);
+window.addEventListener("DOMContentLoaded", function () {
+  includeNavbar();
 
+  setTimeout(() => {
+    const searchInput = document.getElementById("search-input");
+    
+    if (searchInput) {
+      searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          console.log("Hit");
+          const searchQuery = searchInput.value.trim();
+          if (searchQuery) {
+            window.location.href = `Gallery.html?search=${encodeURIComponent(searchQuery)}`;
+          }
+        }
+      });
+    }
+  }, 100); 
 
+  document.addEventListener("click", function (event) {
+    if (event.target.closest("#search-button")) {
+      event.preventDefault();
+      const searchInput = document.getElementById("search-input");
+      const searchQuery = searchInput.value.trim();
+      if (searchQuery) {
+        window.location.href = `Gallery.html?search=${encodeURIComponent(searchQuery)}`;
+      }
+    }
+  });
+});

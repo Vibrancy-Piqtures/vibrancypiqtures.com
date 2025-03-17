@@ -35,7 +35,7 @@ document.querySelector(".show-less").addEventListener("click", function (e) {
 // Minimum prices/ Thresholds for event packages in UGX and their equivalent in USD
 const packageThresholds = {
   Wedding: { silver: 2500000, platinum: 3500000, gold: 5000000 },
-  Kwanjura: { silver: 2000000, platinum: 3500000, gold: 5000000 },
+  Kwanjura: { silver: 2000000, platinum: 3000000, gold: 4500000 },
   Kuhingira: { silver: 2000000, platinum: 3500000, gold: 5000000 },
   Anniversary: { silver: 1800000, platinum: 2500000, gold: 4500000 },
   Kukyala: { silver: 850000, platinum: 1500000, gold: 2500000 },
@@ -74,21 +74,21 @@ function getPackageDetails(eventType, packageType) {
     Wedding: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
-      gold: "500 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 50 years."
+      gold: "500 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 50 years."
     },
     Kwanjura: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
-      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Kuhingira: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame, Secure Online Gallery images for upto 10 years.",
-      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Anniversary: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
-      platinum: "250 image photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (2) A3 boards, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "250 image photobook, (3) 3-5 mins Highlight reels, HD Full Length video { Movie Style Direction }, (2) A3 boards, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       gold: "350 image photobook, (5) 3-5 mins Highlight reels, 1 A3 board,  (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
     },
     Kukyala: {
@@ -128,7 +128,7 @@ function getPackageDetails(eventType, packageType) {
     },
     "Other": {}
   };
-  return details[eventType]?.[packageType] || "Details depend on client’s needs. Please contact us for more information.";
+  return details[eventType]?.[packageType] || "The package details will depend on the client’s specific needs. Please contact us for more information.";
 }
 
 
@@ -396,7 +396,7 @@ function closeModal() {
 
 
 // Models` Questionnaire
-// Triggerring the modal when the user clicks the "Are you a Model" button
+// Triggering the modal
 document.getElementById("model-cta").addEventListener("click", function () {
   openQuizModal();
 });
@@ -426,7 +426,7 @@ function closeQuizModal() {
   document.getElementById("quiz-overlay").classList.add("hidden");
 }
 
-// Initialization of constiables for current step and total steps
+// Initialization of variables for current step and total steps
 let currentStep = 0;
 const totalSteps = 18;
 
@@ -492,36 +492,91 @@ document.addEventListener('DOMContentLoaded', function () {
   otherInput.classList.add('hidden');
 
   // Listen for changes to the radio buttons
-  document.querySelectorAll('input[name="model_type"]').forEach((radio) => {
+  document.querySelectorAll('input[name="Type of model"]').forEach((radio) => {
     radio.addEventListener('change', function () {
       if (otherOption.checked) {
         otherInput.classList.remove('hidden');
       } else {
         otherInput.classList.add('hidden');
-        otherInput.value = ''; // Clear the input when hidden
+        otherInput.value = ''; 
       }
     });
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const customAnswerOption = document.getElementById('custom-answer-option');
+  const customAnswerInput = document.getElementById('custom-answer-input');
 
-  const otherOption = document.getElementById('custom-answer-option');
-  const otherInput = document.getElementById('custom-answer-input');
-  const radioButtons = document.querySelectorAll('input[name="benefit"]');
+  // Initially hide the input
+  customAnswerInput.classList.add('hidden');
 
-  radioButtons.forEach((radio) => {
-    radio.addEventListener('change', () => {
-      if (otherOption.checked) {
-        otherInput.classList.remove('hidden');
+  // Listen for changes to the radio buttons
+  document.querySelectorAll('input[name="Intent to Collab"]').forEach((radio) => {
+    radio.addEventListener('change', function () {
+      if (customAnswerOption.checked) {
+        customAnswerInput.classList.remove('hidden');
       } else {
-        otherInput.classList.add('hidden');
-        otherInput.value = '';
+        customAnswerInput.classList.add('hidden');
+        customAnswerInput.value = ''; // Clear the input when "Other" is not selected
       }
     });
   });
+});
+
+// Collect form data into a JSON object
+function collectFormData() {
+  const formData = new FormData(document.getElementById("quiz-form"));
+  const data = {};
+
+  formData.forEach((value, key) => {
+    // Handle custom input for "Type of model"
+    if (key === "Type of model-custom" && value.trim() !== "") {
+      data["Type of model"] = value;
+      return;
+    }
+
+    // Handle custom input for "Intent to Collab"
+    if (key === "Intent to Collab-custom" && value.trim() !== "") {
+      data["Intent to Collab"] = value;
+      return;
+    }
+
+    // Handle radio buttons and checkboxes (if multiple values exist)
+    if (data[key]) {
+      if (!Array.isArray(data[key])) {
+        data[key] = [data[key]]; 
+      }
+      data[key].push(value);
+    } else {
+      data[key] = value;
+    }
+  });
+
+  return data;
+}
+
+// Send data to WhatsApp
+function sendToWhatsApp(data) {
+  const phoneNumber = "+256767810246"; // Replace with your WhatsApp number
+  const message = encodeURIComponent(
+    `New Model Questionnaire Submission:\n\n${JSON.stringify(data, null, 2)}`
+  );
+  const url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+  // Open WhatsApp in a new tab
+  window.open(url, "_blank");
+}
 
 // Submit the quiz
 function submitQuiz() {
-  alert("Submitted successfully, Thank you.");
+  // Collect form data
+  const formData = collectFormData();
+  console.log("Form Data:", formData);
+
+  // Send data to WhatsApp
+  sendToWhatsApp(formData);
+
+  // Close the modal
   closeQuizModal();
 }

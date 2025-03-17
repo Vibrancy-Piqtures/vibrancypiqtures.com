@@ -15,9 +15,83 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(error => console.error("Error loading navbar:", error));
 });
 
-// Initializing Fancybox function
+// Search Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQuery = urlParams.get("search");
+
+  if (searchQuery) {
+    const filterButtons = document.querySelectorAll(".filter-button");
+    let foundMatch = false;
+
+    filterButtons.forEach((button) => {
+      const filter = button.dataset.filter.toLowerCase();
+      const searchTerms = button.dataset.searchTerms ? button.dataset.searchTerms.toLowerCase().split(",") : [];
+
+      if (filter === searchQuery.toLowerCase() || searchTerms.includes(searchQuery.toLowerCase())) {
+        showGallery(filter);
+
+        // Active class to the matching filter
+        filterButtons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        foundMatch = true;
+      }
+    });
+
+    if (!foundMatch) {
+      console.log("No matching Category found for:", searchQuery);
+    }
+  }
+});
+
+// Function show the Gallery
+function showGallery(filter) {
+  const galleries = document.querySelectorAll(".gallery-container > div");
+
+  galleries.forEach((gallery) => {
+    if (gallery.classList.contains(filter.toLowerCase())) {
+      gallery.style.display = "block";
+    } else {
+      gallery.style.display = "none";
+    }
+  });
+}
+
+// DOMContentLoaded event listener
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const galleries = document.querySelectorAll(".gallery-container > div");
+  const dropdownArrow = document.querySelector("#dropdown-arrow");
+
+  // Event listeners for the filter buttons
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const filter = button.dataset.filter.toLowerCase();
+      showGallery(filter); 
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
+
+  // Dropdown toggle
+  dropdownArrow.addEventListener("click", function () {
+    const container = document.querySelector(".horizontal-list-container");
+    container.classList.toggle("active");
+
+    // Tooltip text for the dropdown arrows
+    if (container.classList.contains("active")) {
+      dropdownArrow.setAttribute("title", "Show less Categories");
+    } else {
+      dropdownArrow.setAttribute("title", "More Categories");
+    }
+  });
+});
+
+// Initializing the Fancybox function
 $(document).ready(function () {
-  // Initialize Fancybox
+  // Initializing Fancybox
   $("[data-fancybox]").fancybox({
     buttons: ["zoom", "slideShow", "fullScreen", "close"]
   });
@@ -38,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Add click event listener to each filter button
+  // Click event listener to each filter button
   filterButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const filter = button.dataset.filter;
@@ -49,6 +123,28 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update active class for buttons
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const galleryItems = document.querySelectorAll('.gallery-container > div');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filterValue = this.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        if (item.classList.contains(filterValue)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
     });
   });
 });
@@ -83,6 +179,3 @@ document
   .addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-
-
-  

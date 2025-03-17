@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!PartyTYPE html>
 <html lang="en">
 
 <head>
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="Navbar/navbar_styles.css">
   <link rel="stylesheet" href="css/style2(Gallery).css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-...your-integrity-hash-here..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="icon" href="Images/favicon.svg" type="image/png">
 </head>
 
@@ -23,11 +24,22 @@
     </div>
     <div id="navbar-placeholder"></div>
     <div class="horizontal-list-container">
-      <button class="filter-button active" data-filter="portraits">Portraits</button>
-      <button class="filter-button" data-filter="weddings">Weddings</button>
-      <button class="filter-button" data-filter="lifestyle">Lifestyle</button>
-      <button class="filter-button" data-filter="boudoir">Boudoir</button>
-      
+      <div class="filter-row">
+        <button class="filter-button active" data-filter="portraits"   data-search-terms="portrait,people,faces,photoshoots" >Portraits</button>
+        <button class="filter-button" data-filter="weddings" data-search-terms="wedding,marriage,mikolo,couples" >Weddings</button>
+        <button class="filter-button" data-filter="kwanjura">Kwanjura</button>
+        <div id="dropdown-arrow" title="More Categories">
+          <i class="fas fa-chevron-down"></i> 
+        </div>
+      </div>
+      <div class="filter-row second-row">
+        <button class="filter-button" data-filter="pre-wedding">Pre-Wedding</button>
+        <button class="filter-button" data-filter="kukyala">Kukyala</button>
+        <button class="filter-button" data-filter="Parties">Parties</button>
+        <button class="filter-button" data-filter="creative" data-search-terms="outdoors,outdoor,art,clean,colorfull,">Creative</button>
+        <button class="filter-button" data-filter="boudoir">Boudoir</button>
+        <button class="filter-button" data-filter="videos">Videos</button>
+      </div>
     </div>
   </header>
   <!-- Button for WhatsApp -->
@@ -35,85 +47,58 @@
   <div class="gallery-container">
     <div class="portraits">
       <div class="thumbnails">
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (1).jpg"><img src="Page2/Images/Portraits/a (1).jpg" alt="Page2/Images/Portraits/a (1).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (2).jpg"><img src="Page2/Images/Portraits/a (2).jpg" alt="Page2/Images/Portraits/a (2).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (3).jpg"><img src="Page2/Images/Portraits/a (3).jpg" alt="Page2/Images/Portraits/a (3).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (4).jpg"><img src="Page2/Images/Portraits/a (4).jpg" alt="Page2/Images/Portraits/a (4).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (5).jpg"><img src="Page2/Images/Portraits/a (5).jpg" alt="Page2/Images/Portraits/a (5).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (6).jpg"><img src="Page2/Images/Portraits/a (6).jpg" alt="Page2/Images/Portraits/a (6).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (7).jpg"><img src="Page2/Images/Portraits/a (7).jpg" alt="Page2/Images/Portraits/a (7).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (8).jpg"><img src="Page2/Images/Portraits/a (8).jpg" alt="Page2/Images/Portraits/a (8).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (9).jpg"><img src="Page2/Images/Portraits/a (9).jpg" alt="Page2/Images/Portraits/a (9).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (10).jpg"><img src="Page2/Images/Portraits/a (10).jpg" alt="Page2/Images/Portraits/a (10).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (11).jpg"><img src="Page2/Images/Portraits/a (11).jpg" alt="Page2/Images/Portraits/a (11).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (12).jpg"><img src="Page2/Images/Portraits/a (12).jpg" alt="Page2/Images/Portraits/a (12).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (13).jpg"><img src="Page2/Images/Portraits/a (13).jpg" alt="Page2/Images/Portraits/a (13).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (14).jpg"><img src="Page2/Images/Portraits/a (14).jpg" alt="Page2/Images/Portraits/a (14).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (15).jpg"><img src="Page2/Images/Portraits/a (15).jpg" alt="Page2/Images/Portraits/a (15).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (16).jpg"><img src="Page2/Images/Portraits/a (16).jpg" alt="Page2/Images/Portraits/a (16).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (17).jpg"><img src="Page2/Images/Portraits/a (17).jpg" alt="Page2/Images/Portraits/a (17).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (18).jpg"><img src="Page2/Images/Portraits/a (18).jpg" alt="Page2/Images/Portraits/a (18).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (19).jpg"><img src="Page2/Images/Portraits/a (19).jpg" alt="Page2/Images/Portraits/a (19).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (20).jpg"><img src="Page2/Images/Portraits/a (20).jpg" alt="Page2/Images/Portraits/a (20).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (21).jpg"><img src="Page2/Images/Portraits/a (21).jpg" alt="Page2/Images/Portraits/a (21).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (22).jpg"><img src="Page2/Images/Portraits/a (22).jpg" alt="Page2/Images/Portraits/a (22).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (23).jpg"><img src="Page2/Images/Portraits/a (23).jpg" alt="Page2/Images/Portraits/a (23).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (24).jpg"><img src="Page2/Images/Portraits/a (24).jpg" alt="Page2/Images/Portraits/a (24).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (25).jpg"><img src="Page2/Images/Portraits/a (25).jpg" alt="Page2/Images/Portraits/a (25).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (26).jpg"><img src="Page2/Images/Portraits/a (26).jpg" alt="Page2/Images/Portraits/a (26).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (27).jpg"><img src="Page2/Images/Portraits/a (27).jpg" alt="Page2/Images/Portraits/a (27).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (28).jpg"><img src="Page2/Images/Portraits/a (28).jpg" alt="Page2/Images/Portraits/a (28).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (29).jpg"><img src="Page2/Images/Portraits/a (29).jpg" alt="Page2/Images/Portraits/a (29).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (30).jpg"><img src="Page2/Images/Portraits/a (30).jpg" alt="Page2/Images/Portraits/a (30).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (31).jpg"><img src="Page2/Images/Portraits/a (31).jpg" alt="Page2/Images/Portraits/a (31).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (32).jpg"><img src="Page2/Images/Portraits/a (32).jpg" alt="Page2/Images/Portraits/a (32).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (33).jpg"><img src="Page2/Images/Portraits/a (33).jpg" alt="Page2/Images/Portraits/a (33).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (34).jpg"><img src="Page2/Images/Portraits/a (34).jpg" alt="Page2/Images/Portraits/a (34).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (35).jpg"><img src="Page2/Images/Portraits/a (35).jpg" alt="Page2/Images/Portraits/a (35).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (36).jpg"><img src="Page2/Images/Portraits/a (36).jpg" alt="Page2/Images/Portraits/a (36).jpg" loading="lazy" class="animated-image"/></a>
-        <a data-fancybox="images" href="Page2/Images/Portraits/a (37).jpg"><img src="Page2/Images/Portraits/a (37).jpg" alt="Page2/Images/Portraits/a (37).jpg" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (1).jpg"><img src="Page2/Images/Portraits/a (1).jpg" alt="Vibrancy Piqtures Img 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (2).jpg"><img src="Page2/Images/Portraits/a (2).jpg" alt="Vibrancy Piqtures Img 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (3).jpg"><img src="Page2/Images/Portraits/a (3).jpg" alt="Vibrancy Piqtures Img 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (4).jpg"><img src="Page2/Images/Portraits/a (4).jpg" alt="Vibrancy Piqtures Img 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (5).jpg"><img src="Page2/Images/Portraits/a (5).jpg" alt="Vibrancy Piqtures Img 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (6).jpg"><img src="Page2/Images/Portraits/a (6).jpg" alt="Vibrancy Piqtures Img 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (7).jpg"><img src="Page2/Images/Portraits/a (7).jpg" alt="Vibrancy Piqtures Img 7" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (8).jpg"><img src="Page2/Images/Portraits/a (8).jpg" alt="Vibrancy Piqtures Img 8" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (9).jpg"><img src="Page2/Images/Portraits/a (9).jpg" alt="Vibrancy Piqtures Img 9" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (10).jpg"><img src="Page2/Images/Portraits/a (10).jpg" alt="Vibrancy Piqtures Img 10" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (11).jpg"><img src="Page2/Images/Portraits/a (11).jpg" alt="Vibrancy Piqtures Img 11" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (12).jpg"><img src="Page2/Images/Portraits/a (12).jpg" alt="Vibrancy Piqtures Img 12" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (13).jpg"><img src="Page2/Images/Portraits/a (13).jpg" alt="Vibrancy Piqtures Img 13" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (14).jpg"><img src="Page2/Images/Portraits/a (14).jpg" alt="Vibrancy Piqtures Img 14" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (15).jpg"><img src="Page2/Images/Portraits/a (15).jpg" alt="Vibrancy Piqtures Img 15" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (16).jpg"><img src="Page2/Images/Portraits/a (16).jpg" alt="Vibrancy Piqtures Img 16" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (18).jpg"><img src="Page2/Images/Portraits/a (17).jpg" alt="Vibrancy Piqtures Img 17" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (19).jpg"><img src="Page2/Images/Portraits/a (18).jpg" alt="Vibrancy Piqtures Img 18" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (20).jpg"><img src="Page2/Images/Portraits/a (19).jpg" alt="Vibrancy Piqtures Img 19" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (21).jpg"><img src="Page2/Images/Portraits/a (20).jpg" alt="Vibrancy Piqtures Img 20" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (22).jpg"><img src="Page2/Images/Portraits/a (21).jpg" alt="Vibrancy Piqtures Img 21" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (23).jpg"><img src="Page2/Images/Portraits/a (22).jpg" alt="Vibrancy Piqtures Img 22" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (24).jpg"><img src="Page2/Images/Portraits/a (23).jpg" alt="Vibrancy Piqtures Img 23" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (25).jpg"><img src="Page2/Images/Portraits/a (24).jpg" alt="Vibrancy Piqtures Img 24" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (26).jpg"><img src="Page2/Images/Portraits/a (25).jpg" alt="Vibrancy Piqtures Img 25" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (27).jpg"><img src="Page2/Images/Portraits/a (26).jpg" alt="Vibrancy Piqtures Img 26" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (28).jpg"><img src="Page2/Images/Portraits/a (27).jpg" alt="Vibrancy Piqtures Img 27" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (29).jpg"><img src="Page2/Images/Portraits/a (28).jpg" alt="Vibrancy Piqtures Img 28" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (30).jpg"><img src="Page2/Images/Portraits/a (29).jpg" alt="Vibrancy Piqtures Img 29" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (31).jpg"><img src="Page2/Images/Portraits/a (30).jpg" alt="Vibrancy Piqtures Img 30" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (32).jpg"><img src="Page2/Images/Portraits/a (31).jpg" alt="Vibrancy Piqtures Img 31" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (33).jpg"><img src="Page2/Images/Portraits/a (32).jpg" alt="Vibrancy Piqtures Img 32" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (34).jpg"><img src="Page2/Images/Portraits/a (33).jpg" alt="Vibrancy Piqtures Img 33" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (35).jpg"><img src="Page2/Images/Portraits/a (34).jpg" alt="Vibrancy Piqtures Img 34" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (36).jpg"><img src="Page2/Images/Portraits/a (35).jpg" alt="Vibrancy Piqtures Img 35" loading="lazy" class="animated-image"/></a>
+        <a data-fancybox="images" href="Page2/Images/Portraits/a (37).jpg"><img src="Page2/Images/Portraits/a (36).jpg" alt="Vibrancy Piqtures Img 36" loading="lazy" class="animated-image"/></a>
       </div>
     </div>
     <div class="weddings" style="display: none;">
       <div class="thumbnails">
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (1).jpg"><img src="Page2/Images/Weddings/1 (1).jpg" alt="Page2/Images/Weddings/1 (1).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (2).jpg"><img src="Page2/Images/Weddings/1 (2).jpg" alt="Page2/Images/Weddings/1 (2).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (3).jpg"><img src="Page2/Images/Weddings/1 (3).jpg" alt="Page2/Images/Weddings/1 (3).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (4).jpg"><img src="Page2/Images/Weddings/1 (4).jpg" alt="Page2/Images/Weddings/1 (4).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (5).jpg"><img src="Page2/Images/Weddings/1 (5).jpg" alt="Page2/Images/Weddings/1 (5).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (6).jpg"><img src="Page2/Images/Weddings/1 (6).jpg" alt="Page2/Images/Weddings/1 (6).jpg" loading="lazy" class="animated-image" /></a>
-            <!--    
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (7).jpg"><img src="Page2/Images/Weddings/1 (7).jpg" alt="Page2/Images/Weddings/1 (7).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (8).jpg"><img src="Page2/Images/Weddings/1 (8).jpg" alt="Page2/Images/Weddings/1 (8).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (9).jpg"><img src="Page2/Images/Weddings/1 (9).jpg" alt="Page2/Images/Weddings/1 (9).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (10).jpg"><img src="Page2/Images/Weddings/1 (10).jpg" alt="Page2/Images/Weddings/1 (10).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (11).jpg"><img src="Page2/Images/Weddings/1 (11).jpg" alt="Page2/Images/Weddings/1 (11).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (12).jpg"><img src="Page2/Images/Weddings/1 (12).jpg" alt="Page2/Images/Weddings/1 (12).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (13).jpg"><img src="Page2/Images/Weddings/1 (13).jpg" alt="Page2/Images/Weddings/1 (13).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (14).jpg"><img src="Page2/Images/Weddings/1 (14).jpg" alt="Page2/Images/Weddings/1 (14).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (15).jpg"><img src="Page2/Images/Weddings/1 (15).jpg" alt="Page2/Images/Weddings/1 (15).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (16).jpg"><img src="Page2/Images/Weddings/1 (16).jpg" alt="Page2/Images/Weddings/1 (16).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (17).jpg"><img src="Page2/Images/Weddings/1 (17).jpg" alt="Page2/Images/Weddings/1 (17).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (18).jpg"><img src="Page2/Images/Weddings/1 (18).jpg" alt="Page2/Images/Weddings/1 (18).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (19).jpg"><img src="Page2/Images/Weddings/1 (19).jpg" alt="Page2/Images/Weddings/1 (19).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (20).jpg"><img src="Page2/Images/Weddings/1 (20).jpg" alt="Page2/Images/Weddings/1 (20).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (21).jpg"><img src="Page2/Images/Weddings/1 (21).jpg" alt="Page2/Images/Weddings/1 (21).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (22).jpg"><img src="Page2/Images/Weddings/1 (22).jpg" alt="Page2/Images/Weddings/1 (22).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (23).jpg"><img src="Page2/Images/Weddings/1 (23).jpg" alt="Page2/Images/Weddings/1 (23).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (24).jpg"><img src="Page2/Images/Weddings/1 (24).jpg" alt="Page2/Images/Weddings/1 (24).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (25).jpg"><img src="Page2/Images/Weddings/1 (25).jpg" alt="Page2/Images/Weddings/1 (25).jpg" loading="lazy" class="animated-image" /></a>
-        <a data-fancybox="images" href="Page2/Images/Weddings/1 (26).jpg"><img src="Page2/Images/Weddings/1 (26).jpg" alt="Page2/Images/Weddings/1 (26).jpg" loading="lazy" class="animated-image" /></a>     
-          <a data-fancybox="images" href="Page2/Images/Weddings/1 (27).jpg"><img src="Page2/Images/Weddings/1 (27).jpg" alt="Page2/Images/Weddings/1 (27).jpg" loading="lazy" class="animated-image"/></a>
-          <a data-fancybox="images" href="Page2/Images/Weddings/1 (28).jpg"><img src="Page2/Images/Weddings/1 (28).jpg" alt="Page2/Images/Weddings/1 (28).jpg" loading="lazy" class="animated-image"/></a>
-          <a data-fancybox="images" href="Page2/Images/Weddings/1 (29).jpg"><img src="Page2/Images/Weddings/1 (29).jpg" alt="Page2/Images/Weddings/1 (29).jpg" loading="lazy" class="animated-image"/></a>
-          <a data-fancybox="images" href="Page2/Images/Weddings/1 (30).jpg"><img src="Page2/Images/Weddings/1 (30).jpg" alt="Page2/Images/Weddings/1 (30).jpg" loading="lazy" class="animated-image"/></a>
-        -->
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (1).jpg"><img src="Page2/Images/Weddings/Wedding IMG (1).jpg" alt="Vibrancy Piqtures Wedding Img 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (2).jpg"><img src="Page2/Images/Weddings/Wedding IMG (2).jpg" alt="Vibrancy Piqtures Wedding Img 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (3).jpg"><img src="Page2/Images/Weddings/Wedding IMG (3).jpg" alt="Vibrancy Piqtures Wedding Img 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (4).jpg"><img src="Page2/Images/Weddings/Wedding IMG (4).jpg" alt="Vibrancy Piqtures Wedding Img 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (5).jpg"><img src="Page2/Images/Weddings/Wedding IMG (5).jpg" alt="Vibrancy Piqtures Wedding Img 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Weddings/Wedding IMG (6).jpg"><img src="Page2/Images/Weddings/Wedding IMG (6).jpg" alt="Vibrancy Piqtures Wedding Img 6" loading="lazy" class="animated-image" /></a>
       </div>
     </div>
-    <div class="lifestyle" style="display: none;">
+    <div class="creative" style="display: none;">
       <div class="thumbnails">
         <!-- Lifestyle Images -->
-        <a data-fancybox="images" href="Page2/Images/LifeStyle/Lifestyle.jpg"><img src="Page2/Images/LifeStyle/Lifestyle.jpg" alt="Boudoir" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Creative/Creative.jpg"><img src="Page2/Images/Creative/Creative.jpg " alt="Vibrancy Piqtures Creative Img 1" loading="lazy" class="animated-image" /></a>
       </div>
     </div>
     <div class="boudoir" style="display: none;">
@@ -121,6 +106,89 @@
         <!-- Bondior Images -->
         <a data-fancybox="images" href="Page2/Images/Boudoir/Boudior.jpg"><img src="Page2/Images/Boudoir/Boudior.jpg" alt="Boudoir" loading="lazy" class="animated-image" /></a>
       </div>
+    </div>
+    <div class="kwanjura" style="display: none;">
+      <div class="thumbnails">
+        <!-- Kwanjura Images -->
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (1).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (1).jpg" alt="Vibrancy Piqtures Kwanjura Img 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (2).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (2).jpg" alt="Vibrancy Piqtures Kwanjura Img 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (3).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (3).jpg" alt="Vibrancy Piqtures Kwanjura Img 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (4).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (4).jpg" alt="Vibrancy Piqtures Kwanjura Img 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (5).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (5).jpg" alt="Vibrancy Piqtures Kwanjura Img 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (6).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (6).jpg" alt="Vibrancy Piqtures Kwanjura Img 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (7).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (7).jpg" alt="Vibrancy Piqtures Kwanjura Img 7" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (8).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (8).jpg" alt="Vibrancy Piqtures Kwanjura Img 8" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (9).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (9).jpg" alt="Vibrancy Piqtures Kwanjura Img 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (10).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (10).jpg" alt="Vibrancy Piqtures Kwanjura Img 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (11).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (11).jpg" alt="Vibrancy Piqtures Kwanjura Img 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (12).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (12).jpg" alt="Vibrancy Piqtures Kwanjura Img 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (13).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (13).jpg" alt="Vibrancy Piqtures Kwanjura Img 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (14).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (14).jpg" alt="Vibrancy Piqtures Kwanjura Img 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (15).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (15).jpg" alt="Vibrancy Piqtures Kwanjura Img 7" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kwanjura/Kwanjura IMG (16).jpg"><img src="Page2/Images/Kwanjura/Kwanjura IMG (16).jpg" alt="Vibrancy Piqtures Kwanjura Img 8" loading="lazy" class="animated-image" /></a>
+      </div>
+    </div>
+    <div class="pre-wedding" style="display: none;">
+      <div class="thumbnails">
+        <!-- Pre-Wedding Images -->
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (1).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (1).jpg" alt="Pre-Wedding Image 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (2).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (2).jpg" alt="Pre-Wedding Image 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (3).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (3).jpg" alt="Pre-Wedding Image 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (4).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (4).jpg" alt="Pre-Wedding Image 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (5).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (5).jpg" alt="Pre-Wedding Image 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (6).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (6).jpg" alt="Pre-Wedding Image 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (7).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (7).jpg" alt="Pre-Wedding Image 7" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (8).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (8).jpg" alt="Pre-Wedding Image 8" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (9).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (9).jpg" alt="Pre-Wedding Image 9" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (10).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (10).jpg" alt="Pre-Wedding Image 10" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Pre-Wedding/Pre-Wedding IMG (11).jpg"><img src="Page2/Images/Pre-Wedding/Pre-Wedding IMG (11).jpg" alt="Pre-Wedding Image 11" loading="lazy" class="animated-image" /></a>
+      </div>
+    </div>
+    <div class="kukyala" style="display: none;">
+      <div class="thumbnails">
+        <!-- Bondior Images -->
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (1).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (1).jpg" alt="Kukyala Image 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (2).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (2).jpg" alt="Kukyala Image 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (3).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (3).jpg" alt="Kukyala Image 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (4).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (4).jpg" alt="Kukyala Image 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (5).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (5).jpg" alt="Kukyala Image 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (6).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (6).jpg" alt="Kukyala Image 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Kukyala/Kukyala IMG (7).jpg"><img src="Page2/Images/Kukyala/Kukyala IMG (7).jpg" alt="Kukyala Image 7" loading="lazy" class="animated-image" /></a>
+      </div>
+    </div>
+    <div class="Parties" style="display: none;">
+      <div class="thumbnails">
+        <!-- Bondior Images -->
+        <!-- <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (1).jpg"><img src="Page2/Images/Parties/Party IMG (1).jpg" alt="Parties Image 1" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (2).jpg"><img src="Page2/Images/Parties/Party IMG (2).jpg" alt="Parties Image 2" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (3).jpg"><img src="Page2/Images/Parties/Party IMG (3).jpg" alt="Parties Image 3" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (4).jpg"><img src="Page2/Images/Parties/Party IMG (4).jpg" alt="Parties Image 4" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (5).jpg"><img src="Page2/Images/Parties/Party IMG (5).jpg" alt="Parties Image 5" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (6).jpg"><img src="Page2/Images/Parties/Party IMG (6).jpg" alt="Parties Image 6" loading="lazy" class="animated-image" /></a>
+        <a data-fancybox="images" href="Page2/Images/Parties/Party IMG (7).jpg"><img src="Page2/Images/Parties/Party IMG (7).jpg" alt="Parties Image 7" loading="lazy" class="animated-image" /></a> -->
+      </div>
+    </div>
+    <div class="videos" style="display: none;">
+      <!-- <div class="thumbnails">
+        <a data-fancybox="videos" href="Page2/Images/Video/B & M.mp4">
+          <video width="200" height="200" controls>
+            <source src="Page2/Images/Video/B & M.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+        <a data-fancybox="videos" href="Page2/Images/Video/J & C.mp4">
+          <video width="200" height="200" controls>
+            <source src="Page2/Images/Video/J & C.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+        <a data-fancybox="videos" href="Page2/Images/Video/W & H.mp4">
+          <video width="200" height="200" controls>
+            <source src="Page2/Images/Video/W & H.mp4"" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+      </div> -->
     </div>
   </div>
   </main>
@@ -162,6 +230,15 @@
           <div class="tooltip">Instagram</div>
         </li>
         <li class="icon-content">
+          <a href="https://www.tiktok.com/@___marq" aria-label="TikTok" data-social="tiktok">
+            <div class="filled"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 449.45 515.38">
+              <path fill-rule="nonzero" d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z" />
+            </svg>
+          </a>
+          <div class="tooltip">TikTok</div>
+        </li>
+        <li class="icon-content">
           <a href="https://www.youtube.com/@marq_shot_it" aria-label="Youtube" data-social="youtube">
             <div class="filled"></div>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
@@ -169,15 +246,6 @@
             </svg>
           </a>
           <div class="tooltip">YouTube</div>
-        </li>
-        <li class="icon-content">
-          <a href="https://www.tiktok.com/@marqdirector" aria-label="TikTok" data-social="tiktok">
-            <div class="filled"></div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 449.45 515.38">
-              <path fill-rule="nonzero" d="M382.31 103.3c-27.76-18.1-47.79-47.07-54.04-80.82-1.35-7.29-2.1-14.8-2.1-22.48h-88.6l-.15 355.09c-1.48 39.77-34.21 71.68-74.33 71.68-12.47 0-24.21-3.11-34.55-8.56-23.71-12.47-39.94-37.32-39.94-65.91 0-41.07 33.42-74.49 74.48-74.49 7.67 0 15.02 1.27 21.97 3.44V190.8c-7.2-.99-14.51-1.59-21.97-1.59C73.16 189.21 0 262.36 0 352.3c0 55.17 27.56 104 69.63 133.52 26.48 18.61 58.71 29.56 93.46 29.56 89.93 0 163.08-73.16 163.08-163.08V172.23c34.75 24.94 77.33 39.64 123.28 39.64v-88.61c-24.75 0-47.8-7.35-67.14-19.96z" />
-            </svg>
-          </a>
-          <div class="tooltip">TikTok</div>
         </li>
       </ul>
     </div>
@@ -191,8 +259,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="Navbar/navbar.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-  <script src="scripts/script2(Gallery).js"></script>
+  <script src="scripts/script2(Gallery).js" defer></script>
 </body>
 
 </html>
-

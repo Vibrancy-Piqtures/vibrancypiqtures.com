@@ -149,7 +149,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .portraits img {
@@ -162,7 +162,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .weddings img {
@@ -175,7 +175,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .boudoir img {
@@ -188,7 +188,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .creative img {
@@ -201,7 +201,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .kwanjura img {
@@ -214,7 +214,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .pre-wedding img {
@@ -227,7 +227,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .kukyala img {
@@ -240,7 +240,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px;
+  margin: 7px;
 }
 
 .documentary img {

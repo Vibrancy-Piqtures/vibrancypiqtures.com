@@ -99,6 +99,12 @@ ol {
 
 @media (min-width: 768px) {
   .more-link {
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .more-link {
     right: 180px;
   }
 }

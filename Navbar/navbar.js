@@ -1,4 +1,3 @@
-// Toggle menu visibility
 function toggleMenu(event) {
   event.stopPropagation();
 
@@ -12,7 +11,6 @@ function toggleMenu(event) {
   }
 }
 
-// Close menu when clicking outside
 function closeMenuOnClickOutside(event) {
   const menuList = document.getElementById("menuList");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -23,7 +21,6 @@ function closeMenuOnClickOutside(event) {
   }
 }
 
-// Search toggle visibility
 function toggleSearch(event) {
   event.preventDefault();
   const searchContainer = document.querySelector(".search-container");
@@ -31,7 +28,6 @@ function toggleSearch(event) {
   document.getElementById("search-input").focus();
 }
 
-// Initializing Navbar content
 function includeNavbar() {
   const navbarElement = document.getElementById("mainNavbar");
   if (navbarElement) {
@@ -98,3 +94,4 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+

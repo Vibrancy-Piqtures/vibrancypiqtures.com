@@ -336,9 +336,6 @@ header {
 @media (max-width: 768px) {
   .thumbnails img {
     width: 95vw;
-  }
-
-  .thumbnails img {
     max-height: 100%;
   }
 

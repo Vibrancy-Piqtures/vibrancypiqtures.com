@@ -246,7 +246,7 @@ document.querySelector(".sign-up-link")?.addEventListener("click", function () {
   const loginForm = document.getElementById("loginForm");
   const signUpForm = document.getElementById("signUpForm");
 
-  if (!signUpForm) return; // Ensure signUpForm exists
+  if (!signUpForm) return;
   if (signUpForm.style.display === "none" || signUpForm.style.display === "") {
     signUpForm.style.display = "block";
     if (loginForm) loginForm.style.display = "none"; 
@@ -256,8 +256,8 @@ document.querySelector(".sign-up-link")?.addEventListener("click", function () {
 });
 
 document.querySelector(".log-in-link")?.addEventListener("click", function (e) {
-  e.preventDefault(); // Prevent default link behavior
-  e.stopPropagation(); // Stop event propagation
+  e.preventDefault(); 
+  e.stopPropagation(); 
   
   const loginForm = document.getElementById("loginForm");
   const signUpForm = document.getElementById("signUpForm");
@@ -303,27 +303,25 @@ window.addEventListener("scroll", function () {
   const scrollHeight = document.documentElement.scrollHeight;
   const scrollPosition = window.innerHeight + window.scrollY;
 
-  // Show button after scrolling past a certain point
   if (window.scrollY >= showButtonOffset) {
     button.classList.add("show-button");
   } else {
     button.classList.remove("show-button");
   }
 
-  // Make button sticky near the bottom of the page
-  if (scrollHeight - scrollPosition <= offsetFromBottom) {
-    button.classList.add("sticky");
-  } else {
-    button.classList.remove("sticky");
+  if (window.innerWidth <= 768) { 
+    if (scrollHeight - scrollPosition <= offsetFromBottom) {
+      button.classList.add("sticky");
+    } else {
+      button.classList.remove("sticky");
+    }
   }
 });
-
 
   // Scroll to top button
 window.addEventListener("scroll", function () {
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
   if (window.scrollY > window.innerHeight) {
-    // Adjusted to 1x the viewport height
     scrollToTopBtn.classList.add("show");
   } else {
     scrollToTopBtn.classList.remove("show");
@@ -416,7 +414,7 @@ window.addEventListener("scroll", function () {
 function openQuizModal() {
   document.getElementById("quiz-modal").classList.remove("hidden");
   document.getElementById("quiz-overlay").classList.remove("hidden");
-  document.getElementById("current-step").textContent = currentStep + 1; // Show step count
+  document.getElementById("current-step").textContent = currentStep + 1; 
   document.getElementById("total-steps").textContent = totalSteps;
 }
 
@@ -426,15 +424,12 @@ function closeQuizModal() {
   document.getElementById("quiz-overlay").classList.add("hidden");
 }
 
-// Initialization of variables for current step and total steps
 let currentStep = 0;
 const totalSteps = 18;
 
-// Navigation logic for the quiz (combined function)
 function navigateQuiz(direction) {
   const questions = document.querySelectorAll(".quiz-question");
 
-  // Save the name for the final message
   if (currentStep === 0 && direction === "next") {
     const name = document.getElementById("name").value;
     document.getElementById("user-name-display").textContent =
@@ -444,7 +439,6 @@ function navigateQuiz(direction) {
   // Hide the current question
   questions[currentStep].classList.add("hidden");
 
-  // Determine the next step
   if (direction === "next" && currentStep < totalSteps - 1) {
     currentStep++;
   } else if (direction === "prev" && currentStep > 0) {
@@ -467,15 +461,12 @@ function navigateQuiz(direction) {
 
 // Keyboard event listeners
 document.addEventListener("keydown", function (e) {
-  // Right arrow key (Next)
   if (e.key === "ArrowRight") {
     navigateQuiz("next");
   }
-  // Left arrow key (Previous)
   if (e.key === "ArrowLeft") {
     navigateQuiz("prev");
   }
-  // Enter key (Next)
   if (e.key === "Enter") {
     const focusedElement = document.activeElement;
     if (focusedElement && focusedElement.tagName === "INPUT") {
@@ -488,10 +479,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const otherOption = document.getElementById('other-option');
   const otherInput = document.getElementById('other-input');
 
-  // Initially hide the input
   otherInput.classList.add('hidden');
 
-  // Listen for changes to the radio buttons
   document.querySelectorAll('input[name="Type of model"]').forEach((radio) => {
     radio.addEventListener('change', function () {
       if (otherOption.checked) {
@@ -508,17 +497,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const customAnswerOption = document.getElementById('custom-answer-option');
   const customAnswerInput = document.getElementById('custom-answer-input');
 
-  // Initially hide the input
   customAnswerInput.classList.add('hidden');
 
-  // Listen for changes to the radio buttons
   document.querySelectorAll('input[name="Intent to Collab"]').forEach((radio) => {
     radio.addEventListener('change', function () {
       if (customAnswerOption.checked) {
         customAnswerInput.classList.remove('hidden');
       } else {
         customAnswerInput.classList.add('hidden');
-        customAnswerInput.value = ''; // Clear the input when "Other" is not selected
+        customAnswerInput.value = ''; 
       }
     });
   });
@@ -530,19 +517,14 @@ function collectFormData() {
   const data = {};
 
   formData.forEach((value, key) => {
-    // Handle custom input for "Type of model"
     if (key === "Type of model-custom" && value.trim() !== "") {
       data["Type of model"] = value;
       return;
     }
-
-    // Handle custom input for "Intent to Collab"
     if (key === "Intent to Collab-custom" && value.trim() !== "") {
       data["Intent to Collab"] = value;
       return;
     }
-
-    // Handle radio buttons and checkboxes (if multiple values exist)
     if (data[key]) {
       if (!Array.isArray(data[key])) {
         data[key] = [data[key]]; 
@@ -558,24 +540,17 @@ function collectFormData() {
 
 // Send data to WhatsApp
 function sendToWhatsApp(data) {
-  const phoneNumber = "+256767810246"; // Replace with your WhatsApp number
+  const phoneNumber = "+256767810246"; 
   const message = encodeURIComponent(
     `New Model Questionnaire Submission:\n\n${JSON.stringify(data, null, 2)}`
   );
   const url = `https://wa.me/${phoneNumber}?text=${message}`;
-
-  // Open WhatsApp in a new tab
   window.open(url, "_blank");
 }
 
 // Submit the quiz
 function submitQuiz() {
-  // Collect form data
   const formData = collectFormData();
-
-  // Send data to WhatsApp
   sendToWhatsApp(formData);
-
-  // Close the modal
   closeQuizModal();
 }

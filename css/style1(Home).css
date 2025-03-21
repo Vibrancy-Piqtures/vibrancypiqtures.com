@@ -204,9 +204,16 @@ main {
 }
 
 /* Media query for smaller screens */
+@media (max-width: 1024px) {
+  .image-container {
+    max-width: 75%;
+    margin: 20px 0;
+  }
+}
+
 @media (max-width: 768px) {
   .image-container {
-    max-width: 100%;
+    max-width: 80%;
     margin: 20px 0;
   }
 }
@@ -490,6 +497,19 @@ main {
 }
 
 /* Media Queries */
+@media (max-width: 1024px) {
+  #loginForm,
+  #signUpForm {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    z-index: 999;
+  }
+}
+
 @media (max-width: 768px) {
   #loginForm,
   #signUpForm {
@@ -1083,7 +1103,7 @@ input:focus {
   }
 }
 
-/*Go to Gallery button*/
+/* Go to Gallery button */
 .animated-button {
   position: fixed;
   bottom: 40px;
@@ -1103,12 +1123,14 @@ input:focus {
   cursor: pointer;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), visibility 0.6s;
   z-index: 997;
 }
 
 .show-button {
   opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 768px) {
@@ -1780,7 +1802,6 @@ ul {
 .socials .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
 }
-/* Existing styles */
 .socials .icon-content a[data-social="tiktok"] .filled,
 .socials .icon-content a[data-social="tiktok"] ~ .tooltip {
   background-color: #000;
@@ -1852,4 +1873,3 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
-

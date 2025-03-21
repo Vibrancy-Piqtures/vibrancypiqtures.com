@@ -97,12 +97,6 @@ ol {
   color: #0a5e64;
 }
 
-@media (max-width: 768px) {
-  .more-link {
-    right: 0;
-  }
-}
-
 @media (min-width: 768px) {
   .more-link {
     right: 180px;
@@ -213,7 +207,7 @@ main {
 
 @media (max-width: 768px) {
   .image-container {
-    max-width: 80%;
+    max-width: 100%;
     margin: 20px 0;
   }
 }

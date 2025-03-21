@@ -97,7 +97,7 @@ ol {
   color: #0a5e64;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .more-link {
     right: 0;
   }
@@ -1106,8 +1106,8 @@ input:focus {
 /* Go to Gallery button */
 .animated-button {
   position: fixed;
-  bottom: 40px;
-  right: 20px;
+  bottom: 42px;
+  right: 18px;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1131,26 +1131,6 @@ input:focus {
 .show-button {
   opacity: 1;
   visibility: visible;
-}
-
-@media (max-width: 768px) {
-  .animated-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    opacity: 0;
-    transition: opacity 0.5s, position 0.3s;
-  }
-
-  .show-button {
-    opacity: 1;
-  }
-
-  .sticky {
-    position: absolute;
-    bottom: 150px;
-    right: 20px;
-  }
 }
 
 .animated-button svg {
@@ -1227,11 +1207,27 @@ input:focus {
   bottom: 150px;
 }
 
+
 @media (max-width: 768px) {
   .animated-button {
+    position: fixed;
     bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.5s, position 0.3s;
+  }
+
+  .show-button {
+    opacity: 1;
+  }
+
+  .sticky {
+    position: absolute;
+    bottom: 150px;
+    right: 20px;
   }
 }
+
 
 /* Slider Container Styles */
 .slider-container {

@@ -1665,7 +1665,7 @@ input:focus {
   background-color: #06302a;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .quiz-modal {
     width: 82vw;
     max-width: 95%;

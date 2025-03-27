@@ -131,7 +131,6 @@ function getPackageDetails(eventType, packageType) {
   return details[eventType]?.[packageType] || "The package details will depend on the client’s specific needs. Please contact us for more information.";
 }
 
-
 // Function to recommend plan based on budget and event type
 function recommendPlan() {
   showLoading();
@@ -176,10 +175,23 @@ function convertCurrency() {
   const budgetInput = document.getElementById("budget");
   const currencySwitch = document.getElementById("currencySwitch");
   const currentBudget = parseFloat(budgetInput.value);
+  if (budgetInput.value.trim() === '') return;
   budgetInput.value = currencySwitch.value === "USD"
     ? (currentBudget * exchangeRate).toFixed(2)
     : (currentBudget / exchangeRate).toFixed(2);
+
 }
+
+// JavaScript to update the label
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('currencySwitch').addEventListener('change', function() {
+    const selectedCurrency = this.value;
+    const budgetLabel = document.getElementById('budgetLabel');
+    budgetLabel.textContent = `ENTER YOUR BUDGET (${selectedCurrency})`;
+    const budgetInput = document.getElementById('budget');
+    budgetInput.placeholder = `Enter budget in ${selectedCurrency}`;
+  });
+});
 
 // Functions to show/hide loading animation and display recommendation
 function showLoading() {

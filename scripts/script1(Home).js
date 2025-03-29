@@ -566,3 +566,6 @@ function submitQuiz() {
   sendToWhatsApp(formData);
   closeQuizModal();
 }
+
+
+

@@ -365,7 +365,7 @@ header {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.025);
   z-index: 1000;
   transition: opacity 0.4s ease;
 }
@@ -376,7 +376,7 @@ header {
 }
 
 #scrollToTopBtn:hover {
-  background-color: #f5f5f5;
+  background-color: #fdfdfd;
 }
 
 /*Footer*/
@@ -548,5 +548,4 @@ ul {
   font-size: 0.9rem;
   color: #000000;
 }
-
 

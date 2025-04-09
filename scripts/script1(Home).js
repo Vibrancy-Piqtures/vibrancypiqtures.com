@@ -74,21 +74,21 @@ function getPackageDetails(eventType, packageType) {
     Wedding: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
-      gold: "500 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 50 years."
+      gold: "500 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 50 years."
     },
     Kwanjura: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame Secure Online Gallery images for upto 10 years.",
-      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Kuhingira: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       platinum: "350 Image Detailed Photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (3) A3 boards, (1) A3 Frame, Secure Online Gallery images for upto 10 years.",
-      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
+      gold: "450 Image Custom Design Detailed Photobook, Upto (5) 3-5 mins HD Highlight reels, HD Full Length video { Movie Style Direction }, (1) A2 board/Frame, (3) A3 boards, Secure Online Gallery images for atleast 45 years."
     },
     Anniversary: {
       silver: "200 image photobook, (2) 3-5 mins Highlight reels, 1 A3 board, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
-      platinum: "250 image photobook, (3) 3-5 mins Highlight reels, HD Full Length video, (2) A3 boards, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
+      platinum: "250 image photobook, (3) 3-5 mins Highlight reels, HD Full Length video { Movie Style Direction }, (2) A3 boards, (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
       gold: "350 image photobook, (5) 3-5 mins Highlight reels, 1 A3 board,  (1) A4 board, Secure online Gallery Accessible for atleat 5 years.",
     },
     Kukyala: {

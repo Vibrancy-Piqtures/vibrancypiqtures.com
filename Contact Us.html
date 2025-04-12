@@ -126,6 +126,313 @@
       </ul>
     </div>
 
+    <!-- Models` Questionnaire -->
+    <div class="quiz-tooltip" id="model-cta">
+      Are You a Model!?
+      <div class="tooltiptext">Hello!</div>
+    </div>
+
+    <div id="quiz-overlay" class="quiz-overlay hidden" onclick="closeQuizModal()"></div>
+    <div id="quiz-modal" class="quiz-modal hidden">
+      <form action="#" id="quiz-form">
+        <div class="quiz-content" id="quiz-content">
+
+          <!-- Progress Status -->
+          <div id="progress-status" class="quiz-status">
+            <span id="current-step">1</span>/<span id="total-steps">18</span>
+          </div><br><br>
+
+          <!-- Questions -->
+          <div class="quiz-question" data-step="1">
+            <h4>Interested in featuring us on a Collabo Photoshoot?</h4><br><br>
+            <p>We’ll ask you a few questions to know about your brand.</p><br>
+            <label for="name">
+              <h5>Name / Alias:</h5>
+            </label>
+            <textarea id="model-name" name="Name" placeholder="Please enter your Name or Alias" required  rows="1" cols="35"></textarea>
+          </div>
+
+          <div class="quiz-question hidden" data-step="2">
+            <label for="location">Where are you currently based?</label><br><br>
+            <textarea id="location" class="clarification" name="Located in" placeholder="Town, City, Country ..." required rows="1" cols="35"></textarea>
+          </div>
+
+          <div class="quiz-question hidden" data-step="3">
+            <label>What type of modeling do you do?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Type of model" value="Fashion Modeling" />
+                <span class="radio-checkmark"></span>
+                Fashion
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Type of model" value="Commercial Modeling" />
+                <span class="radio-checkmark"></span>
+                Commercial
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Type of model" value="Art Modeling" />
+                <span class="radio-checkmark"></span>
+                Art
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Type of model" value="Boudoir Modeling" />
+                <span class="radio-checkmark"></span>
+                Boudoir
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Type of model" value="Specify" id="other-option" />
+                <span class="radio-checkmark"></span>
+                Other
+              </label>
+              <input type="text" id="other-input" name="Type of model-custom" class="hidden" placeholder="Please specify" />              
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="4">
+            <label>How long have you been modeling?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Modelling Experience" value="Just Started" />
+                <span class="radio-checkmark"></span>
+                Just Started
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Modelling Experience" value="1-2 Years" />
+                <span class="radio-checkmark"></span>
+                1-2 Years
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Modelling Experience" value="3-5 Years" />
+                <span class="radio-checkmark"></span>
+                3-5 Years
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Modelling Experience" value="Above 5 years" />
+                <span class="radio-checkmark"></span>
+                Above 5 years
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="5">
+            <label>Have you previously worked with other <br> photographers or businesses?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Worked with Photographies?" value="Yes" />
+                <span class="radio-checkmark"></span>
+                Yes
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Worked with Photographies?" value="No" />
+                <span class="radio-checkmark"></span>
+                Not Really
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="6">
+            <label>Are you currently under any <br> model management or agency?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Is under Model Management?" value="Yes" />
+                <span class="radio-checkmark"></span>
+                Yes
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Is under Model Management?" value="No" />
+                <span class="radio-checkmark"></span>
+                Not Really
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="7">
+            <label>How far are you willing to travel for shoots?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Stance On Travel" value="Around the City" />
+                <span class="radio-checkmark"></span>
+                Around Kampala
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Stance On Travel" value="Anywhere" />
+                <span class="radio-checkmark"></span>
+                Anywhere
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="8">
+            <label>What days or times are you<br>generally available for shoots?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Days/Times Available" value="Evening hours" />
+                <span class="radio-checkmark"></span>
+                Evening
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Days/Times Available" value="Weekends" />
+                <span class="radio-checkmark"></span>
+                Weekends
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Days/Times Available" value="Any day" />
+                <span class="radio-checkmark"></span>
+                Any day
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="9">
+            <label>How many hours can you be <br> on set for?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Estimated time on set" value="2-3 hours" />
+                <span class="radio-checkmark"></span>
+                1-2 hours
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Estimated time on set" value="6 hours" />
+                <span class="radio-checkmark"></span>
+                2-4 hours
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Estimated time on set" value="All day if required" />
+                <span class="radio-checkmark"></span>
+                5+ hours
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="10">
+            <label>How did you hear about us?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Referral Source" value="Friend" />
+                <span class="radio-checkmark"></span>
+                A Friend
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Referral Source" value="Internet" />
+                <span class="radio-checkmark"></span>
+                On the Internet
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Referral Source" value="Reached Out" />
+                <span class="radio-checkmark"></span>
+                A reach Out
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="11">
+            <label>How ambitious are you about modeling?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Ambition About Modelling" value="Hobby" />
+                <span class="radio-checkmark"></span>
+                It's a hobby
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Ambition About Modelling" value="Career" />
+                <span class="radio-checkmark"></span>
+                Building a career
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Ambition About Modelling" value="Undecided" />
+                <span class="radio-checkmark"></span>
+                Undecided
+              </label>
+            </div>
+          </div>
+
+          <div class="quiz-question hidden" data-step="12">
+            <label>Where do you prefer to shoot?</label>
+            <div class="radio-group">
+              <label class="radio-container">
+                <input type="radio" name="Prefers Shooting" value="Indoors" />
+                <span class="radio-checkmark"></span>
+                Indoors
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Prefers Shooting" value="Outdoors" />
+                <span class="radio-checkmark"></span>
+                Outdoors
+              </label>
+              <label class="radio-container">
+                <input type="radio" name="Prefers Shooting" value="Anywhere" />
+                <span class="radio-checkmark"></span>
+                Anywhere
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="quiz-question hidden" data-step="13">
+          <label>How do you hope to benefit from this collaboration? </label>
+          <div class="radio-group">
+            <label class="radio-container">
+              <input type="radio" name="Intent to Collab" value="Portfolio" />
+              <span class="radio-checkmark"></span>
+              Building my Portfolio
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="Intent to Collab" value="Skill Development" />
+              <span class="radio-checkmark"></span>
+              Skill Development
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="Intent to Collab" value="Personal Collection" />
+              <span class="radio-checkmark"></span>
+              Personal Collection
+            </label>
+            <label class="radio-container">
+              <input type="radio" name="Intent to Collab" value="Other" id="custom-answer-option" />
+              <span class="radio-checkmark"></span>
+              Other
+            </label>
+            <input type="text" id="custom-answer-input" name="Intent to Collab-custom" placeholder="Please specify..." class="hidden" />
+          </div>
+        </div>
+        
+        <div class="quiz-question hidden" data-step="14">
+          <label>Can you share a link to your portfolio or recent work?</label><br><br>
+          <textarea id="portfolio-link" name="UserName or Link to socials" placeholder="Please paste social media i.e. Instagram link ..." rows="2" cols="50" required ></textarea>
+        </div>
+
+        <div class="quiz-question hidden" data-step="15">
+          <label>Are there any styles or types of shoots you prefer to avoid? (Optional)</label><br><br>
+          <textarea id="styles-to-avoid" class="clarification" name="Styles to avoid" placeholder="Anything you would be uncomfortable shooting..." rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="quiz-question hidden" data-step="16">
+          <label>Is there any expectations you have pertaining this collaborative project? (Optional)</label><br><br>
+          <textarea id="expectations" class="clarification" name="Expectation" placeholder="How you expect the collaboration to be ..." rows="4" cols="50"></textarea>
+        </div>
+
+        <div class="quiz-question hidden" data-step="17">
+          <label>Do you have any issue that could affect collaboration with us? One we can clarify before! (Optional) </label><br><br>
+          <textarea id="requirements" class="clarification" name="Issue that could hinder" placeholder="Let us know how best to ensure your comfort ..." rows="4" cols="50"></textarea>
+        </div>
+
+        <!-- Final Message -->
+        <div class="quiz-question hidden" data-step="18">
+          <h2>Thank you, <span id="user-name-display">[Name/Alias]</span>!</h2><br>
+          <p>We will reach out to you as soon as possible.</p><br>
+          <p>Please click *submit to finish and submit the questionnaire.</p><br>
+          <button type="button" id="submit-btn" onclick="submitQuiz()">Submit</button>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="quiz-navigation">
+          <button type="button" id="prev-btn" onclick="navigateQuiz('prev')" class="hidden">&#8592;</button>
+          <button type="button" id="next-btn" onclick="navigateQuiz('next')">&#8594;</button>
+        </div>
+    </div>
+    </form>
+    </div>
+
     <!-- Copyright -->
     <div class="footer-bottom">
       <p>&copy; <span id="current-year"></span> Vibrancy Piqtures. All Rights Reserved.</p>

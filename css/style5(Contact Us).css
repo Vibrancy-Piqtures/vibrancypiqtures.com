@@ -63,54 +63,92 @@ header {
   gap: 45px;
 }
 
-.WhatsApp-modal{
-  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
-  padding: 55px;
-  width: 250px;
-  height: 200px;
-  border-radius: 15px;
-  background-color: #fff;
-}
+/* Modern Contact Inputs */
 .contact-inputs {
   width: 100%;
   max-width: 400px;
-  height: 50px;
-  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
-  border: none;
-  outline: none;
-  padding: 15px;
+  height: 56px;
+  padding: 0 20px;
+  font-size: 16px;
   font-weight: 500;
-  color: #666;
-  border-radius: 7px;
+  color: #125c4e;
+  background: #ffffff;
+  border: 2px solid #e2f0ef;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.contact-inputs:focus {
+  border-color: #0f5751;
+  box-shadow: 0 0 0 4px rgba(66, 225, 190, 0.2);
+  outline: none;
+}
+
+.contact-inputs::placeholder {
+  color: #a0c0b9;
+  font-weight: 400;
 }
 
 .contactForm textarea {
   width: 100%;
   max-width: 400px;
-  height: 150px;
-  padding: 15px;
-  border-radius: 5px;
+  min-height: 150px;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d483e;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  resize: vertical;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.contactForm textarea:focus {
+  border-color: #0f5751;
+  box-shadow: 0 0 0 4px rgba(66, 225, 204, 0.2);
+  outline: none;
+}
+
+.contactForm textarea::placeholder {
+  color: #a0aec0;
+  font-weight: 400;
 }
 
 .submitForm {
-  padding: 10px 20px;
-  background-color: #0f7557;
-  color: #fff;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #0b6d5d 0%, #0d574d 100%);
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.466);
-  margin-top: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .submitForm:hover {
-  background-color: #0b8070;
+  background: linear-gradient(135deg, #0d554b 0%, #0d5f4d 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.whatsapp-button {
-  text-decoration: none;
+.submitForm:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.WhatsApp-modal{
+  box-shadow: 0 4px 8px rgba(94, 94, 94, 0.178);
+  padding: 55px;
+  width: 250px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #fff;
 }
 
 .whatsapp-logo {
@@ -118,6 +156,11 @@ header {
   height: auto;
   padding: 25px 0;
   margin: 35px 0;
+}
+
+
+.whatsapp-button {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

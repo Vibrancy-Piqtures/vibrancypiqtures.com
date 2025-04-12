@@ -179,3 +179,7 @@ document
   .addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+  

@@ -567,5 +567,5 @@ function submitQuiz() {
   closeQuizModal();
 }
 
-
+document.getElementById('current-year').textContent = new Date().getFullYear();
 
